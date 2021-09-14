@@ -20,6 +20,7 @@
 		CF48CCA026F131C200406F4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CF48CCA226F131C300406F4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF48CCA526F131C300406F4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CF48CCAF26F1320C00406F4E /* FrameUp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FrameUp; path = ../FrameUp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +38,7 @@
 		CF48CC9226F131C200406F4E = {
 			isa = PBXGroup;
 			children = (
+				CF48CCAF26F1320C00406F4E /* FrameUp */,
 				CF48CC9D26F131C200406F4E /* FrameUpExample */,
 				CF48CC9C26F131C200406F4E /* Products */,
 			);
