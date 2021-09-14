@@ -9,8 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView {
+            HFlowExample()
+                .tabItem {
+                    Label("HFlow", systemImage: "arrow.forward.square.fill")
+                }
+            
+            VFlowExample()
+                .tabItem {
+                    Label("VFlow", systemImage: "arrow.down.square.fill")
+                }
+            
+            WidthReaderExample()
+                .tabItem {
+                    Label("Width", systemImage: "arrow.left.and.right.square")
+                }
+            
+            HeightReaderExample()
+                .tabItem {
+                    Label("Height", systemImage: "arrow.up.and.down.square")
+                }
+        }
     }
 }
 

@@ -16,6 +16,7 @@ struct VFlowExample: View {
         HeightReader { height in
             VFlow(items: items, maxHeight: height, maxColumnWidth: 150) { item in
                 Text(item.value)
+                    .fixedSize(horizontal: false, vertical: true)
                     .padding(12)
                     .foregroundColor(.white)
                     .background(Color.blue)

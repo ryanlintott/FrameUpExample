@@ -9,13 +9,15 @@ import FrameUp
 import SwiftUI
 
 struct HFlowExample: View {
-    let items = ["Hello", "World", "something", "Longer Text is longer", "Hi", "multi\nline", "one more"]
+    let items = ["World", "Hello here is some very very very long text", "something", "Longer Text is longer", "multi\nline", "Hi", "one more"]
         .map { Item(id: UUID(), value: $0) }
     
     var body: some View {
         WidthReader { width in
             HFlow(items: items, maxWidth: width) { item in
                 Text(item.value)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: 200)
                     .padding(12)
                     .foregroundColor(.white)
                     .background(Color.blue)
