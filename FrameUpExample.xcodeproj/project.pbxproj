@@ -12,6 +12,13 @@
 		CF48CCA326F131C300406F4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF48CCA226F131C300406F4E /* Assets.xcassets */; };
 		CF48CCA626F131C300406F4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF48CCA526F131C300406F4E /* Preview Assets.xcassets */; };
 		CF48CCAE26F131EA00406F4E /* FrameUp in Frameworks */ = {isa = PBXBuildFile; productRef = CF48CCAD26F131EA00406F4E /* FrameUp */; };
+		CF48CCB126F132A400406F4E /* WidthReaderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCB026F132A400406F4E /* WidthReaderExample.swift */; };
+		CF48CCB326F1331E00406F4E /* FlowExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCB226F1331E00406F4E /* FlowExampleView.swift */; };
+		CF48CCB526F1340A00406F4E /* FlowLayoutExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCB426F1340A00406F4E /* FlowLayoutExampleView.swift */; };
+		CF48CCB726F1348F00406F4E /* HFlowExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCB626F1348F00406F4E /* HFlowExample.swift */; };
+		CF48CCB926F134AC00406F4E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCB826F134AC00406F4E /* Item.swift */; };
+		CF48CCBB26F134CA00406F4E /* VFlowExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCBA26F134CA00406F4E /* VFlowExample.swift */; };
+		CF48CCBD26F1356A00406F4E /* HeightReaderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +28,13 @@
 		CF48CCA226F131C300406F4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF48CCA526F131C300406F4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CF48CCAF26F1320C00406F4E /* FrameUp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FrameUp; path = ../FrameUp; sourceTree = "<group>"; };
+		CF48CCB026F132A400406F4E /* WidthReaderExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidthReaderExample.swift; sourceTree = "<group>"; };
+		CF48CCB226F1331E00406F4E /* FlowExampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowExampleView.swift; sourceTree = "<group>"; };
+		CF48CCB426F1340A00406F4E /* FlowLayoutExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayoutExampleView.swift; sourceTree = "<group>"; };
+		CF48CCB626F1348F00406F4E /* HFlowExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HFlowExample.swift; sourceTree = "<group>"; };
+		CF48CCB826F134AC00406F4E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		CF48CCBA26F134CA00406F4E /* VFlowExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFlowExample.swift; sourceTree = "<group>"; };
+		CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightReaderExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +71,13 @@
 			children = (
 				CF48CC9E26F131C200406F4E /* FrameUpExampleApp.swift */,
 				CF48CCA026F131C200406F4E /* ContentView.swift */,
+				CF48CCB826F134AC00406F4E /* Item.swift */,
+				CF48CCB026F132A400406F4E /* WidthReaderExample.swift */,
+				CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */,
+				CF48CCB626F1348F00406F4E /* HFlowExample.swift */,
+				CF48CCBA26F134CA00406F4E /* VFlowExample.swift */,
+				CF48CCB226F1331E00406F4E /* FlowExampleView.swift */,
+				CF48CCB426F1340A00406F4E /* FlowLayoutExampleView.swift */,
 				CF48CCA226F131C300406F4E /* Assets.xcassets */,
 				CF48CCA426F131C300406F4E /* Preview Content */,
 			);
@@ -147,8 +168,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF48CCB726F1348F00406F4E /* HFlowExample.swift in Sources */,
+				CF48CCB526F1340A00406F4E /* FlowLayoutExampleView.swift in Sources */,
 				CF48CCA126F131C200406F4E /* ContentView.swift in Sources */,
+				CF48CCBD26F1356A00406F4E /* HeightReaderExample.swift in Sources */,
 				CF48CC9F26F131C200406F4E /* FrameUpExampleApp.swift in Sources */,
+				CF48CCB926F134AC00406F4E /* Item.swift in Sources */,
+				CF48CCB126F132A400406F4E /* WidthReaderExample.swift in Sources */,
+				CF48CCBB26F134CA00406F4E /* VFlowExample.swift in Sources */,
+				CF48CCB326F1331E00406F4E /* FlowExampleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +234,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -261,7 +289,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
