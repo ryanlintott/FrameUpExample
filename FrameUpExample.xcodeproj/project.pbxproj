@@ -11,6 +11,7 @@
 		CF48CCA126F131C200406F4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCA026F131C200406F4E /* ContentView.swift */; };
 		CF48CCA326F131C300406F4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF48CCA226F131C300406F4E /* Assets.xcassets */; };
 		CF48CCA626F131C300406F4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF48CCA526F131C300406F4E /* Preview Assets.xcassets */; };
+		CF48CCAE26F131EA00406F4E /* FrameUp in Frameworks */ = {isa = PBXBuildFile; productRef = CF48CCAD26F131EA00406F4E /* FrameUp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF48CCAE26F131EA00406F4E /* FrameUp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = FrameUpExample;
+			packageProductDependencies = (
+				CF48CCAD26F131EA00406F4E /* FrameUp */,
+			);
 			productName = FrameUpExample;
 			productReference = CF48CC9B26F131C200406F4E /* FrameUpExample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = CF48CC9226F131C200406F4E;
+			packageReferences = (
+				CF48CCAC26F131EA00406F4E /* XCRemoteSwiftPackageReference "FrameUp" */,
+			);
 			productRefGroup = CF48CC9C26F131C200406F4E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -343,6 +351,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF48CCAC26F131EA00406F4E /* XCRemoteSwiftPackageReference "FrameUp" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ryanlintott/FrameUp.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF48CCAD26F131EA00406F4E /* FrameUp */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF48CCAC26F131EA00406F4E /* XCRemoteSwiftPackageReference "FrameUp" */;
+			productName = FrameUp;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CF48CC9326F131C200406F4E /* Project object */;
 }

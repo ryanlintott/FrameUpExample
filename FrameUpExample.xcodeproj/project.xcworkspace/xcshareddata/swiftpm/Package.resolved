@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "FrameUp",
+        "repositoryURL": "https://github.com/ryanlintott/FrameUp.git",
+        "state": {
+          "branch": "main",
+          "revision": "207f2c1b2b3e1ca95b329fd75d9046caf26e69f2",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
