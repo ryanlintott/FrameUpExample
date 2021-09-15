@@ -25,6 +25,11 @@ struct ContentView: View {
                     Label("Scroll", systemImage: "scroll")
                 }
             
+            OverlappingImageExample()
+                .tabItem {
+                    Label("Overlap", systemImage: "square.2.stack.3d.top.fill")
+                }
+            
             WidthReaderExample()
                 .tabItem {
                     Label("Width", systemImage: "arrow.left.and.right.square")
