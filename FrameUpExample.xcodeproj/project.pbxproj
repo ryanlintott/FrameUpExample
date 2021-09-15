@@ -17,6 +17,8 @@
 		CF48CCB926F134AC00406F4E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCB826F134AC00406F4E /* Item.swift */; };
 		CF48CCBB26F134CA00406F4E /* VFlowExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCBA26F134CA00406F4E /* VFlowExample.swift */; };
 		CF48CCBD26F1356A00406F4E /* HeightReaderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */; };
+		CFBC932F26F24DC600D5D439 /* TagViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC932E26F24DC600D5D439 /* TagViewExample.swift */; };
+		CFBC933126F24FF200D5D439 /* TagViewForScrollViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */; };
 		CFF01B9B26F1B33D0018522E /* ScrollViewWithPositionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF01B9A26F1B33D0018522E /* ScrollViewWithPositionExample.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		CF48CCB826F134AC00406F4E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CF48CCBA26F134CA00406F4E /* VFlowExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFlowExample.swift; sourceTree = "<group>"; };
 		CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightReaderExample.swift; sourceTree = "<group>"; };
+		CFBC932E26F24DC600D5D439 /* TagViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewExample.swift; sourceTree = "<group>"; };
+		CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewForScrollViewExample.swift; sourceTree = "<group>"; };
 		CFF01B9A26F1B33D0018522E /* ScrollViewWithPositionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewWithPositionExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +75,8 @@
 				CF48CCA026F131C200406F4E /* ContentView.swift */,
 				CF48CCB826F134AC00406F4E /* Item.swift */,
 				CF48CCB026F132A400406F4E /* WidthReaderExample.swift */,
+				CFBC932E26F24DC600D5D439 /* TagViewExample.swift */,
+				CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */,
 				CFF01B9A26F1B33D0018522E /* ScrollViewWithPositionExample.swift */,
 				CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */,
 				CF48CCB626F1348F00406F4E /* HFlowExample.swift */,
@@ -172,6 +178,8 @@
 				CF48CCB926F134AC00406F4E /* Item.swift in Sources */,
 				CFF01B9B26F1B33D0018522E /* ScrollViewWithPositionExample.swift in Sources */,
 				CF48CCB126F132A400406F4E /* WidthReaderExample.swift in Sources */,
+				CFBC933126F24FF200D5D439 /* TagViewForScrollViewExample.swift in Sources */,
+				CFBC932F26F24DC600D5D439 /* TagViewExample.swift in Sources */,
 				CF48CCBB26F134CA00406F4E /* VFlowExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
