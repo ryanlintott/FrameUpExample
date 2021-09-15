@@ -19,6 +19,7 @@
 		CF48CCBD26F1356A00406F4E /* HeightReaderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */; };
 		CFBC932F26F24DC600D5D439 /* TagViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC932E26F24DC600D5D439 /* TagViewExample.swift */; };
 		CFBC933126F24FF200D5D439 /* TagViewForScrollViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */; };
+		CFBC933526F2AB8000D5D439 /* OverlappingImageExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933426F2AB8000D5D439 /* OverlappingImageExample.swift */; };
 		CFF01B9B26F1B33D0018522E /* ScrollViewWithPositionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF01B9A26F1B33D0018522E /* ScrollViewWithPositionExample.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightReaderExample.swift; sourceTree = "<group>"; };
 		CFBC932E26F24DC600D5D439 /* TagViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewExample.swift; sourceTree = "<group>"; };
 		CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewForScrollViewExample.swift; sourceTree = "<group>"; };
+		CFBC933426F2AB8000D5D439 /* OverlappingImageExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlappingImageExample.swift; sourceTree = "<group>"; };
 		CFF01B9A26F1B33D0018522E /* ScrollViewWithPositionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewWithPositionExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +78,7 @@
 				CF48CCB826F134AC00406F4E /* Item.swift */,
 				CF48CCB026F132A400406F4E /* WidthReaderExample.swift */,
 				CFBC932E26F24DC600D5D439 /* TagViewExample.swift */,
+				CFBC933426F2AB8000D5D439 /* OverlappingImageExample.swift */,
 				CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */,
 				CFF01B9A26F1B33D0018522E /* ScrollViewWithPositionExample.swift */,
 				CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */,
@@ -173,6 +176,7 @@
 			files = (
 				CF48CCB726F1348F00406F4E /* HFlowExample.swift in Sources */,
 				CF48CCA126F131C200406F4E /* ContentView.swift in Sources */,
+				CFBC933526F2AB8000D5D439 /* OverlappingImageExample.swift in Sources */,
 				CF48CCBD26F1356A00406F4E /* HeightReaderExample.swift in Sources */,
 				CF48CC9F26F131C200406F4E /* FrameUpExampleApp.swift in Sources */,
 				CF48CCB926F134AC00406F4E /* Item.swift in Sources */,
