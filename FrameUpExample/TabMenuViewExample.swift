@@ -16,7 +16,7 @@ struct TabMenuViewExample: View {
         TabMenuItem(image: Image(systemName: "books.vertical"), name: "About", tab: 3)
     ]
 
-    var tabMenuPreview: some View {
+    var body: some View {
         TabMenuView(selection: .constant(0), items: items, isShowingName: false) { isSelected in
             Group {
                 if isSelected {
@@ -27,9 +27,11 @@ struct TabMenuViewExample: View {
             }
         }
     }
-    
-    var body: some View {
-        tabMenuPreview
+}
+
+struct TabMenuViewExample_Previews: PreviewProvider {
+    static var previews: some View {
+        TabMenuViewExample()
             .previewLayout(.sizeThatFits)
         
         ZStack {
@@ -67,14 +69,8 @@ struct TabMenuViewExample: View {
             VStack(spacing: 0) {
                 Color.red.opacity(0.5)
                 
-                tabMenuPreview
+                TabMenuViewExample()
             }
         }
-    }
-}
-
-struct TabMenuViewExample_Previews: PreviewProvider {
-    static var previews: some View {
-        TabMenuViewExample()
     }
 }
