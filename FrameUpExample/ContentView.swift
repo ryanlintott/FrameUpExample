@@ -20,6 +20,11 @@ struct ContentView: View {
                     Label("VFlow", systemImage: "arrow.down.square.fill")
                 }
             
+            ScrollViewWithPositionExample()
+                .tabItem {
+                    Label("Scroll", systemImage: "scroll")
+                }
+            
             WidthReaderExample()
                 .tabItem {
                     Label("Width", systemImage: "arrow.left.and.right.square")

@@ -14,7 +14,7 @@ struct HFlowExample: View {
     
     var body: some View {
         WidthReader { width in
-            HFlow(items: items, maxWidth: width) { item in
+            HFlow(items, maxWidth: width) { item in
                 Text(item.value)
                     .fixedSize(horizontal: false, vertical: true)
                     .frame(maxWidth: 200)

@@ -17,6 +17,7 @@
 		CF48CCB926F134AC00406F4E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCB826F134AC00406F4E /* Item.swift */; };
 		CF48CCBB26F134CA00406F4E /* VFlowExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCBA26F134CA00406F4E /* VFlowExample.swift */; };
 		CF48CCBD26F1356A00406F4E /* HeightReaderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */; };
+		CFF01B9B26F1B33D0018522E /* ScrollViewWithPositionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF01B9A26F1B33D0018522E /* ScrollViewWithPositionExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		CF48CCB826F134AC00406F4E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CF48CCBA26F134CA00406F4E /* VFlowExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFlowExample.swift; sourceTree = "<group>"; };
 		CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightReaderExample.swift; sourceTree = "<group>"; };
+		CFF01B9A26F1B33D0018522E /* ScrollViewWithPositionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewWithPositionExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				CF48CCA026F131C200406F4E /* ContentView.swift */,
 				CF48CCB826F134AC00406F4E /* Item.swift */,
 				CF48CCB026F132A400406F4E /* WidthReaderExample.swift */,
+				CFF01B9A26F1B33D0018522E /* ScrollViewWithPositionExample.swift */,
 				CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */,
 				CF48CCB626F1348F00406F4E /* HFlowExample.swift */,
 				CF48CCBA26F134CA00406F4E /* VFlowExample.swift */,
@@ -167,6 +170,7 @@
 				CF48CCBD26F1356A00406F4E /* HeightReaderExample.swift in Sources */,
 				CF48CC9F26F131C200406F4E /* FrameUpExampleApp.swift in Sources */,
 				CF48CCB926F134AC00406F4E /* Item.swift in Sources */,
+				CFF01B9B26F1B33D0018522E /* ScrollViewWithPositionExample.swift in Sources */,
 				CF48CCB126F132A400406F4E /* WidthReaderExample.swift in Sources */,
 				CF48CCBB26F134CA00406F4E /* VFlowExample.swift in Sources */,
 			);
