@@ -12,12 +12,12 @@ struct ContentView: View {
         TabView {
             HFlowExample()
                 .tabItem {
-                    Label("HFlow", systemImage: "arrow.forward.square.fill")
+                    Label("HFlow", systemImage: "arrow.forward.square")
                 }
             
             VFlowExample()
                 .tabItem {
-                    Label("VFlow", systemImage: "arrow.down.square.fill")
+                    Label("VFlow", systemImage: "arrow.down.square")
                 }
             
             ScrollViewWithPositionExample()
