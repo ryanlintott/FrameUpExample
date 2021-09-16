@@ -26,6 +26,7 @@ struct VFlowExample: View {
             .background(Color.gray.opacity(0.5))
         }
         .frame(height: 300)
+        .navigationTitle("VFlow")
     }
 }
 

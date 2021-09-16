@@ -9,46 +9,57 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView {
-            HFlowExample()
-                .tabItem {
-                    Label("HFlow", systemImage: "arrow.forward.square")
+        NavigationView {
+            Form {
+                Group {
+                    NavigationLink(destination: WidthReaderExample()) {
+                        Label("Width", systemImage: "arrow.left.and.right.square")
+                    }
+                    
+                    NavigationLink(destination: HeightReaderExample()) {
+                        Label("Height", systemImage: "arrow.up.and.down.square")
+                    }
+                    
+                    NavigationLink(destination: HFlowExample()) {
+                        Label("HFlow", systemImage: "arrow.forward.square")
+                    }
+                    
+                    NavigationLink(destination: VFlowExample()) {
+                        Label("VFlow", systemImage: "arrow.down.square")
+                    }
+                    
+                    NavigationLink(destination: OverlappingImageHorizontalExample()) {
+                        Label("HOverlap", systemImage: "square.righthalf.fill")
+                    }
+                    
+                    NavigationLink(destination: OverlappingImageVerticalExample()) {
+                        Label("VOverlap", systemImage: "square.bottomhalf.fill")
+                    }
                 }
-            
-            VFlowExample()
-                .tabItem {
-                    Label("VFlow", systemImage: "arrow.down.square")
+                
+                Group {
+                    NavigationLink(destination: TabMenuDemo()) {
+                        Label("TabMenu", systemImage: "squares.below.rectangle")
+                    }
+                    
+                    NavigationLink(destination: ScrollViewWithPositionExample()) {
+                        Label("Scroll", systemImage: "scroll")
+                    }
+                    
+                    NavigationLink(destination: TagViewExample()) {
+                        Label("TagView", systemImage: "capsule")
+                    }
+                    
+                    NavigationLink(destination: TagViewForScrollViewExample()) {
+                        Label("TagViewForScrollView", systemImage: "capsule")
+                    }
+                    
+                    NavigationLink(destination: WidgetDemoExample()) {
+                        Label("WidgetDemo", systemImage: "rectangle.3.offgrid")
+                    }
                 }
-            
-            ScrollViewWithPositionExample()
-                .tabItem {
-                    Label("Scroll", systemImage: "scroll")
-                }
-            
-            OverlappingImageVerticalExample()
-                .tabItem {
-                    Label("VOverlap", systemImage: "square.2.stack.3d.top.fill")
-                }
-            
-            OverlappingImageHorizontalExample()
-                .tabItem {
-                    Label("HOverlap", systemImage: "square.2.stack.3d.bottom.fill")
-                }
-            
-            WidthReaderExample()
-                .tabItem {
-                    Label("Width", systemImage: "arrow.left.and.right.square")
-                }
-            
-            HeightReaderExample()
-                .tabItem {
-                    Label("Height", systemImage: "arrow.up.and.down.square")
-                }
-            
-            TabMenuViewExample()
-                .tabItem {
-                    Label("TabMenu", systemImage: "squares.below.rectangle")
-                }
+            }
+            .navigationTitle("FrameUp")
         }
     }
 }

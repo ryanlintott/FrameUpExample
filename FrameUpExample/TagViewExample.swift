@@ -22,6 +22,7 @@ struct TagViewExample: View {
         }
         .padding(2)
         .background(Color.gray)
+        .navigationTitle("TagView")
     }
 }
 struct TagViewExample_Previews: PreviewProvider {

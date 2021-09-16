@@ -12,18 +12,23 @@ struct TagViewForScrollViewExample: View {
     let elements = ["Thing", "Another", "Test", "Short", "Long Text is Long", "More", "Cool Tag"]
     
     var body: some View {
-        GeometryReader { previewProxy in
-            TagViewForScrollView(maxWidth: previewProxy.size.width, elements: elements) { element in
-                Text(element)
-                    .foregroundColor(.white)
-                    .padding(10)
-                    .background(Color.blue)
-                    .clipShape(Capsule())
+        ScrollView {
+            VStack {
+                WidthReader { width in
+                    TagViewForScrollView(maxWidth: width, elements: elements) { element in
+                        Text(element)
+                            .foregroundColor(.white)
+                            .padding(10)
+                            .background(Color.blue)
+                            .clipShape(Capsule())
+                            .padding(2)
+                    }
                     .padding(2)
+                    .background(Color.gray)
+                }
             }
-            .padding(2)
-            .background(Color.gray)
         }
+        .navigationTitle("TagViewForScroll")
     }
 }
 

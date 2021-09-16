@@ -23,6 +23,7 @@ struct HeightReaderExample: View {
                     }
                 )
         }
+        .navigationTitle("HeightReader")
     }
 }
 

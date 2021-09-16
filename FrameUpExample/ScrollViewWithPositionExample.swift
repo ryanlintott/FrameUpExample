@@ -22,8 +22,18 @@ struct ScrollViewWithPositionExample: View {
                     }
                 }
             }
+            
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("topOffset: \(topOffset ?? 0)")
+                    Text("bottomOffset: \(bottomOffset ?? 0)")
+                }
+                
+                Spacer()
+            }
+            .padding()
         }
-        .overlay(Text("\(topOffset ?? 0) \(bottomOffset ?? 0)"))
+        .navigationTitle("ScrollPosition")
     }
 }
 

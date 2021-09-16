@@ -34,6 +34,7 @@ struct OverlappingImageVerticalExample: View {
         }
         .frame(width: 300, height: 500)
         .previewLayout(.sizeThatFits)
+        .navigationTitle("OverlapVertical")
     }
 }
 
@@ -63,6 +64,7 @@ struct OverlappingImageHorizontalExample: View {
         }
         .frame(width: 300, height: 500)
         .previewLayout(.sizeThatFits)
+        .navigationTitle("OverlapHorizontal")
     }
 }
 

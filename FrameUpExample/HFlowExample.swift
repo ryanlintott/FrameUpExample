@@ -26,6 +26,7 @@ struct HFlowExample: View {
             }
             .background(Color.gray.opacity(0.5))
         }
+        .navigationTitle("HFlow")
     }
 }
 

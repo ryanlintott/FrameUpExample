@@ -22,6 +22,7 @@ struct WidthReaderExample: View {
                     }
                 )
         }
+        .navigationTitle("WidthReader")
     }
 }
 
