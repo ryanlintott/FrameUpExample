@@ -7,16 +7,24 @@
 
 import FrameUp
 import SwiftUI
-import WidgetKit
 
 struct WidgetDemoExample: View {
-    @State private var widgetFamily: WidgetFamily = .systemSmall
+    @State private var widgetSize: WidgetSize = .small
 
+    var size: CGSize {
+        widgetSize.sizeForCurrentDevice()
+    }
+    
+    var sizeString: String {
+        String(format: "%.1f", size.width) + " x " + String(format: "%.1f", size.height)
+    }
+    
+    
     var body: some View {
         VStack {
-            Picker("WidgetFamily", selection: $widgetFamily) {
-                ForEach(WidgetFamily.supportedFamiliesForCurrentDevice, id: \.self) { widgetFamily in
-                    Text("\(widgetFamily.description)")
+            Picker("WidgetFamily", selection: $widgetSize) {
+                ForEach(WidgetSize.supportedSizesForCurrentDevice, id: \.self) { widgetSize in
+                    Text(widgetSize.rawValue)
                 }
             }
             .pickerStyle(.wheel)
@@ -25,11 +33,15 @@ struct WidgetDemoExample: View {
             
             Color.blue
                 .overlay(
-                    Text("Widget")
-                        .bold()
-                        .foregroundColor(.white)
+                    VStack {
+                        Text("Widget")
+                            .bold()
+                        
+                        Text(sizeString)
+                    }
+                    .foregroundColor(.white)
                 )
-                .frame(widgetFamily.sizeForCurrentDevice())
+                .frame(size)
                 .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
             
             Spacer()
