@@ -1,5 +1,5 @@
 //
-//  TabMenuDemo.swift
+//  TabMenuExample.swift
 //  FrameUpExample
 //
 //  Created by Ryan Lintott on 2021-09-16.
@@ -8,7 +8,7 @@
 import FrameUp
 import SwiftUI
 
-struct TabMenuDemo: View {
+struct TabMenuViewExample2: View {
     @State private var selection = 0
     @State private var reselect: Bool = false
     @State private var doubleTap: Bool = false
@@ -74,8 +74,8 @@ struct TabMenuDemo: View {
     }
 }
 
-struct TabMenuDemo_Previews: PreviewProvider {
+struct TabMenuViewExample2_Previews: PreviewProvider {
     static var previews: some View {
-        TabMenuDemo()
+        TabMenuViewExample2()
     }
 }

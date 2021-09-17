@@ -21,8 +21,8 @@
 		CFBC933126F24FF200D5D439 /* TagViewForScrollViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */; };
 		CFBC933526F2AB8000D5D439 /* OverlappingImageExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933426F2AB8000D5D439 /* OverlappingImageExample.swift */; };
 		CFBC933726F2B29300D5D439 /* TabMenuViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933626F2B29300D5D439 /* TabMenuViewExample.swift */; };
-		CFBC933926F38FAD00D5D439 /* WidgetDemoExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933826F38FAD00D5D439 /* WidgetDemoExample.swift */; };
-		CFD6964526F3EED2008D58AD /* TabMenuDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD6964426F3EED2008D58AD /* TabMenuDemo.swift */; };
+		CFBC933926F38FAD00D5D439 /* WidgetSizeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933826F38FAD00D5D439 /* WidgetSizeExample.swift */; };
+		CFD6964526F3EED2008D58AD /* TabMenuViewExample2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD6964426F3EED2008D58AD /* TabMenuViewExample2.swift */; };
 		CFF01B9B26F1B33D0018522E /* ScrollViewWithPositionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF01B9A26F1B33D0018522E /* ScrollViewWithPositionExample.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,8 +42,8 @@
 		CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewForScrollViewExample.swift; sourceTree = "<group>"; };
 		CFBC933426F2AB8000D5D439 /* OverlappingImageExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlappingImageExample.swift; sourceTree = "<group>"; };
 		CFBC933626F2B29300D5D439 /* TabMenuViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuViewExample.swift; sourceTree = "<group>"; };
-		CFBC933826F38FAD00D5D439 /* WidgetDemoExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDemoExample.swift; sourceTree = "<group>"; };
-		CFD6964426F3EED2008D58AD /* TabMenuDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuDemo.swift; sourceTree = "<group>"; };
+		CFBC933826F38FAD00D5D439 /* WidgetSizeExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSizeExample.swift; sourceTree = "<group>"; };
+		CFD6964426F3EED2008D58AD /* TabMenuViewExample2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuViewExample2.swift; sourceTree = "<group>"; };
 		CFF01B9A26F1B33D0018522E /* ScrollViewWithPositionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewWithPositionExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,11 +88,11 @@
 				CF48CCBA26F134CA00406F4E /* VFlowExample.swift */,
 				CFBC933426F2AB8000D5D439 /* OverlappingImageExample.swift */,
 				CFBC933626F2B29300D5D439 /* TabMenuViewExample.swift */,
-				CFD6964426F3EED2008D58AD /* TabMenuDemo.swift */,
+				CFD6964426F3EED2008D58AD /* TabMenuViewExample2.swift */,
 				CFF01B9A26F1B33D0018522E /* ScrollViewWithPositionExample.swift */,
 				CFBC932E26F24DC600D5D439 /* TagViewExample.swift */,
 				CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */,
-				CFBC933826F38FAD00D5D439 /* WidgetDemoExample.swift */,
+				CFBC933826F38FAD00D5D439 /* WidgetSizeExample.swift */,
 				CF48CCA226F131C300406F4E /* Assets.xcassets */,
 				CF48CCA426F131C300406F4E /* Preview Content */,
 			);
@@ -194,9 +194,9 @@
 				CF48CCB126F132A400406F4E /* WidthReaderExample.swift in Sources */,
 				CFBC933126F24FF200D5D439 /* TagViewForScrollViewExample.swift in Sources */,
 				CFBC932F26F24DC600D5D439 /* TagViewExample.swift in Sources */,
-				CFD6964526F3EED2008D58AD /* TabMenuDemo.swift in Sources */,
+				CFD6964526F3EED2008D58AD /* TabMenuViewExample2.swift in Sources */,
 				CF48CCBB26F134CA00406F4E /* VFlowExample.swift in Sources */,
-				CFBC933926F38FAD00D5D439 /* WidgetDemoExample.swift in Sources */,
+				CFBC933926F38FAD00D5D439 /* WidgetSizeExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

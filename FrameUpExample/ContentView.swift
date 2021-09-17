@@ -38,7 +38,7 @@ struct ContentView: View {
                 }
                 
                 Group {
-                    NavigationLink(destination: TabMenuDemo()) {
+                    NavigationLink(destination: TabMenuViewExample2()) {
                         Label("TabMenu", systemImage: "squares.below.rectangle")
                     }
                     
@@ -54,8 +54,8 @@ struct ContentView: View {
                         Label("TagViewForScrollView", systemImage: "capsule")
                     }
                     
-                    NavigationLink(destination: WidgetDemoExample()) {
-                        Label("WidgetDemo", systemImage: "rectangle.3.offgrid")
+                    NavigationLink(destination: WidgetSizeExample()) {
+                        Label("WidgetSize", systemImage: "rectangle.3.offgrid")
                     }
                 }
             }

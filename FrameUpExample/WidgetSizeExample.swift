@@ -1,5 +1,5 @@
 //
-//  WidgetDemoExample.swift
+//  WidgetSizeExample.swift
 //  FrameUpExample
 //
 //  Created by Ryan Lintott on 2021-09-16.
@@ -8,7 +8,7 @@
 import FrameUp
 import SwiftUI
 
-struct WidgetDemoExample: View {
+struct WidgetSizeExample: View {
     @State private var widgetSize: WidgetSize = .small
 
     var size: CGSize {
@@ -22,14 +22,15 @@ struct WidgetDemoExample: View {
     
     var body: some View {
         VStack {
-            Picker("WidgetFamily", selection: $widgetSize) {
+            Picker("WidgetSize", selection: $widgetSize) {
                 ForEach(WidgetSize.supportedSizesForCurrentDevice, id: \.self) { widgetSize in
                     Text(widgetSize.rawValue)
                 }
             }
-            .pickerStyle(.wheel)
+            .pickerStyle(.segmented)
+            .padding()
             
-            Spacer()
+            Spacer(minLength: 0)
             
             Color.blue
                 .overlay(
@@ -46,12 +47,12 @@ struct WidgetDemoExample: View {
             
             Spacer()
         }
-        .navigationTitle("WidgetDemo")
+        .navigationTitle("WidgetSize")
     }
 }
 
-struct WidgetDemoExample_Previews: PreviewProvider {
+struct WidgetSizeExample_Previews: PreviewProvider {
     static var previews: some View {
-        WidgetDemoExample()
+        WidgetSizeExample()
     }
 }
