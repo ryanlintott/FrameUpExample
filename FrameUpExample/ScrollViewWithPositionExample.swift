@@ -9,24 +9,27 @@ import FrameUp
 import SwiftUI
 
 struct ScrollViewWithPositionExample: View {
-    @State private var topOffset: CGFloat? = nil
+    @State private var edgeInsets: EdgeInsets? = nil
     @State private var bottomOffset: CGFloat? = nil
     
     var body: some View {
         VStack {
-            ScrollViewWithPosition(topOffset: $topOffset, bottomOffset: $bottomOffset, showsIndicators: true) {
+            ScrollViewWithPosition([.vertical, .horizontal], showsIndicators: true, edgeInsets: $edgeInsets) {
                 VStack {
-                    ForEach(1...100, id: \.self) { i in
+                    ForEach(1...10, id: \.self) { i in
                         Text("\(i) Some Text")
                             .font(.title)
                     }
                 }
             }
+            .background(Color.blue)
             
             HStack {
                 VStack(alignment: .leading) {
-                    Text("topOffset: \(topOffset ?? 0)")
-                    Text("bottomOffset: \(bottomOffset ?? 0)")
+                    Text("top: \(edgeInsets?.top ?? 0)")
+                    Text("bottom: \(edgeInsets?.bottom ?? 0)")
+                    Text("leading: \(edgeInsets?.leading ?? 0)")
+                    Text("trailing: \(edgeInsets?.trailing ?? 0)")
                 }
                 
                 Spacer()

@@ -46,6 +46,10 @@ struct ContentView: View {
                         Label("Scroll", systemImage: "scroll")
                     }
                     
+                    NavigationLink(destination: SmartScrollViewExample()) {
+                        Label("SmartScroll", systemImage: "scroll.fill")
+                    }
+                    
                     NavigationLink(destination: TagViewExample()) {
                         Label("TagView", systemImage: "capsule")
                     }
@@ -61,6 +65,7 @@ struct ContentView: View {
             }
             .navigationTitle("FrameUp")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
