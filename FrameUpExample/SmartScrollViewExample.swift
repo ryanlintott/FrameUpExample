@@ -47,9 +47,9 @@ struct SmartScrollViewExample: View {
                     }
                 }
                     .background(Color.gray.opacity(0.5))
-                    .padding()
                 , alignment: .center
             )
+            .padding()
             .overlay(
                 VStack(alignment: .trailing) {
                     if let edgeInsets = edgeInsets {
