@@ -42,12 +42,8 @@ struct ContentView: View {
                         Label("TabMenu", systemImage: "squares.below.rectangle")
                     }
                     
-                    NavigationLink(destination: ScrollViewWithPositionExample()) {
-                        Label("Scroll", systemImage: "scroll")
-                    }
-                    
                     NavigationLink(destination: SmartScrollViewExample()) {
-                        Label("SmartScroll", systemImage: "scroll.fill")
+                        Label("SmartScroll", systemImage: "scroll")
                     }
                     
                     NavigationLink(destination: TagViewExample()) {

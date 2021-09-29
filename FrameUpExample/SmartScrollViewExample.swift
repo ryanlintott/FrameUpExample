@@ -36,55 +36,65 @@ struct SmartScrollViewExample: View {
     }
     
     var body: some View {
-        Color.clear
-            .overlay(
-                SmartScrollView(axes, showsIndicators: showsIndicators, optionalScrolling: optionalScrolling, shrinkToFit: shrinkToFit, edgeInsets: $edgeInsets) {
-                    VStack {
-                        ForEach(items, id: \.0) { (i, text) in
-                            Text(text)
-                                .font(.title)
-                        }
-                    }
+        SmartScrollView(axes, showsIndicators: showsIndicators, optionalScrolling: optionalScrolling, shrinkToFit: shrinkToFit) {
+            VStack {
+                ForEach(items, id: \.0) { (i, text) in
+                    Text(text)
+                        .font(.title)
                 }
-                    .background(Color.gray.opacity(0.5))
-                , alignment: .center
-            )
-            .padding()
-            .overlay(
-                VStack(alignment: .trailing) {
-                    if let edgeInsets = edgeInsets {
-                        Text("top inset: \(edgeInsets.top)")
-                        Text("bottom inset: \(edgeInsets.bottom)")
-                        Text("leading inset: \(edgeInsets.leading)")
-                        Text("trailing inset: \(edgeInsets.trailing)")
-                    }
+            }
+        } onScroll: { edgeInsets in
+            self.edgeInsets = edgeInsets
+        }
+        .background(Color.gray.opacity(0.5))
+        .padding(30)
+        .overlay(
+            VStack {
+                if let edgeInsets = edgeInsets {
+                    Text("\(edgeInsets.top)")
+                        .fixedSize()
+                    Spacer()
+                    Text("\(edgeInsets.bottom)")
+                        .fixedSize()
                 }
+            }
                 .foregroundColor(.red)
-                , alignment: .bottomTrailing
-            )
-            .toolbar {
-                Button {
-                    showSettings = true
-                } label: {
-                    Image(systemName: "gear")
+        )
+        .overlay(
+            HStack {
+                if let edgeInsets = edgeInsets {
+                    Text("\(edgeInsets.leading)")
+                        .fixedSize()
+                        .rotationEffect(.degrees(-90))
+                        .offset(x: -20)
+                    Spacer()
+                    Text("\(edgeInsets.trailing)")
+                        .fixedSize()
+                        .rotationEffect(.degrees(-90))
+                        .offset(x: 20)
                 }
             }
-            .navigationTitle("SmartScrollView")
-            .sheet(isPresented: $showSettings) {
-                Form {
-                    Stepper("Number of Items", value: $numItems, in: 1...100)
-                    TextField("Example Text", text: $exampleText)
-                        .textFieldStyle(.roundedBorder)
-                    Toggle("Scroll Vertical", isOn: $vertical)
-                    Toggle("Scroll Horizontal", isOn: $horizontal)
-                    Toggle("Optional Scrolling", isOn: $optionalScrolling)
-                    Toggle("Shrink to Fit", isOn: $shrinkToFit)
-                    
-                    Button("Close") {
-                        
-                    }
-                }
+                .foregroundColor(.red)
+        )
+        .toolbar {
+            Button {
+                showSettings = true
+            } label: {
+                Image(systemName: "gear")
             }
+        }
+        .navigationTitle("SmartScrollView")
+        .sheet(isPresented: $showSettings) {
+            Form {
+                Stepper("Number of Items", value: $numItems, in: 1...100)
+                TextField("Example Text", text: $exampleText)
+                    .textFieldStyle(.roundedBorder)
+                Toggle("Scroll Vertical", isOn: $vertical)
+                Toggle("Scroll Horizontal", isOn: $horizontal)
+                Toggle("Optional Scrolling", isOn: $optionalScrolling)
+                Toggle("Shrink to Fit", isOn: $shrinkToFit)
+            }
+        }
     }
 }
 
