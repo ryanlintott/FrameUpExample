@@ -11,7 +11,7 @@ import SwiftUI
 struct SmartScrollViewExample: View {
     @State private var showSettings = false
     
-    @State private var numItems = 2
+    @State private var numItems = 30
     @State private var exampleText = "Example"
     @State private var vertical = true
     @State private var horizontal = false
@@ -42,7 +42,6 @@ struct SmartScrollViewExample: View {
                     VStack {
                         Text(text)
                             .font(.title)
-                        TagViewForScrollViewExample()
                     }
                 }
             }
@@ -89,7 +88,7 @@ struct SmartScrollViewExample: View {
         .navigationTitle("SmartScrollView")
         .sheet(isPresented: $showSettings) {
             Form {
-                Stepper("Number of Items", value: $numItems, in: 1...100)
+                Stepper("Items: \(numItems)", value: $numItems, in: 1...100)
                 TextField("Example Text", text: $exampleText)
                     .textFieldStyle(.roundedBorder)
                 Toggle("Scroll Vertical", isOn: $vertical)
