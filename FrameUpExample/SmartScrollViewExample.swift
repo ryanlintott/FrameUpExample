@@ -11,7 +11,7 @@ import SwiftUI
 struct SmartScrollViewExample: View {
     @State private var showSettings = false
     
-    @State private var numItems = 20
+    @State private var numItems = 2
     @State private var exampleText = "Example"
     @State private var vertical = true
     @State private var horizontal = false
@@ -39,8 +39,11 @@ struct SmartScrollViewExample: View {
         SmartScrollView(axes, showsIndicators: showsIndicators, optionalScrolling: optionalScrolling, shrinkToFit: shrinkToFit) {
             VStack {
                 ForEach(items, id: \.0) { (i, text) in
-                    Text(text)
-                        .font(.title)
+                    VStack {
+                        Text(text)
+                            .font(.title)
+                        TagViewForScrollViewExample()
+                    }
                 }
             }
         } onScroll: { edgeInsets in
