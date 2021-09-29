@@ -38,6 +38,8 @@ struct TagViewForScrollViewExample: View {
 
 struct TagViewForScrollViewExample_Previews: PreviewProvider {
     static var previews: some View {
-        TagViewForScrollViewExample()
+        NavigationView {
+            TagViewForScrollViewExample()
+        }
     }
 }
