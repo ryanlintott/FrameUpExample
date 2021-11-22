@@ -18,6 +18,8 @@
 		CF48CCB926F134AC00406F4E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCB826F134AC00406F4E /* Item.swift */; };
 		CF48CCBB26F134CA00406F4E /* VFlowExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCBA26F134CA00406F4E /* VFlowExample.swift */; };
 		CF48CCBD26F1356A00406F4E /* HeightReaderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */; };
+		CF4F7133274C2B8400818896 /* ScaledToFrameExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4F7132274C2B8400818896 /* ScaledToFrameExample.swift */; };
+		CF4F7135274C2E3100818896 /* OnSizeChangeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4F7134274C2E3100818896 /* OnSizeChangeExample.swift */; };
 		CFBC932F26F24DC600D5D439 /* TagViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC932E26F24DC600D5D439 /* TagViewExample.swift */; };
 		CFBC933126F24FF200D5D439 /* TagViewForScrollViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */; };
 		CFBC933526F2AB8000D5D439 /* OverlappingImageExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933426F2AB8000D5D439 /* OverlappingImageExample.swift */; };
@@ -39,6 +41,8 @@
 		CF48CCB826F134AC00406F4E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CF48CCBA26F134CA00406F4E /* VFlowExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFlowExample.swift; sourceTree = "<group>"; };
 		CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightReaderExample.swift; sourceTree = "<group>"; };
+		CF4F7132274C2B8400818896 /* ScaledToFrameExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledToFrameExample.swift; sourceTree = "<group>"; };
+		CF4F7134274C2E3100818896 /* OnSizeChangeExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnSizeChangeExample.swift; sourceTree = "<group>"; };
 		CFBC932E26F24DC600D5D439 /* TagViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewExample.swift; sourceTree = "<group>"; };
 		CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewForScrollViewExample.swift; sourceTree = "<group>"; };
 		CFBC933426F2AB8000D5D439 /* OverlappingImageExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlappingImageExample.swift; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 				CF48CCB826F134AC00406F4E /* Item.swift */,
 				CF48CCB026F132A400406F4E /* WidthReaderExample.swift */,
 				CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */,
+				CF4F7134274C2E3100818896 /* OnSizeChangeExample.swift */,
 				CF48CCB626F1348F00406F4E /* HFlowExample.swift */,
 				CF48CCBA26F134CA00406F4E /* VFlowExample.swift */,
 				CFBC933426F2AB8000D5D439 /* OverlappingImageExample.swift */,
@@ -92,6 +97,7 @@
 				CF086A6726FE8AE8002C715D /* SmartScrollViewExample.swift */,
 				CFBC932E26F24DC600D5D439 /* TagViewExample.swift */,
 				CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */,
+				CF4F7132274C2B8400818896 /* ScaledToFrameExample.swift */,
 				CFBC933826F38FAD00D5D439 /* WidgetSizeExample.swift */,
 				CF48CCA226F131C300406F4E /* Assets.xcassets */,
 				CF48CCA426F131C300406F4E /* Preview Content */,
@@ -187,6 +193,7 @@
 				CF48CCA126F131C200406F4E /* ContentView.swift in Sources */,
 				CFBC933526F2AB8000D5D439 /* OverlappingImageExample.swift in Sources */,
 				CF48CCBD26F1356A00406F4E /* HeightReaderExample.swift in Sources */,
+				CF4F7133274C2B8400818896 /* ScaledToFrameExample.swift in Sources */,
 				CF48CC9F26F131C200406F4E /* FrameUpExampleApp.swift in Sources */,
 				CF48CCB926F134AC00406F4E /* Item.swift in Sources */,
 				CFBC933726F2B29300D5D439 /* TabMenuViewExample.swift in Sources */,
@@ -196,6 +203,7 @@
 				CFD6964526F3EED2008D58AD /* TabMenuViewExample2.swift in Sources */,
 				CF086A6826FE8AE8002C715D /* SmartScrollViewExample.swift in Sources */,
 				CF48CCBB26F134CA00406F4E /* VFlowExample.swift in Sources */,
+				CF4F7135274C2E3100818896 /* OnSizeChangeExample.swift in Sources */,
 				CFBC933926F38FAD00D5D439 /* WidgetSizeExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
