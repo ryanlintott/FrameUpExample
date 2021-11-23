@@ -61,6 +61,10 @@ struct ContentView: View {
                     NavigationLink(destination: WidgetSizeExample()) {
                         Label("WidgetSize", systemImage: "rectangle.3.offgrid")
                     }
+                    
+                    NavigationLink(destination: WidgetDemoFrameExample()) {
+                        Label("WidgetDemoFrame", systemImage: "rectangle.3.offgrid")
+                    }
                 }
             }
             .navigationTitle("FrameUp")

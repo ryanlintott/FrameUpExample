@@ -19,7 +19,6 @@ struct WidgetSizeExample: View {
         String(format: "%.1f", size.width) + " x " + String(format: "%.1f", size.height)
     }
     
-    
     var body: some View {
         VStack {
             Picker("WidgetSize", selection: $widgetSize) {
