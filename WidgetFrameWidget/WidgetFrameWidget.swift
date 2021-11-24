@@ -42,7 +42,7 @@ struct WidgetFrameWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        WidgetFrameExample()
+        WidgetRelativeShapeExample()
     }
 }
 
