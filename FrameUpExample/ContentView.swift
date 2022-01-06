@@ -10,66 +10,75 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            Form {
-                Group {
-                    NavigationLink(destination: WidthReaderExample()) {
-                        Label("Width", systemImage: "arrow.left.and.right.square")
-                    }
-                    
-                    NavigationLink(destination: HeightReaderExample()) {
-                        Label("Height", systemImage: "arrow.up.and.down.square")
-                    }
-                    
-                    NavigationLink(destination: HFlowExample()) {
-                        Label("HFlow", systemImage: "arrow.forward.square")
-                    }
-                    
-                    NavigationLink(destination: VFlowExample()) {
-                        Label("VFlow", systemImage: "arrow.down.square")
-                    }
-                    
-                    NavigationLink(destination: OverlappingImageHorizontalExample()) {
-                        Label("HOverlap", systemImage: "square.righthalf.fill")
-                    }
-                    
-                    NavigationLink(destination: OverlappingImageVerticalExample()) {
-                        Label("VOverlap", systemImage: "square.bottomhalf.fill")
-                    }
-                }
+            VStack {
+                Image("FrameUp-logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: 400)
+                    .padding()
                 
-                Group {
-                    NavigationLink(destination: TabMenuViewExample2()) {
-                        Label("TabMenu", systemImage: "squares.below.rectangle")
+                Form {
+                    Group {
+                        NavigationLink(destination: WidthReaderExample()) {
+                            Label("WidthReader", systemImage: "arrow.left.and.right.square")
+                        }
+                        
+                        NavigationLink(destination: HeightReaderExample()) {
+                            Label("HeightReader", systemImage: "arrow.up.and.down.square")
+                        }
+                        
+                        NavigationLink(destination: HFlowExample()) {
+                            Label("HFlow", systemImage: "arrow.forward.square")
+                        }
+                        
+                        NavigationLink(destination: VFlowExample()) {
+                            Label("VFlow", systemImage: "arrow.down.square")
+                        }
+                        
+                        NavigationLink(destination: OverlappingImageHorizontalExample()) {
+                            Label("HOverlap", systemImage: "square.righthalf.fill")
+                        }
+                        
+                        NavigationLink(destination: OverlappingImageVerticalExample()) {
+                            Label("VOverlap", systemImage: "square.bottomhalf.fill")
+                        }
                     }
                     
-                    NavigationLink(destination: SmartScrollViewExample()) {
-                        Label("SmartScroll", systemImage: "scroll")
-                    }
-                    
-                    NavigationLink(destination: TagViewExample()) {
-                        Label("TagView", systemImage: "capsule")
-                    }
-                    
-                    NavigationLink(destination: TagViewForScrollViewExample()) {
-                        Label("TagViewForScrollView", systemImage: "capsule")
-                    }
-                    
-                    NavigationLink(destination: ScaledToFrameExample()) {
-                        Label("ScaledToFrameExample", systemImage: "rectangle.and.arrow.up.right.and.arrow.down.left")
-                    }
-                    
-                    NavigationLink(destination: WidgetSizeExample()) {
-                        Label("WidgetSize", systemImage: "rectangle.3.offgrid")
-                    }
-                    
-                    NavigationLink(destination: WidgetDemoFrameExample()) {
-                        Label("WidgetDemoFrame", systemImage: "rectangle.3.offgrid")
+                    Group {
+                        NavigationLink(destination: TabMenuViewExample2()) {
+                            Label("TabMenu", systemImage: "squares.below.rectangle")
+                        }
+                        
+                        NavigationLink(destination: SmartScrollViewExample()) {
+                            Label("SmartScroll", systemImage: "scroll")
+                        }
+                        
+                        NavigationLink(destination: TagViewExample()) {
+                            Label("TagView", systemImage: "capsule")
+                        }
+                        
+                        NavigationLink(destination: TagViewForScrollViewExample()) {
+                            Label("TagViewForScrollView", systemImage: "capsule")
+                        }
+                        
+                        NavigationLink(destination: ScaledToFrameExample()) {
+                            Label("ScaledToFrameExample", systemImage: "rectangle.and.arrow.up.right.and.arrow.down.left")
+                        }
+                        
+                        NavigationLink(destination: WidgetSizeExample()) {
+                            Label("WidgetSize", systemImage: "rectangle.3.offgrid")
+                        }
+                        
+                        NavigationLink(destination: WidgetDemoFrameExample()) {
+                            Label("WidgetDemoFrame", systemImage: "rectangle.3.offgrid")
+                        }
                     }
                 }
             }
             .navigationTitle("FrameUp")
+            .navigationBarHidden(true)
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationViewStyle(.stack)
     }
 }
 
