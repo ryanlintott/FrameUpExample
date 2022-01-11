@@ -20,7 +20,7 @@ struct TabMenuViewExample: View {
     }
     
     let items = [
-        TabMenuItem(image: Image(systemName: "globe"), name: "Info", tab: 0),
+        TabMenuItem(icon: AnyView(Circle().stroke().overlay(Text("i"))), name: "Info", tab: 0),
         TabMenuItem(image: Image(systemName: "star"), name: "Favourites", tab: 1),
         TabMenuItem(image: Image(systemName: "bookmark"), name: "Categories", tab: 2),
         TabMenuItem(image: Image(systemName: "books.vertical"), name: "About", tab: 3)

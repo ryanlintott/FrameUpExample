@@ -32,7 +32,7 @@ struct WidgetRelativeShapeExample: View {
         .clipShape(WidgetRelativeShape(.systemSmall))
         .background(
             ContainerRelativeShape()
-                .foregroundColor(.red)
+                .fill(.red)
         )
         .padding(1)
     }

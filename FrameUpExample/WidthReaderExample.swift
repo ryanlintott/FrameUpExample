@@ -10,17 +10,21 @@ import SwiftUI
 
 struct WidthReaderExample: View {
     var body: some View {
-        WidthReader { width in
-            Text("\(width)")
-                .background(Color.blue)
+        ScrollView {
+            WidthReader { width in
+                HStack(spacing: 0) {
+                    Text("This text frame is set to 70% of the width.")
+                        .frame(width: width * 0.7)
+                        .background(Color.green)
+                    
+                    Circle()
+                }
+            }
+            .foregroundColor(.white)
+            .background(Color.blue)
             
-            Text("<                                     >")
-                .overlay(
-                    WidthReader(alignment: .center) { width in
-                        Text("\(width)")
-                            .background(Color.red)
-                    }
-                )
+            Text("The WidthReader above does not have a fixed height and will grow to fit the content.")
+                .padding()
         }
         .navigationTitle("WidthReader")
     }

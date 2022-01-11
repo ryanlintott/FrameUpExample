@@ -10,18 +10,21 @@ import SwiftUI
 
 struct HeightReaderExample: View {
     var body: some View {
-        HeightReader { height in
-            Text("\(height)")
+        ScrollView(.horizontal) {
+            HeightReader { height in
+                VStack(spacing: 0) {
+                    Text("This\ntext\nframe\nis\nset\nto\n70%\nof\nthe\nheight.")
+                        .frame(height: height * 0.7)
+                        .background(Color.green)
+                    
+                    Circle()
+                }
+                .foregroundColor(.white)
                 .background(Color.blue)
-            
-            Text("^\n\n\n\n\n\n\nv")
-                .frame(width: 100)
-                .overlay(
-                    HeightReader(alignment: .center) { height in
-                        Text("\(height)")
-                            .background(Color.red)
-                    }
-                )
+                
+                Text("\nThe\nHeightReader\nto\nthe\nleft\ndoes\nnot\nhave\na\nfixed\nwidth\nand\nwill\ngrow\nto\nfit\nthe\ncontent.")
+                    .padding()
+            }
         }
         .navigationTitle("HeightReader")
     }
