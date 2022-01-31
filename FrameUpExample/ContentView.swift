@@ -42,6 +42,10 @@ struct ContentView: View {
                         NavigationLink(destination: OverlappingImageVerticalExample()) {
                             Label("VOverlap", systemImage: "square.bottomhalf.fill")
                         }
+                        
+                        NavigationLink(destination: RelativePaddingExample()) {
+                            Label("RelativePadding", systemImage: "percent")
+                        }
                     }
                     
                     Group {

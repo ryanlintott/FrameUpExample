@@ -29,6 +29,7 @@
 		CF4F7133274C2B8400818896 /* ScaledToFrameExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4F7132274C2B8400818896 /* ScaledToFrameExample.swift */; };
 		CF4F7135274C2E3100818896 /* OnSizeChangeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4F7134274C2E3100818896 /* OnSizeChangeExample.swift */; };
 		CF5149A2274E967000F22BF3 /* WidgetRelativeShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5149A0274E90F000F22BF3 /* WidgetRelativeShape.swift */; };
+		CF9FD88627A83A9D0054B22E /* RelativePaddingExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FD88527A83A9D0054B22E /* RelativePaddingExample.swift */; };
 		CFBC932F26F24DC600D5D439 /* TagViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC932E26F24DC600D5D439 /* TagViewExample.swift */; };
 		CFBC933126F24FF200D5D439 /* TagViewForScrollViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */; };
 		CFBC933526F2AB8000D5D439 /* OverlappingImageExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933426F2AB8000D5D439 /* OverlappingImageExample.swift */; };
@@ -84,6 +85,7 @@
 		CF4F7132274C2B8400818896 /* ScaledToFrameExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledToFrameExample.swift; sourceTree = "<group>"; };
 		CF4F7134274C2E3100818896 /* OnSizeChangeExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnSizeChangeExample.swift; sourceTree = "<group>"; };
 		CF5149A0274E90F000F22BF3 /* WidgetRelativeShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetRelativeShape.swift; sourceTree = "<group>"; };
+		CF9FD88527A83A9D0054B22E /* RelativePaddingExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativePaddingExample.swift; sourceTree = "<group>"; };
 		CFBC932E26F24DC600D5D439 /* TagViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewExample.swift; sourceTree = "<group>"; };
 		CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewForScrollViewExample.swift; sourceTree = "<group>"; };
 		CFBC933426F2AB8000D5D439 /* OverlappingImageExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlappingImageExample.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				CF48CCB626F1348F00406F4E /* HFlowExample.swift */,
 				CF48CCBA26F134CA00406F4E /* VFlowExample.swift */,
 				CFBC933426F2AB8000D5D439 /* OverlappingImageExample.swift */,
+				CF9FD88527A83A9D0054B22E /* RelativePaddingExample.swift */,
 				CFBC933626F2B29300D5D439 /* TabMenuViewExample.swift */,
 				CFD6964426F3EED2008D58AD /* TabMenuViewExample2.swift */,
 				CF086A6726FE8AE8002C715D /* SmartScrollViewExample.swift */,
@@ -322,6 +325,7 @@
 				CF086A6826FE8AE8002C715D /* SmartScrollViewExample.swift in Sources */,
 				CF42CE26274C4A540010F12B /* WidgetDemoFrameExample.swift in Sources */,
 				CF48CCBB26F134CA00406F4E /* VFlowExample.swift in Sources */,
+				CF9FD88627A83A9D0054B22E /* RelativePaddingExample.swift in Sources */,
 				CF4F7135274C2E3100818896 /* OnSizeChangeExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
