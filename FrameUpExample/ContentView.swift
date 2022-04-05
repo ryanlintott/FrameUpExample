@@ -69,6 +69,10 @@ struct ContentView: View {
                             Label("ScaledToFrameExample", systemImage: "rectangle.and.arrow.up.right.and.arrow.down.left")
                         }
                         
+                        NavigationLink(destination: RotationMatchingOrientationExample()) {
+                            Label("RotationMatchingOrientation", systemImage: "face.smiling")
+                        }
+                        
                         NavigationLink(destination: WidgetSizeExample()) {
                             Label("WidgetSize", systemImage: "rectangle.3.offgrid")
                         }
