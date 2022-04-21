@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Item: Identifiable {
+struct Item<T>: Identifiable {
     var id = UUID()
-    var value: String
+    var value: T
 }
