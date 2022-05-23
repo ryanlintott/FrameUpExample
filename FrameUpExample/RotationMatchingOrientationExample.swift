@@ -5,33 +5,71 @@
 //  Created by Ryan Lintott on 2022-04-05.
 //
 
+import FrameUp
 import SwiftUI
 
 struct RotationMatchingOrientationExample: View {
+    @State private var portrait: Bool = true
+    @State private var landscapeLeft: Bool = true
+    @State private var landscapeRight: Bool = true
+    @State private var portraitUpsideDown: Bool = true
+    
+    var allowedOrientations: [FrameUp.InterfaceOrientation] {
+        zip(
+            [
+                portrait,
+                landscapeLeft,
+                landscapeRight,
+                portraitUpsideDown
+            ],
+            [
+                InterfaceOrientation.portrait,
+                InterfaceOrientation.landscapeLeft,
+                InterfaceOrientation.landscapeRight,
+                InterfaceOrientation.portraitUpsideDown
+            ]
+        )
+        .compactMap { $0 ? $1 : nil }
+    }
+    
     func face(text: String) -> some View {
         VStack {
             Image(systemName: "face.smiling")
                 .resizable()
                 .scaledToFit()
                 .frame(height: 40)
-            Text(text)
+            Button {
+                print("clicked")
+            } label: {
+                Text(text)
+            }
         }
-        .frame(width: 100, height: 100)
     }
     
     var body: some View {
         VStack {
-            face(text: "Matches orientation.")
-                .rotationMatchingOrientation()
+            VStack {
+                Image("FrameUp-logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 40)
+                
+                Text("Control this view's orientation with the settings below")
+                    .font(.caption)
+            }
+            .foregroundColor(.white)
+            .padding()
+            .background(Color.blue)
+            .cornerRadius(20)
+                .rotationMatchingOrientation(allowedOrientations)
             
-            face(text: "Always Portrait")
-                .rotationMatchingOrientation([.portrait])
-            
-            face(text: "Always Left")
-                .rotationMatchingOrientation([.landscapeLeft])
-            
-            face(text: "Always Right")
-                .rotationMatchingOrientation([.landscapeRight])
+            VStack {
+                Toggle("Portrait", isOn: $portrait)
+                Toggle("LandscapeLeft", isOn: $landscapeLeft)
+                Toggle("LandscapeRight", isOn: $landscapeRight)
+                Toggle("PortraitUpsideDown", isOn: $portraitUpsideDown)
+            }
+            .padding()
         }
     }
 }
