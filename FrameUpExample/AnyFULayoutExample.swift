@@ -1,39 +1,35 @@
 //
-//  AnyLayoutExample.swift
+//  AnyFULayoutExample.swift
 //  FrameUpExample
 //
-//  Created by Ryan Lintott on 2022-05-31.
+//  Created by Ryan Lintott on 2022-07-18.
 //
 
 import FrameUp
 import SwiftUI
 
-struct AnyLayoutExample: View {
+struct AnyFULayoutExample: View {
     let items = ["These", "Items", "can be arranged", "into any", "layout", "you like", "with", "FrameUp"]
         .map { Item(id: UUID(), value: $0) }
     
-    let layouts: [Layout] = [
-        VStackLayoutStyle(maxWidth: 300).layout,
-        HStackLayoutStyle(maxHeight: 310).layout,
-        VFlowLayoutStyle(maxWidth: 320).layout,
-        HFlowLayoutStyle(maxHeight: 330).layout,
-        VMasonryLayoutStyle(columns: 3, maxWidth: 301).layout,
-        ZStackLayoutStyle(maxWidth: 300, maxHeight: 302).layout
-    ]
-    let layoutNames = [
-        "VStack",
-        "HStack",
-        "VFlow",
-        "HFlow",
-        "VMasonry",
-        "ZStack"
+    let layouts: [AnyFULayout] = [
+        AnyFULayout(VStackLayout(maxWidth: 300)),
+        AnyFULayout(HStackLayout(maxHeight: 310)),
+        AnyFULayout(VFlowLayout(maxWidth: 320)),
+        AnyFULayout(HFlowLayout(maxHeight: 330)),
+        AnyFULayout(VMasonryLayout(columns: 3, maxWidth: 301)),
+        AnyFULayout(ZStackLayout(maxWidth: 300, maxHeight: 302))
     ]
 
     @State private var layoutIndex = 0
     
+    var layout: AnyFULayout {
+        layouts[layoutIndex]
+    }
+
     var body: some View {
         GeometryReader { proxy in
-            AnyLayout(items, layout: layouts[layoutIndex]) { item in
+            layout.forEach(items) { item in
                 Text(item.value)
                     .padding(12)
                     .foregroundColor(.white)
@@ -47,15 +43,15 @@ struct AnyLayoutExample: View {
         .onTapGesture {
             layoutIndex = (layoutIndex + 1) % layouts.count
         }
-        .navigationTitle("\(layoutNames[layoutIndex])")
+        .navigationTitle("\(layouts[layoutIndex].fuLayoutName)")
     }
 }
 
-struct AnyLayoutExample_Previews: PreviewProvider {
+struct AnyFULayoutExample_Previews: PreviewProvider {
     static let data = ["One", "Two", "Three"].map({ Item(id: UUID(), value: $0) })
     static var previews: some View {
         NavigationView {
-            AnyLayoutExample()
+            AnyFULayoutExample()
         }
     }
 }
