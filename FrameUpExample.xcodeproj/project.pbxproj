@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CF086A6826FE8AE8002C715D /* SmartScrollViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF086A6726FE8AE8002C715D /* SmartScrollViewExample.swift */; };
-		CF0C8FAD287E004E008D54B0 /* AnyLayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C8FAC287E004E008D54B0 /* AnyLayoutExample.swift */; };
 		CF1EEF30274D4C4C00987595 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1EEF2F274D4C4C00987595 /* WidgetKit.framework */; };
 		CF1EEF32274D4C4C00987595 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1EEF31274D4C4C00987595 /* SwiftUI.framework */; };
 		CF1EEF35274D4C4C00987595 /* WidgetFrameWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EEF34274D4C4C00987595 /* WidgetFrameWidget.swift */; };
@@ -68,7 +67,6 @@
 
 /* Begin PBXFileReference section */
 		CF086A6726FE8AE8002C715D /* SmartScrollViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartScrollViewExample.swift; sourceTree = "<group>"; };
-		CF0C8FAC287E004E008D54B0 /* AnyLayoutExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyLayoutExample.swift; sourceTree = "<group>"; };
 		CF1EEF2D274D4C4C00987595 /* WidgetFrameWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetFrameWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1EEF2F274D4C4C00987595 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		CF1EEF31274D4C4C00987595 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -187,7 +185,6 @@
 				CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */,
 				CF4F7132274C2B8400818896 /* ScaledToFrameExample.swift */,
 				CFAC149F2885BC99003D4539 /* VFlowLayoutExample.swift */,
-				CF0C8FAC287E004E008D54B0 /* AnyLayoutExample.swift */,
 				CFAC14A12885ED2C003D4539 /* AnyFULayoutExample.swift */,
 				CF1EEF4A274D5FD600987595 /* WidgetSizeExample.swift */,
 				CF42CE25274C4A540010F12B /* WidgetDemoFrameExample.swift */,
@@ -329,7 +326,6 @@
 				CF48CCA126F131C200406F4E /* ContentView.swift in Sources */,
 				CFBC933526F2AB8000D5D439 /* OverlappingImageExample.swift in Sources */,
 				CF48CCBD26F1356A00406F4E /* HeightReaderExample.swift in Sources */,
-				CF0C8FAD287E004E008D54B0 /* AnyLayoutExample.swift in Sources */,
 				CF4F7133274C2B8400818896 /* ScaledToFrameExample.swift in Sources */,
 				CFAC14A02885BC99003D4539 /* VFlowLayoutExample.swift in Sources */,
 				CF48CC9F26F131C200406F4E /* FrameUpExampleApp.swift in Sources */,

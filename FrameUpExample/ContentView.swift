@@ -27,6 +27,10 @@ struct ContentView: View {
                             Label("HeightReader", systemImage: "arrow.up.and.down.square")
                         }
                         
+                        NavigationLink(destination: AnyFULayoutExample()) {
+                            Label("FULayout", systemImage: "rectangle.3.group")
+                        }
+                        
                         NavigationLink(destination: HFlowExample()) {
                             Label("HFlow", systemImage: "arrow.forward.square")
                         }
