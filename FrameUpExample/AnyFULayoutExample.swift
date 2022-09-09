@@ -88,7 +88,6 @@ struct AnyFULayoutExample: View {
                 }
                 .tabItem { Label("_View", systemImage: "rectangle.3.group") }
             }
-            .animation(.spring(), value: items)
             
             Button {
                 layoutDirection = layoutDirection == .leftToRight ? .rightToLeft : .leftToRight
@@ -127,8 +126,9 @@ struct AnyFULayoutForEachExample: View {
             }
         }
         .background(Color.gray.opacity(0.5))
-        .animation(.spring(), value: layoutIndex)
         .border(Color.red)
+        .animation(.spring(), value: layoutIndex)
+        .animation(.spring(), value: items)
         .onTapGesture {
             layoutIndex = (layoutIndex + 1) % layouts.count
         }
@@ -152,18 +152,19 @@ struct AnyFULayout_ViewExample: View {
                 Text(item.value)
                     .padding(12)
                     .foregroundColor(.white)
+                    .frame(height: CGFloat(item.value.count) * 8)
                     .background(Color.blue)
                     .cornerRadius(12)
                     .clipped()
             }
         }
         .background(Color.gray.opacity(0.5))
-        .animation(.spring(), value: layoutIndex)
         .border(Color.red)
+        .animation(.spring(), value: layoutIndex)
+        .animation(.spring(), value: items)
         .onTapGesture {
             layoutIndex = (layoutIndex + 1) % layouts.count
         }
-        .navigationTitle("\(layout.fuLayoutName)")
     }
 }
 
