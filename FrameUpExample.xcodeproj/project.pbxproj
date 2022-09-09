@@ -26,6 +26,7 @@
 		CF48CCB926F134AC00406F4E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCB826F134AC00406F4E /* Item.swift */; };
 		CF48CCBB26F134CA00406F4E /* VFlowExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCBA26F134CA00406F4E /* VFlowExample.swift */; };
 		CF48CCBD26F1356A00406F4E /* HeightReaderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */; };
+		CF4A895128CABEB90073790A /* FULayoutAlignmentExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A895028CABEB90073790A /* FULayoutAlignmentExample.swift */; };
 		CF4F7133274C2B8400818896 /* ScaledToFrameExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4F7132274C2B8400818896 /* ScaledToFrameExample.swift */; };
 		CF4F7135274C2E3100818896 /* OnSizeChangeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4F7134274C2E3100818896 /* OnSizeChangeExample.swift */; };
 		CF5149A2274E967000F22BF3 /* WidgetRelativeShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5149A0274E90F000F22BF3 /* WidgetRelativeShape.swift */; };
@@ -86,6 +87,7 @@
 		CF48CCB826F134AC00406F4E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CF48CCBA26F134CA00406F4E /* VFlowExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFlowExample.swift; sourceTree = "<group>"; };
 		CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightReaderExample.swift; sourceTree = "<group>"; };
+		CF4A895028CABEB90073790A /* FULayoutAlignmentExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FULayoutAlignmentExample.swift; sourceTree = "<group>"; };
 		CF4F7132274C2B8400818896 /* ScaledToFrameExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledToFrameExample.swift; sourceTree = "<group>"; };
 		CF4F7134274C2E3100818896 /* OnSizeChangeExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnSizeChangeExample.swift; sourceTree = "<group>"; };
 		CF5149A0274E90F000F22BF3 /* WidgetRelativeShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetRelativeShape.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				CF4F7132274C2B8400818896 /* ScaledToFrameExample.swift */,
 				CFAC149F2885BC99003D4539 /* VFlowLayoutExample.swift */,
 				CFAC14A12885ED2C003D4539 /* AnyFULayoutExample.swift */,
+				CF4A895028CABEB90073790A /* FULayoutAlignmentExample.swift */,
 				CF1EEF4A274D5FD600987595 /* WidgetSizeExample.swift */,
 				CF42CE25274C4A540010F12B /* WidgetDemoFrameExample.swift */,
 				CF48CCA226F131C300406F4E /* Assets.xcassets */,
@@ -325,6 +328,7 @@
 				CFC2EBFB2811DA230088E36C /* VGridMasonryExample.swift in Sources */,
 				CF48CCA126F131C200406F4E /* ContentView.swift in Sources */,
 				CFBC933526F2AB8000D5D439 /* OverlappingImageExample.swift in Sources */,
+				CF4A895128CABEB90073790A /* FULayoutAlignmentExample.swift in Sources */,
 				CF48CCBD26F1356A00406F4E /* HeightReaderExample.swift in Sources */,
 				CF4F7133274C2B8400818896 /* ScaledToFrameExample.swift in Sources */,
 				CFAC14A02885BC99003D4539 /* VFlowLayoutExample.swift in Sources */,

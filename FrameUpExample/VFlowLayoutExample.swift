@@ -29,7 +29,7 @@ struct VFlowLayoutForEachExample: View {
     var body: some View {
         VStack {
             WidthReader { width in
-                VFlowLayout(maxWidth: width).forEach(items) { item in
+                VFlowFULayout(maxWidth: width).forEach(items) { item in
                     Text(item.value)
                         .padding()
                         .foregroundColor(.white)
@@ -63,7 +63,7 @@ struct VFlowLayout_ViewExample: View {
         VStack {
             SmartScrollView([.vertical], optionalScrolling: true, shrinkToFit: true) {
                 WidthReader { width in
-                    VFlowLayout(
+                    VFlowFULayout(
                         maxWidth: width)._view {
                             ForEach(items) { item in
                                 Text(item.value)
