@@ -26,13 +26,12 @@
 		CF48CCB926F134AC00406F4E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCB826F134AC00406F4E /* Item.swift */; };
 		CF48CCBB26F134CA00406F4E /* VFlowExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCBA26F134CA00406F4E /* VFlowExample.swift */; };
 		CF48CCBD26F1356A00406F4E /* HeightReaderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */; };
-		CF4A895128CABEB90073790A /* FULayoutAlignmentExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A895028CABEB90073790A /* FULayoutAlignmentExample.swift */; };
 		CF4F7133274C2B8400818896 /* ScaledToFrameExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4F7132274C2B8400818896 /* ScaledToFrameExample.swift */; };
 		CF4F7135274C2E3100818896 /* OnSizeChangeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4F7134274C2E3100818896 /* OnSizeChangeExample.swift */; };
 		CF5149A2274E967000F22BF3 /* WidgetRelativeShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5149A0274E90F000F22BF3 /* WidgetRelativeShape.swift */; };
 		CF5C50F927FCF29200769E38 /* AutoRotatingViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C50F827FCF29200769E38 /* AutoRotatingViewExample.swift */; };
 		CF9FD88627A83A9D0054B22E /* RelativePaddingExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FD88527A83A9D0054B22E /* RelativePaddingExample.swift */; };
-		CFAC14A02885BC99003D4539 /* VFlowLayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAC149F2885BC99003D4539 /* VFlowLayoutExample.swift */; };
+		CFAC14A02885BC99003D4539 /* HFlowLayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAC149F2885BC99003D4539 /* HFlowLayoutExample.swift */; };
 		CFAC14A22885ED2C003D4539 /* AnyFULayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAC14A12885ED2C003D4539 /* AnyFULayoutExample.swift */; };
 		CFBC932F26F24DC600D5D439 /* TagViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC932E26F24DC600D5D439 /* TagViewExample.swift */; };
 		CFBC933126F24FF200D5D439 /* TagViewForScrollViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */; };
@@ -87,13 +86,12 @@
 		CF48CCB826F134AC00406F4E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CF48CCBA26F134CA00406F4E /* VFlowExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFlowExample.swift; sourceTree = "<group>"; };
 		CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightReaderExample.swift; sourceTree = "<group>"; };
-		CF4A895028CABEB90073790A /* FULayoutAlignmentExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FULayoutAlignmentExample.swift; sourceTree = "<group>"; };
 		CF4F7132274C2B8400818896 /* ScaledToFrameExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledToFrameExample.swift; sourceTree = "<group>"; };
 		CF4F7134274C2E3100818896 /* OnSizeChangeExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnSizeChangeExample.swift; sourceTree = "<group>"; };
 		CF5149A0274E90F000F22BF3 /* WidgetRelativeShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetRelativeShape.swift; sourceTree = "<group>"; };
 		CF5C50F827FCF29200769E38 /* AutoRotatingViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRotatingViewExample.swift; sourceTree = "<group>"; };
 		CF9FD88527A83A9D0054B22E /* RelativePaddingExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativePaddingExample.swift; sourceTree = "<group>"; };
-		CFAC149F2885BC99003D4539 /* VFlowLayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFlowLayoutExample.swift; sourceTree = "<group>"; };
+		CFAC149F2885BC99003D4539 /* HFlowLayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HFlowLayoutExample.swift; sourceTree = "<group>"; };
 		CFAC14A12885ED2C003D4539 /* AnyFULayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyFULayoutExample.swift; sourceTree = "<group>"; };
 		CFBC932E26F24DC600D5D439 /* TagViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewExample.swift; sourceTree = "<group>"; };
 		CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewForScrollViewExample.swift; sourceTree = "<group>"; };
@@ -186,9 +184,8 @@
 				CFBC932E26F24DC600D5D439 /* TagViewExample.swift */,
 				CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */,
 				CF4F7132274C2B8400818896 /* ScaledToFrameExample.swift */,
-				CFAC149F2885BC99003D4539 /* VFlowLayoutExample.swift */,
+				CFAC149F2885BC99003D4539 /* HFlowLayoutExample.swift */,
 				CFAC14A12885ED2C003D4539 /* AnyFULayoutExample.swift */,
-				CF4A895028CABEB90073790A /* FULayoutAlignmentExample.swift */,
 				CF1EEF4A274D5FD600987595 /* WidgetSizeExample.swift */,
 				CF42CE25274C4A540010F12B /* WidgetDemoFrameExample.swift */,
 				CF48CCA226F131C300406F4E /* Assets.xcassets */,
@@ -328,10 +325,9 @@
 				CFC2EBFB2811DA230088E36C /* VGridMasonryExample.swift in Sources */,
 				CF48CCA126F131C200406F4E /* ContentView.swift in Sources */,
 				CFBC933526F2AB8000D5D439 /* OverlappingImageExample.swift in Sources */,
-				CF4A895128CABEB90073790A /* FULayoutAlignmentExample.swift in Sources */,
 				CF48CCBD26F1356A00406F4E /* HeightReaderExample.swift in Sources */,
 				CF4F7133274C2B8400818896 /* ScaledToFrameExample.swift in Sources */,
-				CFAC14A02885BC99003D4539 /* VFlowLayoutExample.swift in Sources */,
+				CFAC14A02885BC99003D4539 /* HFlowLayoutExample.swift in Sources */,
 				CF48CC9F26F131C200406F4E /* FrameUpExampleApp.swift in Sources */,
 				CF48CCB926F134AC00406F4E /* Item.swift in Sources */,
 				CFBC933726F2B29300D5D439 /* TabMenuViewExample.swift in Sources */,

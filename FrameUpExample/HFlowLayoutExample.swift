@@ -1,5 +1,5 @@
 //
-//  VFlowLayoutExample.swift
+//  HFlowLayoutExample.swift
 //  FrameUpExample
 //
 //  Created by Ryan Lintott on 2022-07-18.
@@ -8,19 +8,19 @@
 import FrameUp
 import SwiftUI
 
-struct VFlowLayoutExample: View {
+struct HFlowLayoutExample: View {
     var body: some View {
         TabView {
-            VFlowLayoutForEachExample()
+            HFlowLayoutForEachExample()
                 .tabItem {Label("ForEach", systemImage: "list.dash") }
             
-            VFlowLayoutForEachExample()
+            HFlowLayoutForEachExample()
                 .tabItem {Label("_View", systemImage: "rectangle.3.group") }
         }
     }
 }
 
-struct VFlowLayoutForEachExample: View {
+struct HFlowLayoutForEachExample: View {
     let items = ["FULayout", "Layup", "Formation", "Board", "Gang", "Herd", "Hord", "Swarm", "Arrangement", "Exhibit", "Blueprint", "Collage"]
         .map { Item(id: UUID(), value: $0) }
     
@@ -29,7 +29,7 @@ struct VFlowLayoutForEachExample: View {
     var body: some View {
         VStack {
             WidthReader { width in
-                VFlowFULayout(maxWidth: width).forEach(items) { item in
+                HFlowFULayout(maxWidth: width).forEach(items) { item in
                     Text(item.value)
                         .padding()
                         .foregroundColor(.white)
@@ -53,7 +53,7 @@ struct VFlowLayoutForEachExample: View {
     }
 }
 
-struct VFlowLayout_ViewExample: View {
+struct HFlowLayout_ViewExample: View {
     let items = ["FULayout", "Layup", "Formation", "Board", "Gang", "Herd", "Hord", "Swarm", "Arrangement", "Exhibit", "Blueprint", "Collage"]
         .map { Item(id: UUID(), value: $0) }
     
@@ -63,7 +63,7 @@ struct VFlowLayout_ViewExample: View {
         VStack {
             SmartScrollView([.vertical], optionalScrolling: true, shrinkToFit: true) {
                 WidthReader { width in
-                    VFlowFULayout(
+                    HFlowFULayout(
                         maxWidth: width)._view {
                             ForEach(items) { item in
                                 Text(item.value)
@@ -90,8 +90,8 @@ struct VFlowLayout_ViewExample: View {
     }
 }
 
-struct VFlowLayoutExample_Previews: PreviewProvider {
+struct HFlowLayoutExample_Previews: PreviewProvider {
     static var previews: some View {
-        VFlowLayoutExample()
+        HFlowLayoutExample()
     }
 }
