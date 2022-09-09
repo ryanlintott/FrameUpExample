@@ -63,7 +63,7 @@ struct AnyFULayoutExample: View {
                 .tabItem {Label("_View", systemImage: "rectangle.3.group") }
             }
         }
-//        .environment(\.layoutDirection, .rightToLeft)
+        .environment(\.layoutDirection, .rightToLeft)
     }
 }
 
