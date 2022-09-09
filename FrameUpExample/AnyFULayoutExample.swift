@@ -71,7 +71,7 @@ struct AnyFULayoutExample: View {
                     AnyFULayoutForEachExample(size: proxy.size, items: items, layouts: layouts(size: proxy.size))
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
-//                .frame(maxWidth: 300, maxHeight: 300)
+                //.frame(maxHeight: 400)
                 .tabItem {Label("ForEach", systemImage: "list.dash") }
                 
                 GeometryReader { proxy in
