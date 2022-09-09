@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Item<T>: Identifiable {
+struct Item<Value>: Identifiable {
     var id = UUID()
-    var value: T
+    var value: Value
 }
+
+extension Item: Equatable where Value: Equatable { }

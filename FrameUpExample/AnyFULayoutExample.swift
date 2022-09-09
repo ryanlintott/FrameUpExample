@@ -9,7 +9,7 @@ import FrameUp
 import SwiftUI
 
 struct AnyFULayoutExample: View {
-    let items = ["These", "Items", "can be arranged", "into any", "layout", "you like", "with", "FrameUp"]
+    @State private var items = ["These", "Items", "can be arranged", "into any", "layout", "you like", "with", "FrameUp"]
         .map { Item(id: UUID(), value: $0) }
     
     func layouts(size: CGSize) -> [AnyFULayout] {
@@ -64,6 +64,14 @@ struct AnyFULayoutExample: View {
         ]
     }
     
+    @State private var layoutDirection: LayoutDirection = .leftToRight
+    var layoutDirectionImageName: String {
+        switch layoutDirection {
+        case .rightToLeft: return "arrow.right"
+        default: return "arrow.left"
+        }
+    }
+    
     var body: some View {
         VStack {
             TabView {
@@ -72,16 +80,26 @@ struct AnyFULayoutExample: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
                 //.frame(maxHeight: 400)
-                .tabItem {Label("ForEach", systemImage: "list.dash") }
+                .tabItem { Label("ForEach", systemImage: "list.dash") }
                 
                 GeometryReader { proxy in
                     AnyFULayout_ViewExample(size: proxy.size, items: items, layouts: layouts(size: proxy.size))
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
-                .tabItem {Label("_View", systemImage: "rectangle.3.group") }
+                .tabItem { Label("_View", systemImage: "rectangle.3.group") }
             }
+            .animation(.spring(), value: items)
+            
+            Button {
+                layoutDirection = layoutDirection == .leftToRight ? .rightToLeft : .leftToRight
+            } label: {
+                Label("Layout Direction", systemImage: layoutDirectionImageName)
+            }
+            
+            Button("Add") { items.append(Item(value: "asdf")) }
+            Button("Remove") { if !items.isEmpty { items.removeLast() } }
         }
-//        .environment(\.layoutDirection, .rightToLeft)
+        .environment(\.layoutDirection, layoutDirection)
     }
 }
 
@@ -91,30 +109,90 @@ struct AnyFULayoutForEachExample: View {
     let layouts: [AnyFULayout]
 
     @State private var layoutIndex = 0
+    @State private var alignmentIndex = 0
+    @State private var horizontalAlignmentIndex = 0
+    @State private var verticalAlignmentIndex = 0
     
     var layout: AnyFULayout {
         layouts[layoutIndex]
     }
+//    
+//    var allLayouts: [AnyFULayout] {[
+//        AnyFULayout(VStackFULayout(alignment: alignment.horizontal, maxWidth: size.width)),
+//        AnyFULayout(HStackFULayout(alignment: alignment.vertical, maxHeight: size.height)),
+//        AnyFULayout(ZStackFULayout(alignment: alignment, maxWidth: size.width, maxHeight: size.height)),
+//        AnyFULayout(VFlowFULayout(alignment: alignment, maxWidth: size.width)),
+//        AnyFULayout(HFlowFULayout(alignment: alignment, maxHeight: size.height)),
+//        AnyFULayout(VMasonryFULayout(alignment: alignment, columns: 3, maxWidth: size.width))
+//    ]}
+//    
+//    var newLayout: AnyFULayout {
+//        allLayouts[layoutIndex]
+//    }
+//    
+//    var alignment: Alignment {
+//        Alignment(
+//            horizontal: horizontalAlignments[horizontalAlignmentIndex],
+//            vertical: verticalAlignments[verticalAlignmentIndex]
+//        )
+//    }
+//    
+//    var horizontalAlignments: [HorizontalAlignment] {
+//        [.leading, .center, .trailing]
+//    }
+//    var horizontalAlignmentStrings: [String] {
+//        ["leading", "center", "trailing"]
+//    }
+//    
+//    var verticalAlignments: [VerticalAlignment] {
+//        [.top, .center, .bottom]
+//    }
+//    var verticalAlignmentStrings: [String] {
+//        ["top", "center", "bottom"]
+//    }
 
     var body: some View {
-        layout.forEach(items) { item in
-            ZStack {
-                Text(item.value)
-                    .padding(12)
-                    .foregroundColor(.white)
-                    .frame(height: CGFloat(item.value.count) * 8)
-                    .background(Color.blue)
-                    .cornerRadius(12)
-                    .clipped()
-            }
+        VStack {
+            Color.clear.overlay(
+                layout.forEach(items) { item in
+                    ZStack {
+                        Text(item.value)
+                            .padding(12)
+                            .foregroundColor(.white)
+                            .frame(height: CGFloat(item.value.count) * 8)
+                            .background(Color.blue)
+                            .cornerRadius(12)
+                            .clipped()
+                    }
+                }
+                .background(Color.gray.opacity(0.5))
+                .border(Color.red)
+                .onTapGesture {
+                    layoutIndex = (layoutIndex + 1) % layouts.count
+                }
+            )
+            
+//            Button {
+//                layoutIndex = (layoutIndex + 1) % allLayouts.count
+//            } label: {
+//                Text(layout.fuLayoutName)
+//            }
+//
+//            Picker("Horizontal Alignment", selection: $horizontalAlignmentIndex) {
+//                ForEach(0..<3) { i in
+//                    Text(horizontalAlignmentStrings[i])
+//                }
+//            }
+//            .pickerStyle(.segmented)
+//
+//            Picker("Vertical Alignment", selection: $verticalAlignmentIndex) {
+//                ForEach(0..<3) { i in
+//                    Text(verticalAlignmentStrings[i])
+//                }
+//            }
+//            .pickerStyle(.segmented)
         }
-        .background(Color.gray.opacity(0.5))
         .animation(.spring(), value: layoutIndex)
-        .border(Color.red)
-        .onTapGesture {
-            layoutIndex = (layoutIndex + 1) % layouts.count
-        }
-        .navigationTitle("\(layout.fuLayoutName)")
     }
 }
 
