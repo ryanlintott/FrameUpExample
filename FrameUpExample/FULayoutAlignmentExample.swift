@@ -16,7 +16,6 @@ struct FULayoutAlignmentExample: View {
         VFlowFULayout(
             alignment: .topLeading,
             maxWidth: 200,
-            itemAlignment: .top,
             maxItemWidth: nil,
             horizontalSpacing: nil,
             verticalSpacing: nil

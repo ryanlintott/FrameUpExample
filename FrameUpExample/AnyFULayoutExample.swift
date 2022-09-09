@@ -14,6 +14,26 @@ struct AnyFULayoutExample: View {
     
     func layouts(size: CGSize) -> [AnyFULayout] {
         [
+            AnyFULayout(VMasonryFULayout(alignment: .topLeading, columns: 3, maxWidth: size.width)),
+            AnyFULayout(VMasonryFULayout(alignment: .top, columns: 3, maxWidth: size.width)),
+            AnyFULayout(VMasonryFULayout(alignment: .topTrailing, columns: 3, maxWidth: size.width)),
+            AnyFULayout(VMasonryFULayout(alignment: .leading, columns: 3, maxWidth: size.width)),
+            AnyFULayout(VMasonryFULayout(alignment: .center, columns: 3, maxWidth: size.width)),
+            AnyFULayout(VMasonryFULayout(alignment: .trailing, columns: 3, maxWidth: size.width)),
+            AnyFULayout(VMasonryFULayout(alignment: .bottomLeading, columns: 3, maxWidth: size.width)),
+            AnyFULayout(VMasonryFULayout(alignment: .bottom, columns: 3, maxWidth: size.width)),
+            AnyFULayout(VMasonryFULayout(alignment: .bottomTrailing, columns: 3, maxWidth: size.width)),
+            
+            AnyFULayout(HFlowFULayout(alignment: .topLeading, maxHeight: size.height)),
+            AnyFULayout(HFlowFULayout(alignment: .top, maxHeight: size.height)),
+            AnyFULayout(HFlowFULayout(alignment: .topTrailing, maxHeight: size.height)),
+            AnyFULayout(HFlowFULayout(alignment: .leading, maxHeight: size.height)),
+            AnyFULayout(HFlowFULayout(alignment: .center, maxHeight: size.height)),
+            AnyFULayout(HFlowFULayout(alignment: .trailing, maxHeight: size.height)),
+            AnyFULayout(HFlowFULayout(alignment: .bottomLeading, maxHeight: size.height)),
+            AnyFULayout(HFlowFULayout(alignment: .bottom, maxHeight: size.height)),
+            AnyFULayout(HFlowFULayout(alignment: .bottomTrailing, maxHeight: size.height)),
+            
             AnyFULayout(VFlowFULayout(alignment: .topLeading, maxWidth: size.width)),
             AnyFULayout(VFlowFULayout(alignment: .top, maxWidth: size.width)),
             AnyFULayout(VFlowFULayout(alignment: .topTrailing, maxWidth: size.width)),
@@ -40,10 +60,7 @@ struct AnyFULayoutExample: View {
             AnyFULayout(ZStackFULayout(alignment: .trailing, maxWidth: size.width, maxHeight: size.height)),
             AnyFULayout(ZStackFULayout(alignment: .bottomLeading, maxWidth: size.width, maxHeight: size.height)),
             AnyFULayout(ZStackFULayout(alignment: .bottom, maxWidth: size.width, maxHeight: size.height)),
-            AnyFULayout(ZStackFULayout(alignment: .bottomTrailing, maxWidth: size.width, maxHeight: size.height)),
-            
-            AnyFULayout(HFlowFULayout(maxHeight: size.height)),
-            AnyFULayout(VMasonryFULayout(columns: 3, maxWidth: size.width))
+            AnyFULayout(ZStackFULayout(alignment: .bottomTrailing, maxWidth: size.width, maxHeight: size.height))
         ]
     }
     
@@ -54,6 +71,7 @@ struct AnyFULayoutExample: View {
                     AnyFULayoutForEachExample(size: proxy.size, items: items, layouts: layouts(size: proxy.size))
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
+//                .frame(maxWidth: 300, maxHeight: 300)
                 .tabItem {Label("ForEach", systemImage: "list.dash") }
                 
                 GeometryReader { proxy in
@@ -63,7 +81,7 @@ struct AnyFULayoutExample: View {
                 .tabItem {Label("_View", systemImage: "rectangle.3.group") }
             }
         }
-        .environment(\.layoutDirection, .rightToLeft)
+//        .environment(\.layoutDirection, .rightToLeft)
     }
 }
 
