@@ -14,14 +14,16 @@ struct VFlowExample: View {
     
     var body: some View {
         HeightReader { height in
-            VFlow(items, maxHeight: height, maxColumnWidth: 150) { item in
-                Text(item.value)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .padding(12)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(12)
-                    .clipped()
+            VFlow(maxHeight: height) {
+                ForEach(items) { item in
+                    Text(item.value)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding(12)
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(12)
+                        .clipped()
+                }
             }
             .background(Color.gray.opacity(0.5))
         }

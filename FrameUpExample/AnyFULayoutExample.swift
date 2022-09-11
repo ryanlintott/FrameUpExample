@@ -14,35 +14,35 @@ struct AnyFULayoutExample: View {
     
     func layouts(size: CGSize) -> [AnyFULayout] {
         [
-            AnyFULayout(VMasonryFULayout(alignment: .topLeading, columns: 3, maxWidth: size.width)),
-            AnyFULayout(VMasonryFULayout(alignment: .top, columns: 3, maxWidth: size.width)),
-            AnyFULayout(VMasonryFULayout(alignment: .topTrailing, columns: 3, maxWidth: size.width)),
-            AnyFULayout(VMasonryFULayout(alignment: .leading, columns: 3, maxWidth: size.width)),
-            AnyFULayout(VMasonryFULayout(alignment: .center, columns: 3, maxWidth: size.width)),
-            AnyFULayout(VMasonryFULayout(alignment: .trailing, columns: 3, maxWidth: size.width)),
-            AnyFULayout(VMasonryFULayout(alignment: .bottomLeading, columns: 3, maxWidth: size.width)),
-            AnyFULayout(VMasonryFULayout(alignment: .bottom, columns: 3, maxWidth: size.width)),
-            AnyFULayout(VMasonryFULayout(alignment: .bottomTrailing, columns: 3, maxWidth: size.width)),
+            AnyFULayout(VMasonry(alignment: .topLeading, columns: 3, maxWidth: size.width)),
+            AnyFULayout(VMasonry(alignment: .top, columns: 3, maxWidth: size.width)),
+            AnyFULayout(VMasonry(alignment: .topTrailing, columns: 3, maxWidth: size.width)),
+            AnyFULayout(VMasonry(alignment: .leading, columns: 3, maxWidth: size.width)),
+            AnyFULayout(VMasonry(alignment: .center, columns: 3, maxWidth: size.width)),
+            AnyFULayout(VMasonry(alignment: .trailing, columns: 3, maxWidth: size.width)),
+            AnyFULayout(VMasonry(alignment: .bottomLeading, columns: 3, maxWidth: size.width)),
+            AnyFULayout(VMasonry(alignment: .bottom, columns: 3, maxWidth: size.width)),
+            AnyFULayout(VMasonry(alignment: .bottomTrailing, columns: 3, maxWidth: size.width)),
             
-            AnyFULayout(VFlowFULayout(alignment: .topLeading, maxHeight: size.height)),
-            AnyFULayout(VFlowFULayout(alignment: .top, maxHeight: size.height)),
-            AnyFULayout(VFlowFULayout(alignment: .topTrailing, maxHeight: size.height)),
-            AnyFULayout(VFlowFULayout(alignment: .leading, maxHeight: size.height)),
-            AnyFULayout(VFlowFULayout(alignment: .center, maxHeight: size.height)),
-            AnyFULayout(VFlowFULayout(alignment: .trailing, maxHeight: size.height)),
-            AnyFULayout(VFlowFULayout(alignment: .bottomLeading, maxHeight: size.height)),
-            AnyFULayout(VFlowFULayout(alignment: .bottom, maxHeight: size.height)),
-            AnyFULayout(VFlowFULayout(alignment: .bottomTrailing, maxHeight: size.height)),
+            AnyFULayout(VFlow(alignment: .topLeading, maxHeight: size.height)),
+            AnyFULayout(VFlow(alignment: .top, maxHeight: size.height)),
+            AnyFULayout(VFlow(alignment: .topTrailing, maxHeight: size.height)),
+            AnyFULayout(VFlow(alignment: .leading, maxHeight: size.height)),
+            AnyFULayout(VFlow(alignment: .center, maxHeight: size.height)),
+            AnyFULayout(VFlow(alignment: .trailing, maxHeight: size.height)),
+            AnyFULayout(VFlow(alignment: .bottomLeading, maxHeight: size.height)),
+            AnyFULayout(VFlow(alignment: .bottom, maxHeight: size.height)),
+            AnyFULayout(VFlow(alignment: .bottomTrailing, maxHeight: size.height)),
             
-            AnyFULayout(HFlowFULayout(alignment: .topLeading, maxWidth: size.width)),
-            AnyFULayout(HFlowFULayout(alignment: .top, maxWidth: size.width)),
-            AnyFULayout(HFlowFULayout(alignment: .topTrailing, maxWidth: size.width)),
-            AnyFULayout(HFlowFULayout(alignment: .leading, maxWidth: size.width)),
-            AnyFULayout(HFlowFULayout(alignment: .center, maxWidth: size.width)),
-            AnyFULayout(HFlowFULayout(alignment: .trailing, maxWidth: size.width)),
-            AnyFULayout(HFlowFULayout(alignment: .bottomLeading, maxWidth: size.width)),
-            AnyFULayout(HFlowFULayout(alignment: .bottom, maxWidth: size.width)),
-            AnyFULayout(HFlowFULayout(alignment: .bottomTrailing, maxWidth: size.width)),
+            AnyFULayout(HFlow(alignment: .topLeading, maxWidth: size.width)),
+            AnyFULayout(HFlow(alignment: .top, maxWidth: size.width)),
+            AnyFULayout(HFlow(alignment: .topTrailing, maxWidth: size.width)),
+            AnyFULayout(HFlow(alignment: .leading, maxWidth: size.width)),
+            AnyFULayout(HFlow(alignment: .center, maxWidth: size.width)),
+            AnyFULayout(HFlow(alignment: .trailing, maxWidth: size.width)),
+            AnyFULayout(HFlow(alignment: .bottomLeading, maxWidth: size.width)),
+            AnyFULayout(HFlow(alignment: .bottom, maxWidth: size.width)),
+            AnyFULayout(HFlow(alignment: .bottomTrailing, maxWidth: size.width)),
             
             AnyFULayout(VStackFULayout(alignment: .leading, maxWidth: size.width)),
             AnyFULayout(VStackFULayout(alignment: .center, maxWidth: size.width)),
@@ -147,7 +147,7 @@ struct AnyFULayout_ViewExample: View {
     }
 
     var body: some View {
-        layout._view {
+        layout {
             ForEach(items) { item in
                 Text(item.value)
                     .padding(12)

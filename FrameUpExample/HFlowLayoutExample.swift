@@ -29,7 +29,7 @@ struct HFlowLayoutForEachExample: View {
     var body: some View {
         VStack {
             WidthReader { width in
-                HFlowFULayout(maxWidth: width).forEach(items) { item in
+                HFlow(maxWidth: width).forEach(items) { item in
                     Text(item.value)
                         .padding()
                         .foregroundColor(.white)
@@ -63,18 +63,16 @@ struct HFlowLayout_ViewExample: View {
         VStack {
             SmartScrollView([.vertical], optionalScrolling: true, shrinkToFit: true) {
                 WidthReader { width in
-                    HFlowFULayout(
-                        maxWidth: width)._view {
-                            ForEach(items) { item in
-                                Text(item.value)
-                                    .padding()
-                                    .foregroundColor(.white)
-                                    .background(Capsule().fill(.blue))
-                            }
+                    HFlow(maxWidth: width) {
+                        ForEach(items) { item in
+                            Text(item.value)
+                                .padding()
+                                .foregroundColor(.white)
+                                .background(Capsule().fill(.blue))
                         }
-                        .background(Color.gray)
-                        .animation(.spring(),
-                                   value: maxWidth)
+                    }
+                    .background(Color.gray)
+                    .animation(.spring(), value: maxWidth)
                 }
                 .frame(maxWidth: maxWidth)                
             }

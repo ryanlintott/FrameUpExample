@@ -14,15 +14,17 @@ struct HFlowExample: View {
     
     var body: some View {
         WidthReader { width in
-            HFlow(items, maxWidth: width) { item in
-                Text(item.value)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: 200)
-                    .padding(12)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(12)
-                    .clipped()
+            HFlow(maxWidth: width) {
+                ForEach(items) { item in
+                    Text(item.value)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(maxWidth: 200)
+                        .padding(12)
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(12)
+                        .clipped()
+                }
             }
             .background(Color.gray.opacity(0.5))
         }
