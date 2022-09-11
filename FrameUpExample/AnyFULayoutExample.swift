@@ -14,6 +14,16 @@ struct AnyFULayoutExample: View {
     
     func layouts(size: CGSize) -> [AnyFULayout] {
         [
+            AnyFULayout(HMasonry(alignment: .topLeading, rows: 3, maxHeight: size.height)),
+            AnyFULayout(HMasonry(alignment: .top, rows: 3, maxHeight: size.height)),
+            AnyFULayout(HMasonry(alignment: .topTrailing, rows: 3, maxHeight: size.height)),
+            AnyFULayout(HMasonry(alignment: .leading, rows: 3, maxHeight: size.height)),
+            AnyFULayout(HMasonry(alignment: .center, rows: 3, maxHeight: size.height)),
+            AnyFULayout(HMasonry(alignment: .trailing, rows: 3, maxHeight: size.height)),
+            AnyFULayout(HMasonry(alignment: .bottomLeading, rows: 3, maxHeight: size.height)),
+            AnyFULayout(HMasonry(alignment: .bottom, rows: 3, maxHeight: size.height)),
+            AnyFULayout(HMasonry(alignment: .bottomTrailing, rows: 3, maxHeight: size.height)),
+            
             AnyFULayout(VMasonry(alignment: .topLeading, columns: 3, maxWidth: size.width)),
             AnyFULayout(VMasonry(alignment: .top, columns: 3, maxWidth: size.width)),
             AnyFULayout(VMasonry(alignment: .topTrailing, columns: 3, maxWidth: size.width)),
