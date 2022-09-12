@@ -19,14 +19,6 @@ struct ContentView: View {
                 
                 Form {
                     Group {
-                        NavigationLink(destination: WidthReaderExample()) {
-                            Label("WidthReader", systemImage: "arrow.left.and.right.square")
-                        }
-                        
-                        NavigationLink(destination: HeightReaderExample()) {
-                            Label("HeightReader", systemImage: "arrow.up.and.down.square")
-                        }
-                        
                         NavigationLink(destination: AnyFULayoutExample()) {
                             Label("FULayout", systemImage: "rectangle.3.group")
                         }
@@ -37,6 +29,14 @@ struct ContentView: View {
                         
                         NavigationLink(destination: VFlowExample()) {
                             Label("VFlow", systemImage: "arrow.down.square")
+                        }
+                        
+                        NavigationLink(destination: WidthReaderExample()) {
+                            Label("WidthReader", systemImage: "arrow.left.and.right.square")
+                        }
+                        
+                        NavigationLink(destination: HeightReaderExample()) {
+                            Label("HeightReader", systemImage: "arrow.up.and.down.square")
                         }
                         
                         NavigationLink(destination: OverlappingImageHorizontalExample()) {
@@ -59,14 +59,6 @@ struct ContentView: View {
                         
                         NavigationLink(destination: SmartScrollViewExample()) {
                             Label("SmartScroll", systemImage: "scroll")
-                        }
-                        
-                        NavigationLink(destination: TagViewExample()) {
-                            Label("TagView", systemImage: "capsule")
-                        }
-                        
-                        NavigationLink(destination: TagViewForScrollViewExample()) {
-                            Label("TagViewForScrollView", systemImage: "capsule")
                         }
                         
                         NavigationLink(destination: ScaledToFrameExample()) {

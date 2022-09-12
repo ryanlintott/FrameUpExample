@@ -22,7 +22,6 @@
 		CF48CCA626F131C300406F4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF48CCA526F131C300406F4E /* Preview Assets.xcassets */; };
 		CF48CCAE26F131EA00406F4E /* FrameUp in Frameworks */ = {isa = PBXBuildFile; productRef = CF48CCAD26F131EA00406F4E /* FrameUp */; };
 		CF48CCB126F132A400406F4E /* WidthReaderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCB026F132A400406F4E /* WidthReaderExample.swift */; };
-		CF48CCB726F1348F00406F4E /* HFlowExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCB626F1348F00406F4E /* HFlowExample.swift */; };
 		CF48CCB926F134AC00406F4E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCB826F134AC00406F4E /* Item.swift */; };
 		CF48CCBB26F134CA00406F4E /* VFlowExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCBA26F134CA00406F4E /* VFlowExample.swift */; };
 		CF48CCBD26F1356A00406F4E /* HeightReaderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */; };
@@ -31,7 +30,7 @@
 		CF5149A2274E967000F22BF3 /* WidgetRelativeShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5149A0274E90F000F22BF3 /* WidgetRelativeShape.swift */; };
 		CF5C50F927FCF29200769E38 /* AutoRotatingViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C50F827FCF29200769E38 /* AutoRotatingViewExample.swift */; };
 		CF9FD88627A83A9D0054B22E /* RelativePaddingExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FD88527A83A9D0054B22E /* RelativePaddingExample.swift */; };
-		CFAC14A02885BC99003D4539 /* HFlowLayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAC149F2885BC99003D4539 /* HFlowLayoutExample.swift */; };
+		CFAC14A02885BC99003D4539 /* HFlowExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAC149F2885BC99003D4539 /* HFlowExample.swift */; };
 		CFAC14A22885ED2C003D4539 /* AnyFULayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAC14A12885ED2C003D4539 /* AnyFULayoutExample.swift */; };
 		CFBC932F26F24DC600D5D439 /* TagViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC932E26F24DC600D5D439 /* TagViewExample.swift */; };
 		CFBC933126F24FF200D5D439 /* TagViewForScrollViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */; };
@@ -82,7 +81,6 @@
 		CF48CCA526F131C300406F4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CF48CCAF26F1320C00406F4E /* FrameUp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FrameUp; path = ../FrameUp; sourceTree = "<group>"; };
 		CF48CCB026F132A400406F4E /* WidthReaderExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidthReaderExample.swift; sourceTree = "<group>"; };
-		CF48CCB626F1348F00406F4E /* HFlowExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HFlowExample.swift; sourceTree = "<group>"; };
 		CF48CCB826F134AC00406F4E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CF48CCBA26F134CA00406F4E /* VFlowExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFlowExample.swift; sourceTree = "<group>"; };
 		CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightReaderExample.swift; sourceTree = "<group>"; };
@@ -91,7 +89,7 @@
 		CF5149A0274E90F000F22BF3 /* WidgetRelativeShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetRelativeShape.swift; sourceTree = "<group>"; };
 		CF5C50F827FCF29200769E38 /* AutoRotatingViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRotatingViewExample.swift; sourceTree = "<group>"; };
 		CF9FD88527A83A9D0054B22E /* RelativePaddingExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativePaddingExample.swift; sourceTree = "<group>"; };
-		CFAC149F2885BC99003D4539 /* HFlowLayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HFlowLayoutExample.swift; sourceTree = "<group>"; };
+		CFAC149F2885BC99003D4539 /* HFlowExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HFlowExample.swift; sourceTree = "<group>"; };
 		CFAC14A12885ED2C003D4539 /* AnyFULayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyFULayoutExample.swift; sourceTree = "<group>"; };
 		CFBC932E26F24DC600D5D439 /* TagViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewExample.swift; sourceTree = "<group>"; };
 		CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewForScrollViewExample.swift; sourceTree = "<group>"; };
@@ -123,6 +121,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF1DF7F828CE5E6E007D5F27 /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				CFBC932E26F24DC600D5D439 /* TagViewExample.swift */,
+				CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */,
+			);
+			path = Deprecated;
+			sourceTree = "<group>";
+		};
 		CF1EEF2E274D4C4C00987595 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,7 +179,7 @@
 				CF48CCB026F132A400406F4E /* WidthReaderExample.swift */,
 				CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */,
 				CF4F7134274C2E3100818896 /* OnSizeChangeExample.swift */,
-				CF48CCB626F1348F00406F4E /* HFlowExample.swift */,
+				CFAC149F2885BC99003D4539 /* HFlowExample.swift */,
 				CF48CCBA26F134CA00406F4E /* VFlowExample.swift */,
 				CFC2EBFA2811DA230088E36C /* VGridMasonryExample.swift */,
 				CFBC933426F2AB8000D5D439 /* OverlappingImageExample.swift */,
@@ -181,13 +188,11 @@
 				CFBC933626F2B29300D5D439 /* TabMenuViewExample.swift */,
 				CFD6964426F3EED2008D58AD /* TabMenuViewExample2.swift */,
 				CF086A6726FE8AE8002C715D /* SmartScrollViewExample.swift */,
-				CFBC932E26F24DC600D5D439 /* TagViewExample.swift */,
-				CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */,
 				CF4F7132274C2B8400818896 /* ScaledToFrameExample.swift */,
-				CFAC149F2885BC99003D4539 /* HFlowLayoutExample.swift */,
 				CFAC14A12885ED2C003D4539 /* AnyFULayoutExample.swift */,
 				CF1EEF4A274D5FD600987595 /* WidgetSizeExample.swift */,
 				CF42CE25274C4A540010F12B /* WidgetDemoFrameExample.swift */,
+				CF1DF7F828CE5E6E007D5F27 /* Deprecated */,
 				CF48CCA226F131C300406F4E /* Assets.xcassets */,
 				CF48CCA426F131C300406F4E /* Preview Content */,
 			);
@@ -321,13 +326,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF48CCB726F1348F00406F4E /* HFlowExample.swift in Sources */,
 				CFC2EBFB2811DA230088E36C /* VGridMasonryExample.swift in Sources */,
 				CF48CCA126F131C200406F4E /* ContentView.swift in Sources */,
 				CFBC933526F2AB8000D5D439 /* OverlappingImageExample.swift in Sources */,
 				CF48CCBD26F1356A00406F4E /* HeightReaderExample.swift in Sources */,
 				CF4F7133274C2B8400818896 /* ScaledToFrameExample.swift in Sources */,
-				CFAC14A02885BC99003D4539 /* HFlowLayoutExample.swift in Sources */,
+				CFAC14A02885BC99003D4539 /* HFlowExample.swift in Sources */,
 				CF48CC9F26F131C200406F4E /* FrameUpExampleApp.swift in Sources */,
 				CF48CCB926F134AC00406F4E /* Item.swift in Sources */,
 				CFBC933726F2B29300D5D439 /* TabMenuViewExample.swift in Sources */,
