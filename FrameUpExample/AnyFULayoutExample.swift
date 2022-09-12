@@ -88,7 +88,6 @@ struct AnyFULayout_ViewExample: View {
     @State private var items = ["These", "Items", "can be arranged", "into any", "layout", "you like", "with", "FrameUp"]
         .map { Item(id: UUID(), value: $0) }
     @State private var layoutIndex = 0
-    @State private var layoutName: String = "FULayout"
     
     @State private var layoutDirection: LayoutDirection = .leftToRight
     var layoutDirectionImageName: String {
@@ -100,39 +99,35 @@ struct AnyFULayout_ViewExample: View {
     
     var body: some View {
         VStack {
-            Text(layoutName)
-                .font(.subheadline)
-            
-            Spacer()
-            
             GeometryReader { proxy in
                 let layouts = exampleLayouts(size: proxy.size)
                 let layout = layouts[layoutIndex]
                 
-                layout {
-                    ForEach(items) { item in
-                        Text(item.value)
-                            .padding(12)
-                            .foregroundColor(.white)
-                            .frame(height: CGFloat(item.value.count) * 8)
-                            .background(Color.blue)
-                            .cornerRadius(12)
-                            .clipped()
+                ZStack(alignment: .top) {
+                    layout {
+                        ForEach(items) { item in
+                            Text(item.value)
+                                .padding(12)
+                                .foregroundColor(.white)
+                                .frame(height: CGFloat(item.value.count) * 8)
+                                .background(Color.blue)
+                                .cornerRadius(12)
+                                .clipped()
+                        }
                     }
+                    .background(Color.gray.opacity(0.5))
+                    .border(Color.red)
+                    .animation(.spring(), value: layoutIndex)
+                    .animation(.spring(), value: items)
+                    .onTapGesture {
+                        layoutIndex = (layoutIndex + 1) % layouts.count
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .environment(\.layoutDirection, layoutDirection)
+                    
+                    Text(layout.fuLayoutName)
+                        .font(.subheadline)
                 }
-                .background(Color.gray.opacity(0.5))
-                .border(Color.red)
-                .animation(.spring(), value: layoutIndex)
-                .animation(.spring(), value: items)
-                .onAppear {
-                    layoutName = layout.fuLayoutName
-                }
-                .onTapGesture {
-                    layoutIndex = (layoutIndex + 1) % layouts.count
-                    layoutName = layout.fuLayoutName
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .environment(\.layoutDirection, layoutDirection)
             }
             .frame(maxHeight: 400)
             .clipped()
@@ -155,7 +150,6 @@ struct AnyFULayoutForEachExample: View {
     @State private var items = ["These", "Items", "can be arranged", "into any", "layout", "you like", "with", "FrameUp"]
         .map { Item(id: UUID(), value: $0) }
     @State private var layoutIndex = 0
-    @State private var layoutName: String = "FULayout"
     
     @State private var layoutDirection: LayoutDirection = .leftToRight
     var layoutDirectionImageName: String {
@@ -167,39 +161,39 @@ struct AnyFULayoutForEachExample: View {
     
     var body: some View {
         VStack {
-            Text(layoutName)
-                .font(.subheadline)
-            
-            Spacer()
-            
             GeometryReader { proxy in
                 let layouts = exampleLayouts(size: proxy.size)
                 let layout = layouts[layoutIndex]
                 
-                SmartScrollView([.horizontal, .vertical], optionalScrolling: true, shrinkToFit: true) {
-                    layout.forEach(items) { item in
-                        Text(item.value)
-                            .padding(12)
-                            .foregroundColor(.white)
-                            .frame(height: CGFloat(item.value.count) * 8)
-                            .background(Color.blue)
-                            .cornerRadius(12)
-                            .clipped()
+                ZStack(alignment: .top) {
+                    ScrollView {
+                        VStack {
+                            ForEach(0..<20) { _ in
+                                layout.forEach(items) { item in
+                                    Text(item.value)
+                                        .padding(12)
+                                        .foregroundColor(.white)
+                                        .frame(height: CGFloat(item.value.count) * 8)
+                                        .background(Color.blue)
+                                        .cornerRadius(12)
+                                        .clipped()
+                                }
+                                .background(Color.gray.opacity(0.5))
+                                .border(Color.red)
+                                .animation(.spring(), value: layoutIndex)
+                                .animation(.spring(), value: items)
+                            }
+                        }
                     }
-                    .background(Color.gray.opacity(0.5))
-                    .border(Color.red)
+                    .onTapGesture {
+                        layoutIndex = (layoutIndex + 1) % layouts.count
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .environment(\.layoutDirection, layoutDirection)
+                    
+                    Text(layout.fuLayoutName)
+                        .font(.subheadline)
                 }
-                .animation(.spring(), value: layoutIndex)
-                .animation(.spring(), value: items)
-                .onAppear {
-                    layoutName = layout.fuLayoutName
-                }
-                .onTapGesture {
-                    layoutIndex = (layoutIndex + 1) % layouts.count
-                    layoutName = layout.fuLayoutName
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .environment(\.layoutDirection, layoutDirection)
             }
             .frame(maxHeight: 400)
             .clipped()

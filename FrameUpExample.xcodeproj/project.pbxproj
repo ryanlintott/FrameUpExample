@@ -121,15 +121,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CF1DF7F828CE5E6E007D5F27 /* Deprecated */ = {
-			isa = PBXGroup;
-			children = (
-				CFBC932E26F24DC600D5D439 /* TagViewExample.swift */,
-				CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */,
-			);
-			path = Deprecated;
-			sourceTree = "<group>";
-		};
 		CF1EEF2E274D4C4C00987595 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,7 +183,8 @@
 				CFAC14A12885ED2C003D4539 /* AnyFULayoutExample.swift */,
 				CF1EEF4A274D5FD600987595 /* WidgetSizeExample.swift */,
 				CF42CE25274C4A540010F12B /* WidgetDemoFrameExample.swift */,
-				CF1DF7F828CE5E6E007D5F27 /* Deprecated */,
+				CFBC932E26F24DC600D5D439 /* TagViewExample.swift */,
+				CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */,
 				CF48CCA226F131C300406F4E /* Assets.xcassets */,
 				CF48CCA426F131C300406F4E /* Preview Content */,
 			);
