@@ -168,7 +168,7 @@ struct AnyFULayoutForEachExample: View {
                 ZStack(alignment: .top) {
                     ScrollView {
                         VStack {
-                            ForEach(0..<20) { _ in
+//                            ForEach(0..<20) { _ in
                                 layout.forEach(items) { item in
                                     Text(item.value)
                                         .padding(12)
@@ -182,7 +182,7 @@ struct AnyFULayoutForEachExample: View {
                                 .border(Color.red)
                                 .animation(.spring(), value: layoutIndex)
                                 .animation(.spring(), value: items)
-                            }
+//                            }
                         }
                     }
                     .onTapGesture {
