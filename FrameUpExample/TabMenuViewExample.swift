@@ -36,11 +36,15 @@ struct TabMenuViewExample: View {
                 }
             }
         } onReselect: {
-            onReselect?()
-            print("TabMenu item \(selection) reselected")
+            NamedAction("Reselect") {
+                onReselect?()
+                print("TabMenu item \(selection) reselected")
+            }
         } onDoubleTap: {
-            onDoubleTap?()
-            print("TabMenu item \(selection) doubletapped")
+            NamedAction("Double Tap") {
+                onDoubleTap?()
+                print("TabMenu item \(selection) doubletapped")
+            }
         }
     }
 }
