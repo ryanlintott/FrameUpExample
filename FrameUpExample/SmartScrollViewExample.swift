@@ -42,7 +42,7 @@ struct SmartScrollViewExample: View {
                     VStack {
                         Text(text)
                             .font(.title)
-//                            .frame(maxWidth: 500)
+//                            .frame(maxWidth: .infinity)
                     }
                 }
             }
