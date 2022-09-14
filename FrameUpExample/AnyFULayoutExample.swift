@@ -139,9 +139,14 @@ struct AnyFULayout_ViewExample: View {
             } label: {
                 Label("Layout Direction", systemImage: layoutDirectionImageName)
             }
+            .padding()
             
-            Button("Add Item") { items.append(Item(value: items.randomElement()?.value ?? "New Item")) }
-            Button("Remove Item") { if !items.isEmpty { items.removeLast() } }
+            HStack {
+                Button("Remove Item") { if !items.isEmpty { items.removeLast() } }
+                    .padding()
+                Button("Add Item") { items.append(Item(value: items.randomElement()?.value ?? "New Item")) }
+                    .padding()
+            }
         }
     }
 }
