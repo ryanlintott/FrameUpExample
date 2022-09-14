@@ -38,6 +38,7 @@
 		CFBC933726F2B29300D5D439 /* TabMenuViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933626F2B29300D5D439 /* TabMenuViewExample.swift */; };
 		CFC2EBFB2811DA230088E36C /* VGridMasonryExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC2EBFA2811DA230088E36C /* VGridMasonryExample.swift */; };
 		CFD6964526F3EED2008D58AD /* TabMenuViewExample2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD6964426F3EED2008D58AD /* TabMenuViewExample2.swift */; };
+		CFF9EC3928D1157200F2D18C /* SmartScrollViewSimpleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9EC3828D1157200F2D18C /* SmartScrollViewSimpleExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		CFBC933626F2B29300D5D439 /* TabMenuViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuViewExample.swift; sourceTree = "<group>"; };
 		CFC2EBFA2811DA230088E36C /* VGridMasonryExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGridMasonryExample.swift; sourceTree = "<group>"; };
 		CFD6964426F3EED2008D58AD /* TabMenuViewExample2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuViewExample2.swift; sourceTree = "<group>"; };
+		CFF9EC3828D1157200F2D18C /* SmartScrollViewSimpleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartScrollViewSimpleExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				CFBC933626F2B29300D5D439 /* TabMenuViewExample.swift */,
 				CFD6964426F3EED2008D58AD /* TabMenuViewExample2.swift */,
 				CF086A6726FE8AE8002C715D /* SmartScrollViewExample.swift */,
+				CFF9EC3828D1157200F2D18C /* SmartScrollViewSimpleExample.swift */,
 				CF4F7132274C2B8400818896 /* ScaledToFrameExample.swift */,
 				CFAC14A12885ED2C003D4539 /* AnyFULayoutExample.swift */,
 				CF1EEF4A274D5FD600987595 /* WidgetSizeExample.swift */,
@@ -338,6 +341,7 @@
 				CF48CCBB26F134CA00406F4E /* VFlowExample.swift in Sources */,
 				CF9FD88627A83A9D0054B22E /* RelativePaddingExample.swift in Sources */,
 				CF5C50F927FCF29200769E38 /* AutoRotatingViewExample.swift in Sources */,
+				CFF9EC3928D1157200F2D18C /* SmartScrollViewSimpleExample.swift in Sources */,
 				CF4F7135274C2E3100818896 /* OnSizeChangeExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
