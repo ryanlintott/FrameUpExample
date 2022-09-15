@@ -41,6 +41,8 @@
 		CFF9EC3928D1157200F2D18C /* SmartScrollViewSimpleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9EC3828D1157200F2D18C /* SmartScrollViewSimpleExample.swift */; };
 		CFF9EC3D28D2D58700F2D18C /* AnyFULayoutSimpleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9EC3C28D2D58700F2D18C /* AnyFULayoutSimpleExample.swift */; };
 		CFF9EC3F28D2DB2C00F2D18C /* CustomFULayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9EC3E28D2DB2C00F2D18C /* CustomFULayoutExample.swift */; };
+		CFF9EC4128D3C07000F2D18C /* TwoSidedViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9EC4028D3C07000F2D18C /* TwoSidedViewExample.swift */; };
+		CFF9EC4328D3C0AA00F2D18C /* FlippingViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9EC4228D3C0AA00F2D18C /* FlippingViewExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 		CFF9EC3828D1157200F2D18C /* SmartScrollViewSimpleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartScrollViewSimpleExample.swift; sourceTree = "<group>"; };
 		CFF9EC3C28D2D58700F2D18C /* AnyFULayoutSimpleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyFULayoutSimpleExample.swift; sourceTree = "<group>"; };
 		CFF9EC3E28D2DB2C00F2D18C /* CustomFULayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFULayoutExample.swift; sourceTree = "<group>"; };
+		CFF9EC4028D3C07000F2D18C /* TwoSidedViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSidedViewExample.swift; sourceTree = "<group>"; };
+		CFF9EC4228D3C0AA00F2D18C /* FlippingViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippingViewExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,7 @@
 				CF48CCB826F134AC00406F4E /* Item.swift */,
 				CF48CCB026F132A400406F4E /* WidthReaderExample.swift */,
 				CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */,
+				CF4F7134274C2E3100818896 /* OnSizeChangeExample.swift */,
 				CF086A6726FE8AE8002C715D /* SmartScrollViewExample.swift */,
 				CFF9EC3828D1157200F2D18C /* SmartScrollViewSimpleExample.swift */,
 				CFAC14A12885ED2C003D4539 /* AnyFULayoutExample.swift */,
@@ -183,7 +188,8 @@
 				CF48CCBA26F134CA00406F4E /* VFlowExample.swift */,
 				CFC2EBFA2811DA230088E36C /* VGridMasonryExample.swift */,
 				CFF9EC3E28D2DB2C00F2D18C /* CustomFULayoutExample.swift */,
-				CF4F7134274C2E3100818896 /* OnSizeChangeExample.swift */,
+				CFF9EC4028D3C07000F2D18C /* TwoSidedViewExample.swift */,
+				CFF9EC4228D3C0AA00F2D18C /* FlippingViewExample.swift */,
 				CFBC933426F2AB8000D5D439 /* OverlappingImageExample.swift */,
 				CF5C50F827FCF29200769E38 /* AutoRotatingViewExample.swift */,
 				CF9FD88527A83A9D0054B22E /* RelativePaddingExample.swift */,
@@ -333,6 +339,7 @@
 				CFBC933526F2AB8000D5D439 /* OverlappingImageExample.swift in Sources */,
 				CF48CCBD26F1356A00406F4E /* HeightReaderExample.swift in Sources */,
 				CF4F7133274C2B8400818896 /* ScaledToFrameExample.swift in Sources */,
+				CFF9EC4128D3C07000F2D18C /* TwoSidedViewExample.swift in Sources */,
 				CFF9EC3F28D2DB2C00F2D18C /* CustomFULayoutExample.swift in Sources */,
 				CFAC14A02885BC99003D4539 /* HFlowExample.swift in Sources */,
 				CF48CC9F26F131C200406F4E /* FrameUpExampleApp.swift in Sources */,
@@ -350,6 +357,7 @@
 				CF9FD88627A83A9D0054B22E /* RelativePaddingExample.swift in Sources */,
 				CF5C50F927FCF29200769E38 /* AutoRotatingViewExample.swift in Sources */,
 				CFF9EC3928D1157200F2D18C /* SmartScrollViewSimpleExample.swift in Sources */,
+				CFF9EC4328D3C0AA00F2D18C /* FlippingViewExample.swift in Sources */,
 				CF4F7135274C2E3100818896 /* OnSizeChangeExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

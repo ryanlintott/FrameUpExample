@@ -46,6 +46,16 @@ struct ContentView: View {
                         NavigationLink(destination: CustomFULayoutExample()) {
                             Label("CustomFULayout", systemImage: "rectangle.3.group.bubble.left")
                         }
+                    }
+                    
+                    Group {
+                        NavigationLink(destination: TwoSidedViewExample()) {
+                            Label("TwoSidedView", systemImage: "arrow.2.squarepath")
+                        }
+                        
+                        NavigationLink(destination: FlippingViewExample()) {
+                            Label("FlippingView", systemImage: "arrow.uturn.right.square")
+                        }
                         
                         NavigationLink(destination: OverlappingImageHorizontalExample()) {
                             Label("HOverlap", systemImage: "square.righthalf.fill")
