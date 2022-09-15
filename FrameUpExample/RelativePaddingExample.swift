@@ -9,43 +9,37 @@ import FrameUp
 import SwiftUI
 
 struct RelativePaddingExample: View {
-    @State private var width: CGFloat = 100
-    @State private var height: CGFloat = 200
+    @State private var isHorizontal: Bool = true
     @State private var padding: CGFloat = 0.1
+    
+    var axis: Edge.Set {
+        isHorizontal ? .horizontal : .vertical
+    }
     
     var body: some View {
         VStack(spacing: 0) {
             Spacer(minLength: 0)
             
             Color.green
-                .relativePadding(.horizontal, padding)
-                .background(Color.yellow)
-                .relativePadding([.leading, .top], padding)
-                .background(Color.blue)
-                .relativePadding(padding)
+                .relativePadding(axis, padding)
                 .background(Color.red)
-                .frame(width: width, height: height)
-            
-            Text("Use Negative values to create relative overlaps")
-                .background(Color.gray.opacity(0.5))
-                .relativePadding(.top, -padding)
+                .padding(80)
             
             Spacer(minLength: 0)
             
             VStack(alignment: .leading) {
-                Text("Width (20 - 100)")
-                Slider(value: $width, in: 20...100) {
-                    Text("Width")
+                Picker(selection: $isHorizontal) {
+                    ForEach([true, false], id: \.self) { isHorizontal in
+                        Text(isHorizontal ? "Horizontal" : "Vertical")
+                    }
+                } label: {
+                    Text("Axis")
                 }
+                .pickerStyle(.segmented)
                 
-                Text("Height (20 - 200)")
-                Slider(value: $height, in: 20...200) {
-                    Text("Height")
-                }
-                
-                Text("Padding (0 - 0.2)")
-                Slider(value: $padding, in: 0...0.2) {
-                    Text("Padding")
+                HStack {
+                    Text("Padding \(padding * 100, specifier: "%.0f")%")
+                    Slider(value: $padding, in: -0.5...0.5)
                 }
             }
             .padding()

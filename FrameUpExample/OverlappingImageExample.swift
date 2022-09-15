@@ -12,28 +12,46 @@ struct OverlappingImageVerticalExample: View {
     let previewImage = UIImage(systemName: "star.square")!
     let image = Image(systemName: "star.square")
     
+    @State private var top: CGFloat = 0.1
+    @State private var bottom: CGFloat = 0.25
+    
     var body: some View {
-        VStack(spacing: 0) {
-            Text("Overlapping Image")
-                .font(.system(size: 50))
-            Rectangle()
-                .frame(height: 5)
+        VStack {
+            VStack(spacing: 0) {
+                Text("Overlapping Image")
+                    .font(.system(size: 50))
+                Rectangle()
+                    .frame(height: 5)
+                
+                OverlappingImage(image, aspectRatio: 1.0, top: top, bottom: bottom)
+                    .foregroundColor(.blue.opacity(0.5))
+                    .padding(.horizontal, 50)
+                    .zIndex(1)
+                
+                VStack {
+                    Text("The image above will overlap content above and below with an inset based on a percent of the image height. This allows the overlap to occur in the same location regardless of scale.")
+                        .padding(20)
+                }
+                .background(Color.gray)
+                .padding(3)
+                .background(Color.red)
+            }
+            .frame(width: 300, height: 500)
             
-            OverlappingImage(image, aspectRatio: 1.0, top: 0.1, bottom: 0.25)
-                .foregroundColor(.blue.opacity(0.5))
-                .padding(.horizontal, 50)
-                .zIndex(1)
+            Spacer()
             
             VStack {
-                Text("The image above will overlap content above and below with an inset based on a percent of the image height. This allows the overlap to occur in the same location regardless of scale.")
-                    .padding(20)
+                HStack {
+                    Text("Top \(top * 100, specifier: "%.0f")%")
+                    Slider(value: $top, in: 0...1)
+                }
+                HStack {
+                    Text("Bottom \(bottom * 100, specifier: "%.0f")%")
+                    Slider(value: $bottom, in: 0...1)
+                }
             }
-            .background(Color.gray)
-            .padding(3)
-            .background(Color.red)
+            .padding()
         }
-        .frame(width: 300, height: 500)
-        .previewLayout(.sizeThatFits)
         .navigationTitle("OverlapVertical")
     }
 }
@@ -42,28 +60,44 @@ struct OverlappingImageHorizontalExample: View {
     let previewImage = UIImage(systemName: "star.square")!
     let image = Image(systemName: "star.square")
     
+    @State private var leading: CGFloat = 0.1
+    @State private var trailing: CGFloat = 0.25
+    
     var body: some View {
-        HStack(spacing: 0) {
-            Text("Overlapping Image")
-                .font(.system(size: 15))
-            Rectangle()
-                .frame(width: 5)
-            
-            OverlappingImage(image, aspectRatio: 1.0, left: 0.2, right: 0.2)
-                .foregroundColor(.blue.opacity(0.5))
-                .padding(.vertical, 50)
-                .zIndex(1)
+        VStack {
+            HStack(spacing: 0) {
+                Text("Overlapping Image")
+                    .font(.system(size: 15))
+                Rectangle()
+                    .frame(width: 5)
+                
+                OverlappingImage(image, aspectRatio: 1.0, left: leading, right: trailing)
+                    .foregroundColor(.blue.opacity(0.5))
+                    .padding(.vertical, 50)
+                    .zIndex(1)
+                
+                VStack {
+                    Text("The image to the left will overlap content to the left and right with an inset based on a percent of the image width.")
+                        .padding(20)
+                }
+                .background(Color.gray)
+                .padding(3)
+                .background(Color.red)
+            }
+            .frame(width: 300, height: 500)
             
             VStack {
-                Text("The image to the left will overlap content to the left and right with an inset based on a percent of the image width.")
-                    .padding(20)
+                HStack {
+                    Text("Leading \(leading * 100, specifier: "%.0f")%")
+                    Slider(value: $leading, in: 0...1)
+                }
+                HStack {
+                    Text("Trailing \(trailing * 100, specifier: "%.0f")%")
+                    Slider(value: $trailing, in: 0...1)
+                }
             }
-            .background(Color.gray)
-            .padding(3)
-            .background(Color.red)
+            .padding()
         }
-        .frame(width: 300, height: 500)
-        .previewLayout(.sizeThatFits)
         .navigationTitle("OverlapHorizontal")
     }
 }

@@ -121,6 +121,7 @@ struct AnyFULayout_ViewExample: View {
                         Text(layout.fuLayoutName)
                             .font(.subheadline)
                     }
+                    , alignment: .top
                 )
             }
             .clipped()
