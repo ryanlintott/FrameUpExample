@@ -11,7 +11,7 @@ import SwiftUI
 struct SmartScrollViewExample: View {
     @State private var showSettings = false
     
-    @State private var numItems = 30
+    @State private var numItems = 20
     @State private var exampleText = "Example"
     @State private var vertical = true
     @State private var horizontal = false
@@ -35,50 +35,69 @@ struct SmartScrollViewExample: View {
         return axes
     }
     
+    @State private var smartScrollID =  UUID()
+    
     var body: some View {
-        SmartScrollView(axes, showsIndicators: showsIndicators, optionalScrolling: optionalScrolling, shrinkToFit: shrinkToFit) {
-            VStack {
-                ForEach(items, id: \.0) { (i, text) in
-                    VStack {
-                        Text(text)
-                            .font(.title)
-//                            .frame(maxWidth: .infinity)
+        VStack {
+            SmartScrollView(axes, showsIndicators: showsIndicators, optionalScrolling: optionalScrolling, shrinkToFit: shrinkToFit) {
+                VStack {
+                    ForEach(items, id: \.0) { (i, text) in
+                        VStack {
+                            Text(text)
+                                .font(.title)
+                        }
                     }
                 }
+            } onScroll: { edgeInsets in
+                self.edgeInsets = edgeInsets
             }
-        } onScroll: { edgeInsets in
-            self.edgeInsets = edgeInsets
-        }
-        .background(Color.gray.opacity(0.5))
-        .padding(30)
-        .overlay(
+            .id(smartScrollID)
+            .background(Color.gray.opacity(0.5))
+            .padding(30)
+            .overlay(
+                VStack {
+                    if let edgeInsets = edgeInsets {
+                        Text("\(edgeInsets.top)")
+                            .fixedSize()
+                        Spacer()
+                        Text("\(edgeInsets.bottom)")
+                            .fixedSize()
+                    }
+                }
+                    .foregroundColor(.red)
+            )
+            .overlay(
+                HStack {
+                    if let edgeInsets = edgeInsets {
+                        Text("\(edgeInsets.leading)")
+                            .fixedSize()
+                            .rotationEffect(.degrees(-90))
+                            .offset(x: -20)
+                        Spacer()
+                        Text("\(edgeInsets.trailing)")
+                            .fixedSize()
+                            .rotationEffect(.degrees(-90))
+                            .offset(x: 20)
+                    }
+                }
+                    .foregroundColor(.red)
+            )
+            
+            Spacer(minLength: 0)
+            
             VStack {
-                if let edgeInsets = edgeInsets {
-                    Text("\(edgeInsets.top)")
-                        .fixedSize()
-                    Spacer()
-                    Text("\(edgeInsets.bottom)")
-                        .fixedSize()
+                Stepper("Items: \(numItems)", value: $numItems, in: 1...100)
+                TextField("Example Text", text: $exampleText) { _ in
+                    smartScrollID = UUID()
+                } onCommit: {
+                    smartScrollID = UUID()
                 }
+                    .textFieldStyle(.roundedBorder)
             }
-                .foregroundColor(.red)
-        )
-        .overlay(
-            HStack {
-                if let edgeInsets = edgeInsets {
-                    Text("\(edgeInsets.leading)")
-                        .fixedSize()
-                        .rotationEffect(.degrees(-90))
-                        .offset(x: -20)
-                    Spacer()
-                    Text("\(edgeInsets.trailing)")
-                        .fixedSize()
-                        .rotationEffect(.degrees(-90))
-                        .offset(x: 20)
-                }
-            }
-                .foregroundColor(.red)
-        )
+            .padding()
+            
+            
+        }
         .toolbar {
             Button {
                 showSettings = true
@@ -91,9 +110,6 @@ struct SmartScrollViewExample: View {
         .padding(.top, 1)
         .sheet(isPresented: $showSettings) {
             Form {
-                Stepper("Items: \(numItems)", value: $numItems, in: 1...100)
-                TextField("Example Text", text: $exampleText)
-                    .textFieldStyle(.roundedBorder)
                 Toggle("Scroll Vertical", isOn: $vertical)
                 Toggle("Scroll Horizontal", isOn: $horizontal)
                 Toggle("Optional Scrolling", isOn: $optionalScrolling)

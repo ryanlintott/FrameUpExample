@@ -20,20 +20,14 @@ fileprivate func exampleLayouts(size: CGSize) -> [AnyFULayout] {
         AnyFULayout(VFlow(alignment: .bottom, maxHeight: size.height)),
         AnyFULayout(VFlow(alignment: .bottomTrailing, maxHeight: size.height)),
 
-        AnyFULayout(VMasonry(alignment: .topLeading, columns: 3, maxWidth: size.width)),
         AnyFULayout(VMasonry(alignment: .top, columns: 3, maxWidth: size.width)),
-        AnyFULayout(VMasonry(alignment: .topTrailing, columns: 3, maxWidth: size.width)),
-        AnyFULayout(VMasonry(alignment: .leading, columns: 3, maxWidth: size.width)),
         AnyFULayout(VMasonry(alignment: .center, columns: 3, maxWidth: size.width)),
-        AnyFULayout(VMasonry(alignment: .trailing, columns: 3, maxWidth: size.width)),
-        AnyFULayout(VMasonry(alignment: .bottomLeading, columns: 3, maxWidth: size.width)),
         AnyFULayout(VMasonry(alignment: .bottom, columns: 3, maxWidth: size.width)),
-        AnyFULayout(VMasonry(alignment: .bottomTrailing, columns: 3, maxWidth: size.width)),
-        
+
         AnyFULayout(VStackFULayout(alignment: .leading, maxWidth: size.width)),
         AnyFULayout(VStackFULayout(alignment: .center, maxWidth: size.width)),
         AnyFULayout(VStackFULayout(alignment: .trailing, maxWidth: size.width)),
-        
+
         AnyFULayout(HFlow(alignment: .topLeading, maxWidth: size.width)),
         AnyFULayout(HFlow(alignment: .top, maxWidth: size.width)),
         AnyFULayout(HFlow(alignment: .topTrailing, maxWidth: size.width)),
@@ -44,15 +38,9 @@ fileprivate func exampleLayouts(size: CGSize) -> [AnyFULayout] {
         AnyFULayout(HFlow(alignment: .bottom, maxWidth: size.width)),
         AnyFULayout(HFlow(alignment: .bottomTrailing, maxWidth: size.width)),
         
-        AnyFULayout(HMasonry(alignment: .topLeading, rows: 3, maxHeight: size.height)),
-        AnyFULayout(HMasonry(alignment: .top, rows: 3, maxHeight: size.height)),
-        AnyFULayout(HMasonry(alignment: .topTrailing, rows: 3, maxHeight: size.height)),
         AnyFULayout(HMasonry(alignment: .leading, rows: 3, maxHeight: size.height)),
         AnyFULayout(HMasonry(alignment: .center, rows: 3, maxHeight: size.height)),
         AnyFULayout(HMasonry(alignment: .trailing, rows: 3, maxHeight: size.height)),
-        AnyFULayout(HMasonry(alignment: .bottomLeading, rows: 3, maxHeight: size.height)),
-        AnyFULayout(HMasonry(alignment: .bottom, rows: 3, maxHeight: size.height)),
-        AnyFULayout(HMasonry(alignment: .bottomTrailing, rows: 3, maxHeight: size.height)),
         
         AnyFULayout(HStackFULayout(alignment: .top, maxHeight: size.height)),
         AnyFULayout(HStackFULayout(alignment: .center, maxHeight: size.height)),
@@ -103,36 +91,40 @@ struct AnyFULayout_ViewExample: View {
                 let layouts = exampleLayouts(size: proxy.size)
                 let layout = layouts[layoutIndex]
                 
-                ZStack(alignment: .top) {
-                    layout {
-                        ForEach(items) { item in
-                            Text(item.value)
-                                .padding(12)
-                                .foregroundColor(.white)
-                                .frame(height: CGFloat(item.value.count) * 8)
-                                .background(Color.blue)
-                                .cornerRadius(12)
-                                .clipped()
+                Color.clear.overlay(
+                    ZStack(alignment: .top) {
+                        layout {
+                            ForEach(items) { item in
+                                Text(item.value)
+                                    .padding(12)
+                                    .foregroundColor(.white)
+                                    .frame(height: CGFloat(item.value.count) * 8)
+                                    .frame(
+                                        maxWidth: layout.fuLayoutName.contains("VMasonry") ? .infinity : nil,
+                                        maxHeight: layout.fuLayoutName.contains("HMasonry") ? .infinity : nil
+                                    )
+                                    .background(Color.blue)
+                                    .cornerRadius(12)
+                                    .clipped()
+                            }
                         }
+                        .background(Color.gray.opacity(0.5))
+                        .border(Color.red)
+                        .animation(.spring(), value: layoutIndex)
+                        .animation(.spring(), value: items)
+                        .onTapGesture {
+                            layoutIndex = (layoutIndex + 1) % layouts.count
+                        }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .environment(\.layoutDirection, layoutDirection)
+                        
+                        Text(layout.fuLayoutName)
+                            .font(.subheadline)
                     }
-                    .background(Color.gray.opacity(0.5))
-                    .border(Color.red)
-                    .animation(.spring(), value: layoutIndex)
-                    .animation(.spring(), value: items)
-                    .onTapGesture {
-                        layoutIndex = (layoutIndex + 1) % layouts.count
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .environment(\.layoutDirection, layoutDirection)
-                    
-                    Text(layout.fuLayoutName)
-                        .font(.subheadline)
-                }
+                )
             }
-            .frame(maxHeight: 400)
             .clipped()
-            
-            Spacer()
+            .frame(maxHeight: 400)
             
             Button {
                 layoutDirection = layoutDirection == .leftToRight ? .rightToLeft : .leftToRight
@@ -170,40 +162,33 @@ struct AnyFULayoutForEachExample: View {
                 let layouts = exampleLayouts(size: proxy.size)
                 let layout = layouts[layoutIndex]
                 
-                ZStack(alignment: .top) {
-                    ScrollView {
-                        VStack {
-//                            ForEach(0..<20) { _ in
-                                layout.forEach(items) { item in
-                                    Text(item.value)
-                                        .padding(12)
-                                        .foregroundColor(.white)
-                                        .frame(height: CGFloat(item.value.count) * 8)
-                                        .background(Color.blue)
-                                        .cornerRadius(12)
-                                        .clipped()
-                                }
-                                .background(Color.gray.opacity(0.5))
-                                .border(Color.red)
-                                .animation(.spring(), value: layoutIndex)
-                                .animation(.spring(), value: items)
-//                            }
+                Color.clear.overlay(
+                    ZStack(alignment: .top) {
+                        layout.forEach(items) { item in
+                            Text(item.value)
+                                .padding(12)
+                                .foregroundColor(.white)
+                                .frame(height: CGFloat(item.value.count) * 8)
+                                .background(Color.blue)
+                                .cornerRadius(12)
+                                .clipped()
                         }
+                        .background(Color.gray.opacity(0.5))
+                        .border(Color.red)
+                        .animation(.spring(), value: layoutIndex)
+                        .animation(.spring(), value: items)
+                        
+                        Text(layout.fuLayoutName)
+                            .font(.subheadline)
                     }
-                    .onTapGesture {
-                        layoutIndex = (layoutIndex + 1) % layouts.count
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .environment(\.layoutDirection, layoutDirection)
-                    
-                    Text(layout.fuLayoutName)
-                        .font(.subheadline)
-                }
+                        .onTapGesture {
+                            layoutIndex = (layoutIndex + 1) % layouts.count
+                        }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .environment(\.layoutDirection, layoutDirection)
+                )
             }
-            .frame(maxHeight: 400)
             .clipped()
-            
-            Spacer()
             
             Button {
                 layoutDirection = layoutDirection == .leftToRight ? .rightToLeft : .leftToRight
