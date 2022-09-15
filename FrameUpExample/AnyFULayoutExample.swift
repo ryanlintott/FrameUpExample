@@ -170,6 +170,10 @@ struct AnyFULayoutForEachExample: View {
                                 .padding(12)
                                 .foregroundColor(.white)
                                 .frame(height: CGFloat(item.value.count) * 8)
+                                .frame(
+                                    maxWidth: layout.fuLayoutName.contains("VMasonry") ? .infinity : nil,
+                                    maxHeight: layout.fuLayoutName.contains("HMasonry") ? .infinity : nil
+                                )
                                 .background(Color.blue)
                                 .cornerRadius(12)
                                 .clipped()
@@ -178,18 +182,20 @@ struct AnyFULayoutForEachExample: View {
                         .border(Color.red)
                         .animation(.spring(), value: layoutIndex)
                         .animation(.spring(), value: items)
-                        
-                        Text(layout.fuLayoutName)
-                            .font(.subheadline)
-                    }
                         .onTapGesture {
                             layoutIndex = (layoutIndex + 1) % layouts.count
                         }
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .environment(\.layoutDirection, layoutDirection)
+                        
+                        Text(layout.fuLayoutName)
+                            .font(.subheadline)
+                    }
+                    , alignment: .top
                 )
             }
             .clipped()
+            .frame(maxHeight: 400)
             
             Button {
                 layoutDirection = layoutDirection == .leftToRight ? .rightToLeft : .leftToRight

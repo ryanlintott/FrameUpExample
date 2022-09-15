@@ -26,14 +26,16 @@ struct HFlowExample: View {
             }
             .background(Color.gray)
             .animation(.spring(), value: maxWidth)
-            .frame(maxWidth: maxWidth)
+            .frame(maxWidth: maxWidth, alignment: .leading)
 
             Spacer()
+            
             HStack {
-                Stepper("Max Width \(maxWidth)", value: $maxWidth, in: 50...600, step: 50)
+                Stepper("Max Width \(maxWidth, specifier: "%.0F")", value: $maxWidth, in: 50...600, step: 50)
             }
             .padding()
         }
+        .navigationTitle("HFlow")
     }
 }
 

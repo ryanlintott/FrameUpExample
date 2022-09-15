@@ -12,22 +12,29 @@ struct VFlowExample: View {
     let items = ["Hello", "World", "something", "Longer Text is longer", "Hi", "multi\nline", "one more"]
         .map { Item(id: UUID(), value: $0) }
     
+    @State private var maxHeight: CGFloat = 300
+    
     var body: some View {
-        HeightReader { height in
-            VFlow(maxHeight: height) {
+        VStack {
+            VFlow(maxHeight: maxHeight) {
                 ForEach(items) { item in
                     Text(item.value)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding(12)
+                        .padding()
                         .foregroundColor(.white)
-                        .background(Color.blue)
-                        .cornerRadius(12)
-                        .clipped()
+                        .background(Capsule().fill(.blue))
                 }
             }
-            .background(Color.gray.opacity(0.5))
+            .background(Color.gray)
+            .animation(.spring(), value: maxHeight)
+            .frame(maxHeight: maxHeight, alignment: .top)
+            
+            Spacer()
+            
+            HStack {
+                Stepper("Max Height \(maxHeight, specifier: "%.0F")", value: $maxHeight, in: 50...600, step: 50)
+            }
+            .padding()
         }
-        .frame(height: 300)
         .navigationTitle("VFlow")
     }
 }
