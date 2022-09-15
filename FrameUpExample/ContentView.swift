@@ -19,6 +19,18 @@ struct ContentView: View {
                 
                 Form {
                     Group {
+                        NavigationLink(destination: WidthReaderExample()) {
+                            Label("WidthReader", systemImage: "arrow.left.and.right.square")
+                        }
+                        
+                        NavigationLink(destination: HeightReaderExample()) {
+                            Label("HeightReader", systemImage: "arrow.up.and.down.square")
+                        }
+                        
+                        NavigationLink(destination: SmartScrollViewExample()) {
+                            Label("SmartScroll", systemImage: "scroll")
+                        }
+                        
                         NavigationLink(destination: AnyFULayoutExample()) {
                             Label("FULayout", systemImage: "rectangle.3.group")
                         }
@@ -31,12 +43,8 @@ struct ContentView: View {
                             Label("VFlow", systemImage: "arrow.down.square")
                         }
                         
-                        NavigationLink(destination: WidthReaderExample()) {
-                            Label("WidthReader", systemImage: "arrow.left.and.right.square")
-                        }
-                        
-                        NavigationLink(destination: HeightReaderExample()) {
-                            Label("HeightReader", systemImage: "arrow.up.and.down.square")
+                        NavigationLink(destination: CustomFULayoutExample()) {
+                            Label("CustomFULayout", systemImage: "rectangle.3.group.bubble.left")
                         }
                         
                         NavigationLink(destination: OverlappingImageHorizontalExample()) {
@@ -55,10 +63,6 @@ struct ContentView: View {
                     Group {
                         NavigationLink(destination: TabMenuViewExample2()) {
                             Label("TabMenu", systemImage: "squares.below.rectangle")
-                        }
-                        
-                        NavigationLink(destination: SmartScrollViewExample()) {
-                            Label("SmartScroll", systemImage: "scroll")
                         }
                         
                         NavigationLink(destination: ScaledToFrameExample()) {
