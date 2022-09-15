@@ -9,22 +9,32 @@ import FrameUp
 import SwiftUI
 
 struct HeightReaderExample: View {
+    @State private var percent = 0.7
+    
     var body: some View {
-        ScrollView(.horizontal) {
-            HeightReader { height in
-                VStack(spacing: 0) {
-                    Text("This\ntext\nframe\nis\nset\nto\n70%\nof\nthe\nheight.")
-                        .frame(height: height * 0.7)
-                        .background(Color.green)
-                    
-                    Circle()
+        VStack {
+            ScrollView(.horizontal) {
+                HeightReader { height in
+                    VStack(spacing: 0) {
+                        Text("This text frame is set to \(percent * 100, specifier: "%.0f")% of the height.")
+                            .frame(height: height * percent)
+                            .background(Color.green)
+                        
+                        Circle()
+                    }
+                    .foregroundColor(.white)
+                    .background(Color.blue)
                 }
-                .foregroundColor(.white)
-                .background(Color.blue)
-                
-                Text("\nThe\nHeightReader\nto\nthe\nleft\ndoes\nnot\nhave\na\nfixed\nwidth\nand\nwill\ngrow\nto\nfit\nthe\ncontent.")
-                    .padding()
             }
+            
+            Text("The HeightReader above does not have a fixed width and will fit the content.")
+                .padding()
+            
+            HStack {
+                Text("Percent \(percent * 100, specifier: "%.0f")%")
+                Slider(value: $percent, in: 0...1)
+            }
+            .padding()
         }
         .navigationTitle("HeightReader")
     }

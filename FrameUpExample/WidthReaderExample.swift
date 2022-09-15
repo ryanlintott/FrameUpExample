@@ -9,22 +9,32 @@ import FrameUp
 import SwiftUI
 
 struct WidthReaderExample: View {
+    @State private var percent = 0.7
+    
     var body: some View {
-        ScrollView {
-            WidthReader { width in
-                HStack(spacing: 0) {
-                    Text("This text frame is set to 70% of the width.")
-                        .frame(width: width * 0.7)
-                        .background(Color.green)
-                    
-                    Circle()
+        VStack {
+            ScrollView {
+                WidthReader { width in
+                    HStack(spacing: 0) {
+                        Text("This text frame is set to \(percent * 100, specifier: "%.0f")% of the width.")
+                            .frame(width: width * percent)
+                            .background(Color.green)
+                        
+                        Circle()
+                    }
                 }
+                .foregroundColor(.white)
+                .background(Color.blue)
             }
-            .foregroundColor(.white)
-            .background(Color.blue)
             
-            Text("The WidthReader above does not have a fixed height and will grow to fit the content.")
+            Text("The WidthReader above does not have a fixed height and will fit the content.")
                 .padding()
+            
+            HStack {
+                Text("Percent \(percent * 100, specifier: "%.0f")%")
+                Slider(value: $percent, in: 0...1)
+            }
+            .padding()
         }
         .navigationTitle("WidthReader")
     }
