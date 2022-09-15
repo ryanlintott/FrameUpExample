@@ -25,8 +25,8 @@ struct VFlowExample: View {
                 }
             }
             .background(Color.gray)
-            .animation(.spring(), value: maxHeight)
             .frame(maxHeight: maxHeight, alignment: .top)
+            .animation(.spring(), value: maxHeight)
             
             Spacer()
             
