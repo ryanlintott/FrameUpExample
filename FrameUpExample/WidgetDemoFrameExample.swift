@@ -9,7 +9,7 @@ import FrameUp
 import SwiftUI
 
 struct WidgetDemoFrameExample: View {
-    @State private var widgetSize: WidgetSize = .extraLarge
+    @State private var widgetSize: WidgetSize = .small
     
     var homeScreenSize: CGSize {
         widgetSize.sizeForCurrentDevice(iPadTarget: .homeScreen)

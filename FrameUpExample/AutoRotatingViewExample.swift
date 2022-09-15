@@ -1,5 +1,5 @@
 //
-//  RotationMatchingOrientationExample.swift
+//  AutoRotatingViewExample.swift
 //  FrameUpExample
 //
 //  Created by Ryan Lintott on 2022-04-05.
@@ -8,7 +8,8 @@
 import FrameUp
 import SwiftUI
 
-struct RotationMatchingOrientationExample: View {
+struct AutoRotatingViewExample: View {
+    @State private var isAnimated: Bool = true
     @State private var portrait: Bool = true
     @State private var landscapeLeft: Bool = true
     @State private var landscapeRight: Bool = true
@@ -48,34 +49,39 @@ struct RotationMatchingOrientationExample: View {
     
     var body: some View {
         VStack {
-            VStack {
-                Image("FrameUp-logo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 40)
-                
-                Text("Control this view's orientation with the settings below")
-                    .font(.caption)
+            AutoRotatingView(allowedOrientations, animation: isAnimated ? .default : nil) {
+                VStack {
+                    Image("FrameUp-logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 40)
+
+                    Text("This view can auto-rotate to orientations the app does not support.")
+                        .font(.caption)
+                }
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.blue)
+                .cornerRadius(20)
             }
-            .foregroundColor(.white)
-            .padding()
-            .background(Color.blue)
-            .cornerRadius(20)
-                .rotationMatchingOrientation(allowedOrientations)
             
-            VStack {
-                Toggle("Portrait", isOn: $portrait)
-                Toggle("LandscapeLeft", isOn: $landscapeLeft)
-                Toggle("LandscapeRight", isOn: $landscapeRight)
-                Toggle("PortraitUpsideDown", isOn: $portraitUpsideDown)
+            VStack(alignment: .leading) {
+                Toggle("Animation", isOn: $isAnimated)
+                Section(header: Text("Allowed Orientations:").font(.headline)) {
+                    Toggle("Portrait", isOn: $portrait)
+                    Toggle("LandscapeLeft", isOn: $landscapeLeft)
+                    Toggle("LandscapeRight", isOn: $landscapeRight)
+                    Toggle("PortraitUpsideDown", isOn: $portraitUpsideDown)
+                }
             }
             .padding()
         }
+        .navigationTitle("AutoRotatingView")
     }
 }
 
-struct RotationMatchingOrientationExample_Previews: PreviewProvider {
+struct AutoRotatingViewExample_Previews: PreviewProvider {
     static var previews: some View {
-        RotationMatchingOrientationExample()
+        AutoRotatingViewExample()
     }
 }

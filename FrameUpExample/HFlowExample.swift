@@ -1,32 +1,39 @@
 //
-//  HFlowExample.swift
+//  HFlowLayoutExample.swift
 //  FrameUpExample
 //
-//  Created by Ryan Lintott on 2021-09-14.
+//  Created by Ryan Lintott on 2022-07-18.
 //
 
 import FrameUp
 import SwiftUI
 
 struct HFlowExample: View {
-    let items = ["World", "Hello here is some very very very long text", "something", "Longer Text is longer", "multi\nline", "Hi", "one more"]
+    let items = ["FULayout", "Layup", "Formation", "Board", "Gang", "Herd", "Hord", "Swarm", "Arrangement", "Exhibit", "Blueprint", "Collage"]
         .map { Item(id: UUID(), value: $0) }
     
+    @State private var maxWidth: CGFloat = 300
+    
     var body: some View {
-        WidthReader { width in
-            HFlow(items, maxWidth: width) { item in
-                Text(item.value)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: 200)
-                    .padding(12)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(12)
-                    .clipped()
+        VStack {
+            HFlow(maxWidth: maxWidth) {
+                ForEach(items) { item in
+                    Text(item.value)
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Capsule().fill(.blue))
+                }
             }
-            .background(Color.gray.opacity(0.5))
+            .background(Color.gray)
+            .animation(.spring(), value: maxWidth)
+            .frame(maxWidth: maxWidth)
+
+            Spacer()
+            HStack {
+                Stepper("Max Width \(maxWidth)", value: $maxWidth, in: 50...600, step: 50)
+            }
+            .padding()
         }
-        .navigationTitle("HFlow")
     }
 }
 

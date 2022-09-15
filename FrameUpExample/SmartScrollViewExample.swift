@@ -42,6 +42,7 @@ struct SmartScrollViewExample: View {
                     VStack {
                         Text(text)
                             .font(.title)
+//                            .frame(maxWidth: .infinity)
                     }
                 }
             }
@@ -86,6 +87,8 @@ struct SmartScrollViewExample: View {
             }
         }
         .navigationTitle("SmartScrollView")
+        // padding of at least 1 point is needed when inside a navigation stack as it will resize the available space
+        .padding(.top, 1)
         .sheet(isPresented: $showSettings) {
             Form {
                 Stepper("Items: \(numItems)", value: $numItems, in: 1...100)

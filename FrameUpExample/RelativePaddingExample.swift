@@ -5,6 +5,7 @@
 //  Created by Ryan Lintott on 2022-01-31.
 //
 
+import FrameUp
 import SwiftUI
 
 struct RelativePaddingExample: View {
