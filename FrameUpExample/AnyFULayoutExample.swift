@@ -80,8 +80,8 @@ struct AnyFULayout_ViewExample: View {
     @State private var layoutDirection: LayoutDirection = .leftToRight
     var layoutDirectionImageName: String {
         switch layoutDirection {
-        case .rightToLeft: return "arrow.right"
-        default: return "arrow.left"
+        case .rightToLeft: return "arrow.left"
+        default: return "arrow.right"
         }
     }
     
@@ -152,8 +152,8 @@ struct AnyFULayoutForEachExample: View {
     @State private var layoutDirection: LayoutDirection = .leftToRight
     var layoutDirectionImageName: String {
         switch layoutDirection {
-        case .rightToLeft: return "arrow.right"
-        default: return "arrow.left"
+        case .rightToLeft: return "arrow.left"
+        default: return "arrow.right"
         }
     }
     
@@ -202,9 +202,14 @@ struct AnyFULayoutForEachExample: View {
             } label: {
                 Label("Layout Direction", systemImage: layoutDirectionImageName)
             }
+            .padding()
             
-            Button("Add Item") { items.append(Item(value: items.randomElement()?.value ?? "New Item")) }
-            Button("Remove Item") { if !items.isEmpty { items.removeLast() } }
+            HStack {
+                Button("Remove Item") { if !items.isEmpty { items.removeLast() } }
+                    .padding()
+                Button("Add Item") { items.append(Item(value: items.randomElement()?.value ?? "New Item")) }
+                    .padding()
+            }
         }
     }
 }
