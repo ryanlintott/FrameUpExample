@@ -16,15 +16,24 @@ struct FlippingViewExample: View {
     
     var body: some View {
         VStack {
-            FlippingView(axis, flips: $flips, perspective: perspective) {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(.blue)
-                    .overlay(Text("Up").font(.largeTitle).bold())
+            FlippingView(
+                axis,
+                flips: $flips,
+                perspective: perspective
+            ) {
+                ZStack {
+                    Color.blue
+                    Text("Front")
+                }
+                .cornerRadius(20)
             } back: {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(.red)
-                    .overlay(Text("Down").font(.largeTitle).bold())
+                ZStack {
+                    Color.red
+                    Text("Back")
+                }
+                .cornerRadius(20)
             }
+            .font(.largeTitle)
             .padding(40)
             
             VStack {
