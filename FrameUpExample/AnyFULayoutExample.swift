@@ -105,7 +105,6 @@ struct AnyFULayout_ViewExample: View {
                                     )
                                     .background(Color.blue)
                                     .cornerRadius(12)
-                                    .clipped()
                             }
                         }
                         .background(Color.gray.opacity(0.5))
@@ -176,7 +175,6 @@ struct AnyFULayoutForEachExample: View {
                                 )
                                 .background(Color.blue)
                                 .cornerRadius(12)
-                                .clipped()
                         }
                         .background(Color.gray.opacity(0.5))
                         .border(Color.red)
