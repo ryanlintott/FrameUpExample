@@ -8,53 +8,53 @@
 import FrameUp
 import SwiftUI
 
-fileprivate func exampleLayouts(size: CGSize) -> [AnyFULayout] {
+fileprivate func exampleLayouts(size: CGSize) -> [any FULayout] {
     [
-        AnyFULayout(VFlow(alignment: .topLeading, maxHeight: size.height)),
-        AnyFULayout(VFlow(alignment: .top, maxHeight: size.height)),
-        AnyFULayout(VFlow(alignment: .topTrailing, maxHeight: size.height)),
-        AnyFULayout(VFlow(alignment: .leading, maxHeight: size.height)),
-        AnyFULayout(VFlow(alignment: .center, maxHeight: size.height)),
-        AnyFULayout(VFlow(alignment: .trailing, maxHeight: size.height)),
-        AnyFULayout(VFlow(alignment: .bottomLeading, maxHeight: size.height)),
-        AnyFULayout(VFlow(alignment: .bottom, maxHeight: size.height)),
-        AnyFULayout(VFlow(alignment: .bottomTrailing, maxHeight: size.height)),
+        VFlow(alignment: .topLeading, maxHeight: size.height),
+        VFlow(alignment: .top, maxHeight: size.height),
+        VFlow(alignment: .topTrailing, maxHeight: size.height),
+        VFlow(alignment: .leading, maxHeight: size.height),
+        VFlow(alignment: .center, maxHeight: size.height),
+        VFlow(alignment: .trailing, maxHeight: size.height),
+        VFlow(alignment: .bottomLeading, maxHeight: size.height),
+        VFlow(alignment: .bottom, maxHeight: size.height),
+        VFlow(alignment: .bottomTrailing, maxHeight: size.height),
 
-        AnyFULayout(VMasonry(alignment: .top, columns: 3, maxWidth: size.width)),
-        AnyFULayout(VMasonry(alignment: .center, columns: 3, maxWidth: size.width)),
-        AnyFULayout(VMasonry(alignment: .bottom, columns: 3, maxWidth: size.width)),
+        VMasonry(alignment: .top, columns: 3, maxWidth: size.width),
+        VMasonry(alignment: .center, columns: 3, maxWidth: size.width),
+        VMasonry(alignment: .bottom, columns: 3, maxWidth: size.width),
 
-        AnyFULayout(VStackFULayout(alignment: .leading, maxWidth: size.width)),
-        AnyFULayout(VStackFULayout(alignment: .center, maxWidth: size.width)),
-        AnyFULayout(VStackFULayout(alignment: .trailing, maxWidth: size.width)),
+        VStackFULayout(alignment: .leading, maxWidth: size.width),
+        VStackFULayout(alignment: .center, maxWidth: size.width),
+        VStackFULayout(alignment: .trailing, maxWidth: size.width),
 
-        AnyFULayout(HFlow(alignment: .topLeading, maxWidth: size.width)),
-        AnyFULayout(HFlow(alignment: .top, maxWidth: size.width)),
-        AnyFULayout(HFlow(alignment: .topTrailing, maxWidth: size.width)),
-        AnyFULayout(HFlow(alignment: .leading, maxWidth: size.width)),
-        AnyFULayout(HFlow(alignment: .center, maxWidth: size.width)),
-        AnyFULayout(HFlow(alignment: .trailing, maxWidth: size.width)),
-        AnyFULayout(HFlow(alignment: .bottomLeading, maxWidth: size.width)),
-        AnyFULayout(HFlow(alignment: .bottom, maxWidth: size.width)),
-        AnyFULayout(HFlow(alignment: .bottomTrailing, maxWidth: size.width)),
+        HFlow(alignment: .topLeading, maxWidth: size.width),
+        HFlow(alignment: .top, maxWidth: size.width),
+        HFlow(alignment: .topTrailing, maxWidth: size.width),
+        HFlow(alignment: .leading, maxWidth: size.width),
+        HFlow(alignment: .center, maxWidth: size.width),
+        HFlow(alignment: .trailing, maxWidth: size.width),
+        HFlow(alignment: .bottomLeading, maxWidth: size.width),
+        HFlow(alignment: .bottom, maxWidth: size.width),
+        HFlow(alignment: .bottomTrailing, maxWidth: size.width),
         
-        AnyFULayout(HMasonry(alignment: .leading, rows: 3, maxHeight: size.height)),
-        AnyFULayout(HMasonry(alignment: .center, rows: 3, maxHeight: size.height)),
-        AnyFULayout(HMasonry(alignment: .trailing, rows: 3, maxHeight: size.height)),
+        HMasonry(alignment: .leading, rows: 3, maxHeight: size.height),
+        HMasonry(alignment: .center, rows: 3, maxHeight: size.height),
+        HMasonry(alignment: .trailing, rows: 3, maxHeight: size.height),
         
-        AnyFULayout(HStackFULayout(alignment: .top, maxHeight: size.height)),
-        AnyFULayout(HStackFULayout(alignment: .center, maxHeight: size.height)),
-        AnyFULayout(HStackFULayout(alignment: .bottom, maxHeight: size.height)),
+        HStackFULayout(alignment: .top, maxHeight: size.height),
+        HStackFULayout(alignment: .center, maxHeight: size.height),
+        HStackFULayout(alignment: .bottom, maxHeight: size.height),
         
-        AnyFULayout(ZStackFULayout(alignment: .topLeading, maxWidth: size.width, maxHeight: size.height)),
-        AnyFULayout(ZStackFULayout(alignment: .top, maxWidth: size.width, maxHeight: size.height)),
-        AnyFULayout(ZStackFULayout(alignment: .topTrailing, maxWidth: size.width, maxHeight: size.height)),
-        AnyFULayout(ZStackFULayout(alignment: .leading, maxWidth: size.width, maxHeight: size.height)),
-        AnyFULayout(ZStackFULayout(alignment: .center, maxWidth: size.width, maxHeight: size.height)),
-        AnyFULayout(ZStackFULayout(alignment: .trailing, maxWidth: size.width, maxHeight: size.height)),
-        AnyFULayout(ZStackFULayout(alignment: .bottomLeading, maxWidth: size.width, maxHeight: size.height)),
-        AnyFULayout(ZStackFULayout(alignment: .bottom, maxWidth: size.width, maxHeight: size.height)),
-        AnyFULayout(ZStackFULayout(alignment: .bottomTrailing, maxWidth: size.width, maxHeight: size.height))
+        ZStackFULayout(alignment: .topLeading, maxWidth: size.width, maxHeight: size.height),
+        ZStackFULayout(alignment: .top, maxWidth: size.width, maxHeight: size.height),
+        ZStackFULayout(alignment: .topTrailing, maxWidth: size.width, maxHeight: size.height),
+        ZStackFULayout(alignment: .leading, maxWidth: size.width, maxHeight: size.height),
+        ZStackFULayout(alignment: .center, maxWidth: size.width, maxHeight: size.height),
+        ZStackFULayout(alignment: .trailing, maxWidth: size.width, maxHeight: size.height),
+        ZStackFULayout(alignment: .bottomLeading, maxWidth: size.width, maxHeight: size.height),
+        ZStackFULayout(alignment: .bottom, maxWidth: size.width, maxHeight: size.height),
+        ZStackFULayout(alignment: .bottomTrailing, maxWidth: size.width, maxHeight: size.height)
     ]
 }
 
@@ -89,7 +89,7 @@ struct AnyFULayout_ViewExample: View {
         VStack {
             GeometryReader { proxy in
                 let layouts = exampleLayouts(size: proxy.size)
-                let layout = layouts[layoutIndex]
+                let layout = layouts[layoutIndex].anyFULayout
                 
                 Color.clear.overlay(
                     ZStack(alignment: .top) {
@@ -160,7 +160,7 @@ struct AnyFULayoutForEachExample: View {
         VStack {
             GeometryReader { proxy in
                 let layouts = exampleLayouts(size: proxy.size)
-                let layout = layouts[layoutIndex]
+                let layout = layouts[layoutIndex].anyFULayout
                 
                 Color.clear.overlay(
                     ZStack(alignment: .top) {
