@@ -31,12 +31,20 @@ struct ContentView: View {
                             Label("SmartScroll", systemImage: "scroll")
                         }
                         
+                        NavigationLink(destination: SmartScrollViewSimpleExample()) {
+                            Label("SmartScrollSimple", systemImage: "scroll")
+                        }
+                        
                         NavigationLink(destination: AnyFULayoutExample()) {
                             Label("FULayout", systemImage: "rectangle.3.group")
                         }
                         
                         NavigationLink(destination: HFlowExample()) {
                             Label("HFlow", systemImage: "arrow.forward.square")
+                        }
+                        
+                        NavigationLink(destination: HFlowSmartScrollViewExample()) {
+                            Label("HFlowSmartScrollView", systemImage: "arrow.forward.square")
                         }
                         
                         NavigationLink(destination: VFlowExample()) {

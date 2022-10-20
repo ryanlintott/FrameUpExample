@@ -109,8 +109,8 @@ struct AnyFULayout_ViewExample: View {
                         }
                         .background(Color.gray.opacity(0.5))
                         .border(Color.red)
-                        .animation(.spring(), value: layoutIndex)
-                        .animation(.spring(), value: items)
+                        .animation(.default, value: layoutIndex)
+                        .animation(.default, value: items)
                         .onTapGesture {
                             layoutIndex = (layoutIndex + 1) % layouts.count
                         }

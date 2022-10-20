@@ -16,6 +16,7 @@
 		CF1EEF4B274D5FD600987595 /* WidgetSizeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EEF4A274D5FD600987595 /* WidgetSizeExample.swift */; };
 		CF1EEF4D274D60E900987595 /* FrameUp in Frameworks */ = {isa = PBXBuildFile; productRef = CF1EEF4C274D60E900987595 /* FrameUp */; };
 		CF25F6512900DA1A0041FBAF /* AnyHorizontalFULayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF25F6502900DA1A0041FBAF /* AnyHorizontalFULayoutExample.swift */; };
+		CF25F6532901D91C0041FBAF /* HFlowSmartScrollViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF25F6522901D91C0041FBAF /* HFlowSmartScrollViewExample.swift */; };
 		CF2986B528FEFD1F00CFDAA5 /* HFlowBoxExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2986B428FEFD1F00CFDAA5 /* HFlowBoxExample.swift */; };
 		CF42CE26274C4A540010F12B /* WidgetDemoFrameExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF42CE25274C4A540010F12B /* WidgetDemoFrameExample.swift */; };
 		CF48CC9F26F131C200406F4E /* FrameUpExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CC9E26F131C200406F4E /* FrameUpExampleApp.swift */; };
@@ -81,6 +82,7 @@
 		CF1EEF39274D4C4D00987595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF1EEF4A274D5FD600987595 /* WidgetSizeExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSizeExample.swift; sourceTree = "<group>"; };
 		CF25F6502900DA1A0041FBAF /* AnyHorizontalFULayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyHorizontalFULayoutExample.swift; sourceTree = "<group>"; };
+		CF25F6522901D91C0041FBAF /* HFlowSmartScrollViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HFlowSmartScrollViewExample.swift; sourceTree = "<group>"; };
 		CF2986B428FEFD1F00CFDAA5 /* HFlowBoxExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HFlowBoxExample.swift; sourceTree = "<group>"; };
 		CF42CE25274C4A540010F12B /* WidgetDemoFrameExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetDemoFrameExample.swift; sourceTree = "<group>"; };
 		CF48CC9B26F131C200406F4E /* FrameUpExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameUpExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +192,7 @@
 				CF25F6502900DA1A0041FBAF /* AnyHorizontalFULayoutExample.swift */,
 				CFF9EC3C28D2D58700F2D18C /* AnyFULayoutSimpleExample.swift */,
 				CFAC149F2885BC99003D4539 /* HFlowExample.swift */,
+				CF25F6522901D91C0041FBAF /* HFlowSmartScrollViewExample.swift */,
 				CF48CCBA26F134CA00406F4E /* VFlowExample.swift */,
 				CF2986B428FEFD1F00CFDAA5 /* HFlowBoxExample.swift */,
 				CFC2EBFA2811DA230088E36C /* VGridMasonryExample.swift */,
@@ -349,6 +352,7 @@
 				CFF9EC3F28D2DB2C00F2D18C /* CustomFULayoutExample.swift in Sources */,
 				CFAC14A02885BC99003D4539 /* HFlowExample.swift in Sources */,
 				CF48CC9F26F131C200406F4E /* FrameUpExampleApp.swift in Sources */,
+				CF25F6532901D91C0041FBAF /* HFlowSmartScrollViewExample.swift in Sources */,
 				CF48CCB926F134AC00406F4E /* Item.swift in Sources */,
 				CFBC933726F2B29300D5D439 /* TabMenuViewExample.swift in Sources */,
 				CF48CCB126F132A400406F4E /* WidthReaderExample.swift in Sources */,
