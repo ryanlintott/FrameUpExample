@@ -12,7 +12,7 @@
 		CF1EEF32274D4C4C00987595 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1EEF31274D4C4C00987595 /* SwiftUI.framework */; };
 		CF1EEF35274D4C4C00987595 /* WidgetFrameWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EEF34274D4C4C00987595 /* WidgetFrameWidget.swift */; };
 		CF1EEF38274D4C4D00987595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1EEF37274D4C4D00987595 /* Assets.xcassets */; };
-		CF1EEF3E274D4C4D00987595 /* WidgetFrameWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CF1EEF2D274D4C4C00987595 /* WidgetFrameWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CF1EEF3E274D4C4D00987595 /* WidgetFrameWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CF1EEF2D274D4C4C00987595 /* WidgetFrameWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CF1EEF4B274D5FD600987595 /* WidgetSizeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EEF4A274D5FD600987595 /* WidgetSizeExample.swift */; };
 		CF1EEF4D274D60E900987595 /* FrameUp in Frameworks */ = {isa = PBXBuildFile; productRef = CF1EEF4C274D60E900987595 /* FrameUp */; };
 		CF25F6512900DA1A0041FBAF /* AnyHorizontalFULayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF25F6502900DA1A0041FBAF /* AnyHorizontalFULayoutExample.swift */; };
@@ -59,15 +59,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CF1EEF42274D4C4D00987595 /* Embed App Extensions */ = {
+		CF1EEF42274D4C4D00987595 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				CF1EEF3E274D4C4D00987595 /* WidgetFrameWidgetExtension.appex in Embed App Extensions */,
+				CF1EEF3E274D4C4D00987595 /* WidgetFrameWidgetExtension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -253,7 +253,7 @@
 				CF48CC9726F131C200406F4E /* Sources */,
 				CF48CC9826F131C200406F4E /* Frameworks */,
 				CF48CC9926F131C200406F4E /* Resources */,
-				CF1EEF42274D4C4D00987595 /* Embed App Extensions */,
+				CF1EEF42274D4C4D00987595 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -276,7 +276,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					CF1EEF2C274D4C4C00987595 = {
 						CreatedOnToolsVersion = 13.1;
