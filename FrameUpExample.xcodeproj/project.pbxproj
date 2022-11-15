@@ -18,6 +18,7 @@
 		CF25F6512900DA1A0041FBAF /* AnyHorizontalFULayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF25F6502900DA1A0041FBAF /* AnyHorizontalFULayoutExample.swift */; };
 		CF25F6532901D91C0041FBAF /* HFlowSmartScrollViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF25F6522901D91C0041FBAF /* HFlowSmartScrollViewExample.swift */; };
 		CF2986B528FEFD1F00CFDAA5 /* HFlowBoxExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2986B428FEFD1F00CFDAA5 /* HFlowBoxExample.swift */; };
+		CF2D066C292201BD007D1142 /* DoubleScrollTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2D066B292201BD007D1142 /* DoubleScrollTabView.swift */; };
 		CF3482C52910C7C600563B01 /* FUViewThatFitsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3482C42910C7C600563B01 /* FUViewThatFitsExample.swift */; };
 		CF42CE26274C4A540010F12B /* WidgetDemoFrameExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF42CE25274C4A540010F12B /* WidgetDemoFrameExample.swift */; };
 		CF48CC9F26F131C200406F4E /* FrameUpExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CC9E26F131C200406F4E /* FrameUpExampleApp.swift */; };
@@ -33,6 +34,7 @@
 		CF4F7135274C2E3100818896 /* OnSizeChangeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4F7134274C2E3100818896 /* OnSizeChangeExample.swift */; };
 		CF5149A2274E967000F22BF3 /* WidgetRelativeShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5149A0274E90F000F22BF3 /* WidgetRelativeShape.swift */; };
 		CF5C50F927FCF29200769E38 /* AutoRotatingViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C50F827FCF29200769E38 /* AutoRotatingViewExample.swift */; };
+		CF7B8B6829243A6A00C4490E /* JustifiedTextExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7B8B622924383200C4490E /* JustifiedTextExample.swift */; };
 		CF9CA722290DC712006E05E4 /* LayoutThatFitsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9CA721290DC712006E05E4 /* LayoutThatFitsExample.swift */; };
 		CF9FD88627A83A9D0054B22E /* RelativePaddingExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FD88527A83A9D0054B22E /* RelativePaddingExample.swift */; };
 		CFAC14A02885BC99003D4539 /* HFlowExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAC149F2885BC99003D4539 /* HFlowExample.swift */; };
@@ -87,6 +89,7 @@
 		CF25F6502900DA1A0041FBAF /* AnyHorizontalFULayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyHorizontalFULayoutExample.swift; sourceTree = "<group>"; };
 		CF25F6522901D91C0041FBAF /* HFlowSmartScrollViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HFlowSmartScrollViewExample.swift; sourceTree = "<group>"; };
 		CF2986B428FEFD1F00CFDAA5 /* HFlowBoxExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HFlowBoxExample.swift; sourceTree = "<group>"; };
+		CF2D066B292201BD007D1142 /* DoubleScrollTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleScrollTabView.swift; sourceTree = "<group>"; };
 		CF3482C42910C7C600563B01 /* FUViewThatFitsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUViewThatFitsExample.swift; sourceTree = "<group>"; };
 		CF42CE25274C4A540010F12B /* WidgetDemoFrameExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetDemoFrameExample.swift; sourceTree = "<group>"; };
 		CF48CC9B26F131C200406F4E /* FrameUpExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameUpExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +106,7 @@
 		CF4F7134274C2E3100818896 /* OnSizeChangeExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnSizeChangeExample.swift; sourceTree = "<group>"; };
 		CF5149A0274E90F000F22BF3 /* WidgetRelativeShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetRelativeShape.swift; sourceTree = "<group>"; };
 		CF5C50F827FCF29200769E38 /* AutoRotatingViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRotatingViewExample.swift; sourceTree = "<group>"; };
+		CF7B8B622924383200C4490E /* JustifiedTextExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifiedTextExample.swift; sourceTree = "<group>"; };
 		CF9CA721290DC712006E05E4 /* LayoutThatFitsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutThatFitsExample.swift; sourceTree = "<group>"; };
 		CF9FD88527A83A9D0054B22E /* RelativePaddingExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativePaddingExample.swift; sourceTree = "<group>"; };
 		CFAC149F2885BC99003D4539 /* HFlowExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HFlowExample.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 			children = (
 				CF1EEF34274D4C4C00987595 /* WidgetFrameWidget.swift */,
 				CF5149A0274E90F000F22BF3 /* WidgetRelativeShape.swift */,
+				CF7B8B622924383200C4490E /* JustifiedTextExample.swift */,
 				CF1EEF37274D4C4D00987595 /* Assets.xcassets */,
 				CF1EEF39274D4C4D00987595 /* Info.plist */,
 			);
@@ -194,6 +199,7 @@
 				CF4F7134274C2E3100818896 /* OnSizeChangeExample.swift */,
 				CF086A6726FE8AE8002C715D /* SmartScrollViewExample.swift */,
 				CFF9EC3828D1157200F2D18C /* SmartScrollViewSimpleExample.swift */,
+				CF2D066B292201BD007D1142 /* DoubleScrollTabView.swift */,
 				CFAC14A12885ED2C003D4539 /* AnyFULayoutExample.swift */,
 				CF25F6502900DA1A0041FBAF /* AnyHorizontalFULayoutExample.swift */,
 				CFF9EC3C28D2D58700F2D18C /* AnyFULayoutSimpleExample.swift */,
@@ -342,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF7B8B6829243A6A00C4490E /* JustifiedTextExample.swift in Sources */,
 				CF1EEF35274D4C4C00987595 /* WidgetFrameWidget.swift in Sources */,
 				CF5149A2274E967000F22BF3 /* WidgetRelativeShape.swift in Sources */,
 			);
@@ -360,6 +367,7 @@
 				CF4F7133274C2B8400818896 /* ScaledToFrameExample.swift in Sources */,
 				CFF9EC4128D3C07000F2D18C /* TwoSidedViewExample.swift in Sources */,
 				CFF9EC3F28D2DB2C00F2D18C /* CustomFULayoutExample.swift in Sources */,
+				CF2D066C292201BD007D1142 /* DoubleScrollTabView.swift in Sources */,
 				CFAC14A02885BC99003D4539 /* HFlowExample.swift in Sources */,
 				CF48CC9F26F131C200406F4E /* FrameUpExampleApp.swift in Sources */,
 				CF25F6532901D91C0041FBAF /* HFlowSmartScrollViewExample.swift in Sources */,

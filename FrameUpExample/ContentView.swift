@@ -35,6 +35,13 @@ struct ContentView: View {
                             Label("SmartScrollSimple", systemImage: "scroll")
                         }
                         
+                        NavigationLink(destination: DoubleScrollTabViewExample()) {
+                            Label("DoubleScrollTabView", systemImage: "scroll")
+                        }
+                    }
+                    
+                    Group {
+                        
                         NavigationLink(destination: AnyFULayoutExample()) {
                             Label("FULayout", systemImage: "rectangle.3.group")
                         }
