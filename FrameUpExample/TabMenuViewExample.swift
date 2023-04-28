@@ -8,6 +8,7 @@
 import FrameUp
 import SwiftUI
 
+#if os(iOS)
 struct TabMenuViewExample: View {
     @Binding var selection: Int
     let onReselect: (() -> Void)?
@@ -102,3 +103,4 @@ struct TabMenuViewExample_Previews: PreviewProvider {
         }
     }
 }
+#endif

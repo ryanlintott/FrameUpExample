@@ -43,7 +43,9 @@ struct SmartScrollViewSimpleExample: View {
             .padding()
         }
         .navigationTitle("SmartScrollViewSimple")
+        #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+        #endif
     }
 }
 

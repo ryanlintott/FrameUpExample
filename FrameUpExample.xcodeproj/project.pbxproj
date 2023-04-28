@@ -12,7 +12,7 @@
 		CF1EEF32274D4C4C00987595 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1EEF31274D4C4C00987595 /* SwiftUI.framework */; };
 		CF1EEF35274D4C4C00987595 /* WidgetFrameWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EEF34274D4C4C00987595 /* WidgetFrameWidget.swift */; };
 		CF1EEF38274D4C4D00987595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1EEF37274D4C4D00987595 /* Assets.xcassets */; };
-		CF1EEF3E274D4C4D00987595 /* WidgetFrameWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CF1EEF2D274D4C4C00987595 /* WidgetFrameWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CF1EEF3E274D4C4D00987595 /* WidgetFrameWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CF1EEF2D274D4C4C00987595 /* WidgetFrameWidgetExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CF1EEF4B274D5FD600987595 /* WidgetSizeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EEF4A274D5FD600987595 /* WidgetSizeExample.swift */; };
 		CF1EEF4D274D60E900987595 /* FrameUp in Frameworks */ = {isa = PBXBuildFile; productRef = CF1EEF4C274D60E900987595 /* FrameUp */; };
 		CF25F6512900DA1A0041FBAF /* AnyHorizontalFULayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF25F6502900DA1A0041FBAF /* AnyHorizontalFULayoutExample.swift */; };
@@ -35,6 +35,7 @@
 		CF5149A2274E967000F22BF3 /* WidgetRelativeShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5149A0274E90F000F22BF3 /* WidgetRelativeShape.swift */; };
 		CF5C50F927FCF29200769E38 /* AutoRotatingViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C50F827FCF29200769E38 /* AutoRotatingViewExample.swift */; };
 		CF7B8B6829243A6A00C4490E /* JustifiedTextExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7B8B622924383200C4490E /* JustifiedTextExample.swift */; };
+		CF8C0D4029FB715E00559041 /* Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8C0D3F29FB715E00559041 /* Examples.swift */; };
 		CF9CA722290DC712006E05E4 /* LayoutThatFitsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9CA721290DC712006E05E4 /* LayoutThatFitsExample.swift */; };
 		CF9FD88627A83A9D0054B22E /* RelativePaddingExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FD88527A83A9D0054B22E /* RelativePaddingExample.swift */; };
 		CFAC14A02885BC99003D4539 /* HFlowExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAC149F2885BC99003D4539 /* HFlowExample.swift */; };
@@ -107,6 +108,7 @@
 		CF5149A0274E90F000F22BF3 /* WidgetRelativeShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetRelativeShape.swift; sourceTree = "<group>"; };
 		CF5C50F827FCF29200769E38 /* AutoRotatingViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRotatingViewExample.swift; sourceTree = "<group>"; };
 		CF7B8B622924383200C4490E /* JustifiedTextExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifiedTextExample.swift; sourceTree = "<group>"; };
+		CF8C0D3F29FB715E00559041 /* Examples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Examples.swift; sourceTree = "<group>"; };
 		CF9CA721290DC712006E05E4 /* LayoutThatFitsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutThatFitsExample.swift; sourceTree = "<group>"; };
 		CF9FD88527A83A9D0054B22E /* RelativePaddingExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativePaddingExample.swift; sourceTree = "<group>"; };
 		CFAC149F2885BC99003D4539 /* HFlowExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HFlowExample.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			children = (
 				CF48CC9E26F131C200406F4E /* FrameUpExampleApp.swift */,
 				CF48CCA026F131C200406F4E /* ContentView.swift */,
+				CF8C0D3F29FB715E00559041 /* Examples.swift */,
 				CF48CCB826F134AC00406F4E /* Item.swift */,
 				CF48CCB026F132A400406F4E /* WidthReaderExample.swift */,
 				CF48CCBC26F1356A00406F4E /* HeightReaderExample.swift */,
@@ -382,6 +385,7 @@
 				CFD6964526F3EED2008D58AD /* TabMenuViewExample2.swift in Sources */,
 				CFAC14A22885ED2C003D4539 /* AnyFULayoutExample.swift in Sources */,
 				CF086A6826FE8AE8002C715D /* SmartScrollViewExample.swift in Sources */,
+				CF8C0D4029FB715E00559041 /* Examples.swift in Sources */,
 				CF42CE26274C4A540010F12B /* WidgetDemoFrameExample.swift in Sources */,
 				CF48CCBB26F134CA00406F4E /* VFlowExample.swift in Sources */,
 				CF9FD88627A83A9D0054B22E /* RelativePaddingExample.swift in Sources */,
@@ -399,6 +403,7 @@
 /* Begin PBXTargetDependency section */
 		CF1EEF3D274D4C4D00987595 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = CF1EEF2C274D4C4C00987595 /* WidgetFrameWidgetExtension */;
 			targetProxy = CF1EEF3C274D4C4D00987595 /* PBXContainerItemProxy */;
 		};
@@ -600,9 +605,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.abetterwaytodo.FrameUpExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -632,9 +641,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.abetterwaytodo.FrameUpExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

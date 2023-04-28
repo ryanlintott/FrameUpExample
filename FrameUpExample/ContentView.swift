@@ -8,110 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
+    var logo: some View {
+        Image("FrameUp-logo")
+            .resizable()
+            .scaledToFit()
+            .frame(maxWidth: 400)
+            .padding()
+    }
+    
     var body: some View {
+        #if os(iOS)
         NavigationView {
             VStack {
-                Image("FrameUp-logo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxWidth: 400)
-                    .padding()
+                logo
                 
                 Form {
-                    Group {
-                        NavigationLink(destination: WidthReaderExample()) {
-                            Label("WidthReader", systemImage: "arrow.left.and.right.square")
-                        }
-                        
-                        NavigationLink(destination: HeightReaderExample()) {
-                            Label("HeightReader", systemImage: "arrow.up.and.down.square")
-                        }
-                        
-                        NavigationLink(destination: SmartScrollViewExample()) {
-                            Label("SmartScroll", systemImage: "scroll")
-                        }
-                        
-                        NavigationLink(destination: SmartScrollViewSimpleExample()) {
-                            Label("SmartScrollSimple", systemImage: "scroll")
-                        }
-                        
-                        NavigationLink(destination: DoubleScrollTabViewExample()) {
-                            Label("DoubleScrollTabView", systemImage: "scroll")
-                        }
-                    }
-                    
-                    Group {
-                        
-                        NavigationLink(destination: AnyFULayoutExample()) {
-                            Label("FULayout", systemImage: "rectangle.3.group")
-                        }
-                        
-                        NavigationLink(destination: HFlowExample()) {
-                            Label("HFlow", systemImage: "arrow.forward.square")
-                        }
-                        
-                        NavigationLink(destination: HFlowSmartScrollViewExample()) {
-                            Label("HFlowSmartScrollView", systemImage: "arrow.forward.square")
-                        }
-                        
-                        NavigationLink(destination: VFlowExample()) {
-                            Label("VFlow", systemImage: "arrow.down.square")
-                        }
-                        
-                        NavigationLink(destination: CustomFULayoutExample()) {
-                            Label("CustomFULayout", systemImage: "rectangle.3.group.bubble.left")
-                        }
-                    }
-                    
-                    Group {
-                        NavigationLink(destination: TwoSidedViewExample()) {
-                            Label("TwoSidedView", systemImage: "arrow.2.squarepath")
-                        }
-                        
-                        NavigationLink(destination: FlippingViewExample()) {
-                            Label("FlippingView", systemImage: "arrow.uturn.right.square")
-                        }
-                        
-                        NavigationLink(destination: OverlappingImageHorizontalExample()) {
-                            Label("HOverlap", systemImage: "square.righthalf.fill")
-                        }
-                        
-                        NavigationLink(destination: OverlappingImageVerticalExample()) {
-                            Label("VOverlap", systemImage: "square.bottomhalf.fill")
-                        }
-                        
-                        NavigationLink(destination: RelativePaddingExample()) {
-                            Label("RelativePadding", systemImage: "percent")
-                        }
-                    }
-                    
-                    Group {
-                        NavigationLink(destination: TabMenuViewExample2()) {
-                            Label("TabMenu", systemImage: "squares.below.rectangle")
-                        }
-                        
-                        NavigationLink(destination: ScaledToFrameExample()) {
-                            Label("ScaledToFrameExample", systemImage: "rectangle.and.arrow.up.right.and.arrow.down.left")
-                        }
-                        
-                        NavigationLink(destination: AutoRotatingViewExample()) {
-                            Label("AutoRotatingView", systemImage: "arrow.turn.up.forward.iphone")
-                        }
-                        
-                        NavigationLink(destination: WidgetSizeExample()) {
-                            Label("WidgetSize", systemImage: "rectangle.3.offgrid")
-                        }
-                        
-                        NavigationLink(destination: WidgetDemoFrameExample()) {
-                            Label("WidgetDemoFrame", systemImage: "rectangle.3.offgrid")
-                        }
-                    }
+                    Examples()
                 }
             }
             .navigationTitle("FrameUp")
             .navigationBarHidden(true)
         }
         .navigationViewStyle(.stack)
+        #else
+        NavigationView {
+            List {
+                logo
+                
+                Examples()
+            }
+            .navigationTitle("FrameUp")
+        }
+        #endif
     }
 }
 

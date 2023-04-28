@@ -8,6 +8,7 @@
 import FrameUp
 import SwiftUI
 
+#if os(iOS)
 struct AutoRotatingViewExample: View {
     @State private var isAnimated: Bool = true
     @State private var portrait: Bool = true
@@ -85,3 +86,4 @@ struct AutoRotatingViewExample_Previews: PreviewProvider {
         AutoRotatingViewExample()
     }
 }
+#endif

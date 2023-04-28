@@ -9,7 +9,6 @@ import FrameUp
 import SwiftUI
 
 struct OverlappingImageVerticalExample: View {
-    let previewImage = UIImage(systemName: "star.square")!
     let image = Image(systemName: "star.square")
     
     @State private var top: CGFloat = 0.1
@@ -57,7 +56,6 @@ struct OverlappingImageVerticalExample: View {
 }
 
 struct OverlappingImageHorizontalExample: View {
-    let previewImage = UIImage(systemName: "star.square")!
     let image = Image(systemName: "star.square")
     
     @State private var leading: CGFloat = 0.1

@@ -8,6 +8,7 @@
 import FrameUp
 import SwiftUI
 
+#if os(iOS)
 enum DoubleScrollTab: Int, RawRepresentable, CaseIterable {
     case first
     case second
@@ -183,3 +184,4 @@ struct DoubleScrollTabView_Previews: PreviewProvider {
         DoubleScrollTabViewExample()
     }
 }
+#endif

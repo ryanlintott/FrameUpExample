@@ -8,6 +8,7 @@
 import FrameUp
 import SwiftUI
 
+#if os(iOS)
 struct WidgetSizeExample: View {
     @State private var widgetSize: WidgetSize = .small
 
@@ -55,3 +56,4 @@ struct WidgetSizeExample_Previews: PreviewProvider {
         WidgetSizeExample()
     }
 }
+#endif

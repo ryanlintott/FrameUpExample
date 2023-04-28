@@ -8,6 +8,7 @@
 import FrameUp
 import SwiftUI
 
+#if os(iOS)
 struct TabMenuViewExample2: View {
     @State private var selection = 0
     @State private var reselect: Bool = false
@@ -79,3 +80,4 @@ struct TabMenuViewExample2_Previews: PreviewProvider {
         TabMenuViewExample2()
     }
 }
+#endif
