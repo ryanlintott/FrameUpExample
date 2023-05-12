@@ -52,7 +52,7 @@
 		CFBC932F26F24DC600D5D439 /* TagViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC932E26F24DC600D5D439 /* TagViewExample.swift */; };
 		CFBC933126F24FF200D5D439 /* TagViewForScrollViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */; };
 		CFBC933526F2AB8000D5D439 /* OverlappingImageHorizontalExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933426F2AB8000D5D439 /* OverlappingImageHorizontalExample.swift */; };
-		CFBC933726F2B29300D5D439 /* TabMenuExmple.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933626F2B29300D5D439 /* TabMenuExmple.swift */; };
+		CFBC933726F2B29300D5D439 /* TabMenuExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933626F2B29300D5D439 /* TabMenuExample.swift */; };
 		CFC476462A0C7E8E003B51CF /* LayoutExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC476452A0C7E8E003B51CF /* LayoutExamples.swift */; };
 		CFC476482A0C82FA003B51CF /* WidgetRelativeShapeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC476472A0C82FA003B51CF /* WidgetRelativeShapeExample.swift */; };
 		CFC4764A2A0C84F1003B51CF /* WidgetRelativeShapeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC476492A0C84F1003B51CF /* WidgetRelativeShapeDemo.swift */; };
@@ -142,7 +142,7 @@
 		CFBC932E26F24DC600D5D439 /* TagViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewExample.swift; sourceTree = "<group>"; };
 		CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewForScrollViewExample.swift; sourceTree = "<group>"; };
 		CFBC933426F2AB8000D5D439 /* OverlappingImageHorizontalExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlappingImageHorizontalExample.swift; sourceTree = "<group>"; };
-		CFBC933626F2B29300D5D439 /* TabMenuExmple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuExmple.swift; sourceTree = "<group>"; };
+		CFBC933626F2B29300D5D439 /* TabMenuExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuExample.swift; sourceTree = "<group>"; };
 		CFC476452A0C7E8E003B51CF /* LayoutExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutExamples.swift; sourceTree = "<group>"; };
 		CFC476472A0C82FA003B51CF /* WidgetRelativeShapeExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetRelativeShapeExample.swift; sourceTree = "<group>"; };
 		CFC476492A0C84F1003B51CF /* WidgetRelativeShapeDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetRelativeShapeDemo.swift; sourceTree = "<group>"; };
@@ -244,7 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				CF05409B2A005A3A007EE95F /* TabMenuExamples.swift */,
-				CFBC933626F2B29300D5D439 /* TabMenuExmple.swift */,
+				CFBC933626F2B29300D5D439 /* TabMenuExample.swift */,
 				CFD6964426F3EED2008D58AD /* TabMenuExampleView.swift */,
 			);
 			path = TabMenuExamples;
@@ -512,7 +512,7 @@
 				CF48CC9F26F131C200406F4E /* FrameUpExampleApp.swift in Sources */,
 				CF25F6532901D91C0041FBAF /* HFlowSmartScrollViewExample.swift in Sources */,
 				CF48CCB926F134AC00406F4E /* Item.swift in Sources */,
-				CFBC933726F2B29300D5D439 /* TabMenuExmple.swift in Sources */,
+				CFBC933726F2B29300D5D439 /* TabMenuExample.swift in Sources */,
 				CFF9E7452A0E96DF00451A65 /* ExperimentViews.swift in Sources */,
 				CF48CCB126F132A400406F4E /* WidthReaderExample.swift in Sources */,
 				CF9CA722290DC712006E05E4 /* LayoutThatFitsExample.swift in Sources */,

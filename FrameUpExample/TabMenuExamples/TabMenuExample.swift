@@ -1,5 +1,5 @@
 //
-//  TabMenuExmple.swift
+//  TabMenuExample.swift
 //  FrameUpExample
 //
 //  Created by Ryan Lintott on 2021-09-15.
@@ -9,7 +9,7 @@ import FrameUp
 import SwiftUI
 
 #if os(iOS)
-struct TabMenuExmple: View {
+struct TabMenuExample: View {
     @Binding var selection: Int
     let onReselect: (() -> Void)?
     let onDoubleTap: (() -> Void)?
@@ -88,7 +88,7 @@ struct DefaultTabView: View {
 
 struct TabMenuExample_Previews: PreviewProvider {
     static var previews: some View {
-        TabMenuExmple(selection: .constant(0))
+        TabMenuExample(selection: .constant(0))
             .previewLayout(.sizeThatFits)
         
         ZStack {
@@ -98,7 +98,7 @@ struct TabMenuExample_Previews: PreviewProvider {
             VStack(spacing: 0) {
                 Color.red.opacity(0.5)
                 
-                TabMenuExmple(selection: .constant(0))
+                TabMenuExample(selection: .constant(0))
             }
         }
     }

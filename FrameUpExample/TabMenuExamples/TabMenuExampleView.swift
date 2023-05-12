@@ -49,7 +49,7 @@ struct TabMenuExampleView: View {
             )
             .foregroundColor(.white)
             
-            TabMenuExmple(selection: $selection, onReselect: onReselect, onDoubleTap: onDoubleTap)
+            TabMenuExample(selection: $selection, onReselect: onReselect, onDoubleTap: onDoubleTap)
         }
         .navigationTitle("TabMenu")
     }
