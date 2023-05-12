@@ -16,14 +16,37 @@ struct ContentView: View {
             .padding()
     }
     
+    @ViewBuilder
+    var examples: some View {
+        AutoRotatingViewExamples()
+        
+        FrameAdjustmentExamples()
+        
+        FULayoutExamples()
+        
+        LayoutExamples()
+        
+        SmartScrollViewExamples()
+        
+        TabMenuExamples()
+        
+        TagViewExamples()
+        
+        WidgetExamples()
+        
+        TwoSidedViewExamples()
+        
+        ExperimentViews()
+    }
+    
     var body: some View {
         #if os(iOS)
         NavigationView {
             VStack {
                 logo
                 
-                Form {
-                    Examples()
+                List {
+                    examples
                 }
             }
             .navigationTitle("FrameUp")
@@ -35,7 +58,7 @@ struct ContentView: View {
             List {
                 logo
                 
-                Examples()
+                examples
             }
             .navigationTitle("FrameUp")
         }
