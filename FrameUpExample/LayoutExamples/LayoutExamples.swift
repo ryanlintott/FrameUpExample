@@ -11,14 +11,31 @@ struct LayoutExamples: View {
     var body: some View {
         Section {
             if #available(iOS 16, macOS 13, *) {
-                NavigationLink(destination: LayoutThatFitsExample()) {
-                    Label("LayoutThatFits", systemImage: "arrow.up.right.and.arrow.down.left.rectangle")
+                NavigationLink(destination: HFlowLayoutExample()) {
+                    Label("HFlowLayout", systemImage: "text.word.spacing")
+                }
+                
+                NavigationLink(destination: VFlowLayoutExample()) {
+                    Label {
+                        Text("VFlowLayout")
+                    } icon: {
+                        Image(systemName: "text.word.spacing")
+                            .rotation3DEffect(.degrees(180), axis: (1, 1, 0))
+                    }
+                }
+                
+                NavigationLink(destination: HMasonryLayoutExample()) {
+                    Label("HMasonryLayout", systemImage: "align.horizontal.left")
+                }
+                
+                NavigationLink(destination: VMasonryLayoutExample()) {
+                    Label("VMasonryLayout", systemImage: "align.vertical.top")
                 }
             } else {
                 UnavailableView(availableInLaterVersion: true)
             }
         } header: {
-            Text("Layout")
+            Text("SwiftUI Layout")
         }
     }
 }
