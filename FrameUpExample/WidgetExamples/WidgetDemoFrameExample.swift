@@ -26,41 +26,28 @@ struct WidgetDemoFrameExample: View {
     
     var body: some View {
         VStack {
+            Text("Demo frames below are sized for this device. Demo frames for other devices can be created by supplying screen size. iPad demo frames will provide an accurate dimension for the content and scale to the size shown on the home screen. Corner radius used is just an estimate as Apple does not supply these values.")
+                .font(.footnote)
+                .padding()
+            
             Picker("WidgetSize", selection: $widgetSize) {
                 ForEach(WidgetSize.supportedSizesForCurrentDevice, id: \.self) { widgetSize in
                     Text(widgetSize.rawValue)
                 }
             }
-            .pickerStyle(.segmented)
+            .pickerStyle(.menu)
             .padding()
             
             Spacer(minLength: 0)
             
             WidgetDemoFrame(widgetSize) { size, cornerRadius in
                 Color.blue
-                    .overlay(
-                        VStack {
-                            Text(UIDevice.current.userInterfaceIdiom == .pad ? "designCanvas: \(sizeString(size))" : "")
-
-                            Spacer()
-                            
-                            Text("homeScreen: \(sizeString(homeScreenSize))")
-                        }
-                    )
             }
-            .overlay(
-                GeometryReader { proxy in
-                    Color.clear
-                        .overlay(
-                            Text("actual size: \(sizeString(proxy.size))")
-                        )
-                }
-            )
             .foregroundColor(.white)
             
             Spacer()
         }
-        .navigationTitle("WidgetSize")
+        .navigationTitle("WidgetDemoFrame")
     }
 }
 

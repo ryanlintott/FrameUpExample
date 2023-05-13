@@ -22,28 +22,26 @@ struct WidgetSizeExample: View {
     
     var body: some View {
         VStack {
+            Text("Sizes below are for this device. Widget sizes for other devices can be found by supplying the screen size.")
+                .font(.footnote)
+                .padding()
+            
             Picker("WidgetSize", selection: $widgetSize) {
                 ForEach(WidgetSize.supportedSizesForCurrentDevice, id: \.self) { widgetSize in
                     Text(widgetSize.rawValue)
                 }
             }
-            .pickerStyle(.segmented)
+            .pickerStyle(.menu)
             .padding()
             
             Spacer(minLength: 0)
             
             Color.blue
                 .overlay(
-                    VStack {
-                        Text("Widget")
-                            .bold()
-                        
-                        Text(sizeString)
-                    }
-                    .foregroundColor(.white)
+                    Text(sizeString)
+                        .foregroundColor(.white)
                 )
                 .frame(size)
-                .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
             
             Spacer()
         }
