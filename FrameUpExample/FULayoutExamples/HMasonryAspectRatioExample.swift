@@ -11,16 +11,17 @@ import SwiftUI
 struct HMasonryAspectRatioExample: View {
     @State private var items: [Item] = [1, 1.3, 1.4, 0.5, 0.7, 1.1, 2, 0.6].map { .init(value: $0) }
     @State private var horizontalAlignment: FUHorizontalAlignment = .leading
-    @State private var verticalAlignment: FUVerticalAlignment = .top
     @State private var maxHeight: CGFloat = 300
     
     @State private var rows = 3
+    
+    var alignment: FUAlignment { .init(horizontal: horizontalAlignment, vertical: .top)}
     
     var body: some View {
         VStack {
             Color.clear.overlay(
                 ScrollView(.horizontal) {
-                    HMasonry(alignment: horizontalAlignment, rows: rows, maxHeight: maxHeight) {
+                    HMasonry(alignment: alignment, rows: rows, maxHeight: maxHeight) {
                         ForEach(items) { item in
                             Color.blue
                                 .aspectRatio(item.value, contentMode: .fit)
@@ -40,7 +41,6 @@ struct HMasonryAspectRatioExample: View {
                 .animation(.default, value: rows)
                 .animation(.default, value: maxHeight)
                 .animation(.default, value: horizontalAlignment)
-                .animation(.default, value: verticalAlignment)
             )
             
             VStack {

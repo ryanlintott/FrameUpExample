@@ -15,16 +15,17 @@ struct VMasonryExample: View {
     @State private var maxWidth: CGFloat = 300
     @State private var columns = 3
     
+    var alignment: FUAlignment { .init(horizontal: horizontalAlignment, vertical: verticalAlignment)}
+    
     var body: some View {
         VStack {
             Color.clear.overlay(
                 ScrollView(.vertical) {
-                    VMasonry(alignment: verticalAlignment, columns: columns, maxWidth: maxWidth) {
+                    VMasonry(alignment: alignment, columns: columns, maxWidth: maxWidth) {
                         ForEach(items) { item in
                             Text(item.value)
                                 .padding(12)
                                 .foregroundColor(.white)
-//                                .frame(height: CGFloat(item.value.count) * 6)
                                 .background(Color.blue)
                                 .cornerRadius(12)
                         }
@@ -49,7 +50,14 @@ struct VMasonryExample: View {
                 }
                 
                 Picker("Vertical Alignment", selection: $verticalAlignment) {
-                    ForEach([FUVerticalAlignment.top, .center, .bottom]) {
+                    ForEach(FUVerticalAlignment.allCases) {
+                        Text($0.rawValue)
+                    }
+                }
+                .pickerStyle(.segmented)
+                
+                Picker("Horizontal Alignment", selection: $horizontalAlignment) {
+                    ForEach([FUHorizontalAlignment.leading, .center, .trailing]) {
                         Text($0.rawValue)
                     }
                 }

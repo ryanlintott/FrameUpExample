@@ -16,11 +16,13 @@ struct HMasonryExample: View {
     
     @State private var rows = 3
     
+    var alignment: FUAlignment { .init(horizontal: horizontalAlignment, vertical: verticalAlignment)}
+    
     var body: some View {
         VStack {
             Color.clear.overlay(
                 ScrollView(.horizontal) {
-                    HMasonry(alignment: horizontalAlignment, rows: rows, maxHeight: maxHeight) {
+                    HMasonry(alignment: alignment, rows: rows, maxHeight: maxHeight) {
                         ForEach(items) { item in
                             Text(item.value)
                                 .padding(12)
@@ -49,6 +51,13 @@ struct HMasonryExample: View {
                     Button("Add Item") { items.append(Item(value: items.randomElement()?.value ?? "New Item")) }
                         .padding()
                 }
+                
+                Picker("Vertical Alignment", selection: $verticalAlignment) {
+                    ForEach([FUVerticalAlignment.top, .center, .bottom]) {
+                        Text($0.rawValue)
+                    }
+                }
+                .pickerStyle(.segmented)
                 
                 Picker("Horizontal Alignment", selection: $horizontalAlignment) {
                     ForEach(FUHorizontalAlignment.allCases) {
