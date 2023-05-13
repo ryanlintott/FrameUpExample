@@ -1,26 +1,23 @@
 //
-//  HMasonryExample.swift
+//  HStackFULayoutExample.swift
 //  FrameUpExample
 //
-//  Created by Ryan Lintott on 2023-05-10.
+//  Created by Ryan Lintott on 2023-05-12.
 //
 
 import FrameUp
 import SwiftUI
 
-struct HMasonryExample: View {
+struct HStackFULayoutExample: View {
     @State private var items: [Item] = .examples
-    @State private var horizontalAlignment: FUHorizontalAlignment = .leading
-    @State private var verticalAlignment: FUVerticalAlignment = .top
+    @State private var verticalAlignment: FUVerticalAlignment = .center
     @State private var maxHeight: CGFloat = 300
-    
-    @State private var rows = 3
     
     var body: some View {
         VStack {
             Color.clear.overlay(
                 ScrollView(.horizontal) {
-                    HMasonry(alignment: horizontalAlignment, rows: rows, maxHeight: maxHeight) {
+                    HStackFULayout(alignment: verticalAlignment, maxHeight: maxHeight) {
                         ForEach(items) { item in
                             Text(item.value)
                                 .padding(12)
@@ -36,9 +33,7 @@ struct HMasonryExample: View {
                     .padding()
                 }
                 .animation(.default, value: items)
-                .animation(.default, value: rows)
                 .animation(.default, value: maxHeight)
-                .animation(.default, value: horizontalAlignment)
                 .animation(.default, value: verticalAlignment)
             )
             
@@ -49,26 +44,26 @@ struct HMasonryExample: View {
                     Button("Add Item") { items.append(Item(value: items.randomElement()?.value ?? "New Item")) }
                         .padding()
                 }
-                
-                Picker("Horizontal Alignment", selection: $horizontalAlignment) {
-                    ForEach(FUHorizontalAlignment.allCases) {
+
+                Picker("Vertical Alignment", selection: $verticalAlignment) {
+                    ForEach([FUVerticalAlignment.top, .center, .bottom]) {
                         Text($0.rawValue)
                     }
                 }
                 .pickerStyle(.segmented)
-                
+
                 Stepper("Max Height \(maxHeight, specifier: "%.0F")", value: $maxHeight, in: 50...600, step: 50)
-                
-                Stepper("Rows \(rows)", value: $rows, in: 2...6)
             }
             .padding()
         }
-        .navigationTitle("HMasonry")
+        .navigationTitle("HStackFULayout")
     }
 }
 
-struct HMasonryExample_Previews: PreviewProvider {
+struct HStackFULayoutExample_Previews: PreviewProvider {
     static var previews: some View {
-        HMasonryExample()
+        NavigationView {
+            HStackFULayoutExample()
+        }
     }
 }

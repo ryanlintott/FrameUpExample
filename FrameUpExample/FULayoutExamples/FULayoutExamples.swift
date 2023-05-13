@@ -34,6 +34,10 @@ struct FULayoutExamples: View {
             NavigationLink(destination: VMasonryAspectRatioExample()) {
                 Label("VMasonry Aspect Ratio", systemImage: "arrow.down.square")
             }
+            
+            NavigationLink(destination: HStackFULayoutExample()) {
+                Label("HStackFULayout", systemImage: "arrow.forward.square")
+            }
         } header: {
             Text("FULayout")
         }

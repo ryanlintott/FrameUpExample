@@ -9,49 +9,45 @@ import FrameUp
 import SwiftUI
 
 struct HFlowBoxExample: View {
-    @State private var alignment: FUAlignment = .center
     @State private var boxes = [1,2,3,4,5]
+    @State private var horizontalAlignment: FUHorizontalAlignment = .leading
+    let verticalAlignment: FUVerticalAlignment = .top
+    
+    var alignment: FUAlignment { .init(horizontal: horizontalAlignment, vertical: verticalAlignment)}
     
     var body: some View {
         VStack {
-            ScrollView {
-                WidthReader { width in
-                    HFlow(alignment: alignment, maxWidth: width) {
-                        ForEach(boxes, id: \.self) { box in
-                            Color.red
-                                .frame(width: 80, height: 80)
-                                .padding()
+            Color.clear.overlay(
+                ScrollView {
+                    WidthReader { width in
+                        HFlow(alignment: alignment, maxWidth: width) {
+                            ForEach(boxes, id: \.self) { box in
+                                Color.red
+                                    .frame(width: 80, height: 80)
+                                    .padding()
+                            }
                         }
                     }
                 }
-            }
-            .animation(.default, value: boxes)
-            .animation(.default, value: alignment)
-            
-            Spacer()
-            
-            Text("Elements")
-                .font(.title)
-            
-            HStack {
-                Button("Remove") {
-                    if !boxes.isEmpty {
-                        boxes.removeLast()
+                .animation(.default, value: boxes)
+                .animation(.default, value: alignment)
+            )
+            VStack {
+                HStack {
+                    Button("Remove Box") { if !boxes.isEmpty { boxes.removeLast() } }
+                        .padding()
+                    Button("Add Box") { boxes.append((boxes.max() ?? 1) + 1) }
+                        .padding()
+                }
+                
+                Picker("Horizontal Alignment", selection: $horizontalAlignment) {
+                    ForEach(FUHorizontalAlignment.allCases) {
+                        Text($0.rawValue)
                     }
                 }
-                Button("Add") {
-                    boxes.append((boxes.last ?? 0) + 1)
-                }
+                .pickerStyle(.segmented)
             }
-            
-            
-            Text("Alignment")
-                .font(.title)
-            HStack {
-                Button("Leading") { alignment = .leading }
-                Button("Center") { alignment = .center }
-                Button("Trailing") { alignment = .trailing }
-            }
+            .padding()
         }
         .navigationTitle("HFlow Box")
     }
