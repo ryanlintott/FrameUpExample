@@ -12,31 +12,48 @@ struct FULayoutExamples: View {
     var body: some View {
         Section {
             NavigationLink(destination: HFlowExample()) {
-                Label("HFlow", systemImage: "arrow.forward.square")
+                Label("HFlow", systemImage: "text.word.spacing")
+            }
+            
+            NavigationLink(destination: HFlowBoxExample()) {
+                Label("HFlow Boxes", systemImage: "square.grid.3x3")
             }
             
             NavigationLink(destination: VFlowExample()) {
-                Label("VFlow", systemImage: "arrow.down.square")
+                Label {
+                    Text("VFlow")
+                } icon: {
+                    Image(systemName: "text.word.spacing")
+                        .rotation3DEffect(.degrees(180), axis: (1, 1, 0))
+                }
             }
             
             NavigationLink(destination: HMasonryExample()) {
-                Label("HMasonry", systemImage: "arrow.forward.square")
+                Label("HMasonry", systemImage: "align.horizontal.left")
             }
             
             NavigationLink(destination: HMasonryAspectRatioExample()) {
-                Label("HMasonry Aspect Ratio", systemImage: "arrow.forward.square")
+                Label("HMasonry Aspect Ratio", systemImage: "align.horizontal.left")
             }
             
             NavigationLink(destination: VMasonryExample()) {
-                Label("VMasonry", systemImage: "arrow.down.square")
+                Label("VMasonry", systemImage: "align.vertical.top")
             }
             
             NavigationLink(destination: VMasonryAspectRatioExample()) {
-                Label("VMasonry Aspect Ratio", systemImage: "arrow.down.square")
+                Label("VMasonry Aspect Ratio", systemImage: "align.vertical.top")
             }
             
             NavigationLink(destination: HStackFULayoutExample()) {
-                Label("HStackFULayout", systemImage: "arrow.forward.square")
+                Label("HStackFULayout", systemImage: "arrow.left.and.right")
+            }
+            
+            NavigationLink(destination: VStackFULayoutExample()) {
+                Label("VStackFULayout", systemImage: "arrow.up.and.down")
+            }
+            
+            NavigationLink(destination: ZStackFULayoutExample()) {
+                Label("ZStackFULayout", systemImage: "square.3.layers.3d")
             }
         } header: {
             Text("FULayout")

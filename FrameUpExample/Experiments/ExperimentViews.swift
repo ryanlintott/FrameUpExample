@@ -20,6 +20,8 @@ struct ExperimentViews: View {
             }
         } header: {
             Text("Experiments")
+        } footer: {
+            Text("These are buggy and may crash the app.")
         }
         #else
         EmptyView()
@@ -29,6 +31,8 @@ struct ExperimentViews: View {
 
 struct ExperimentViews_Previews: PreviewProvider {
     static var previews: some View {
-        ExperimentViews()
+        List {
+            ExperimentViews()
+        }
     }
 }

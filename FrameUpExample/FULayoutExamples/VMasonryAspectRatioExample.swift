@@ -68,6 +68,8 @@ struct VMasonryAspectRatioExample: View {
 
 struct VMasonryAspectRatioExample_Previews: PreviewProvider {
     static var previews: some View {
-        VMasonryAspectRatioExample()
+        NavigationView {
+            VMasonryAspectRatioExample()
+        }
     }
 }

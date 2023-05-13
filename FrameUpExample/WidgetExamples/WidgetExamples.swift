@@ -12,15 +12,15 @@ struct WidgetExamples: View {
         Section {
             #if os(iOS)
             NavigationLink(destination: WidgetSizeExample()) {
-                Label("WidgetSize", systemImage: "rectangle.3.offgrid")
+                Label("WidgetSize", systemImage: "questionmark.app")
             }
             
             NavigationLink(destination: WidgetDemoFrameExample()) {
-                Label("WidgetDemoFrame", systemImage: "rectangle.3.offgrid")
+                Label("WidgetDemoFrame", systemImage: "app")
             }
             
             NavigationLink(destination: WidgetRelativeShapeExample()) {
-                Label("WidgetRelativeShape", systemImage: "viewfinder")
+                Label("WidgetRelativeShape", systemImage: "app.dashed")
             }
             #else
             UnavailableView()

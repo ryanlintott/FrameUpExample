@@ -11,7 +11,7 @@ struct TwoSidedViewExamples: View {
     var body: some View {
         Section {
             NavigationLink(destination: TwoSidedViewExample()) {
-                Label("TwoSidedView", systemImage: "arrow.2.squarepath")
+                Label("TwoSidedView", systemImage: "arrow.uturn.right.square")
             }
             
             NavigationLink(destination: FlippingViewExample()) {

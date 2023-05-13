@@ -65,6 +65,8 @@
 		CFEB0B132911A556000507B8 /* FULayoutThatFitsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEB0B122911A556000507B8 /* FULayoutThatFitsExample.swift */; };
 		CFF9E7452A0E96DF00451A65 /* ExperimentViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9E7442A0E96DF00451A65 /* ExperimentViews.swift */; };
 		CFF9E7492A0EE83600451A65 /* HStackFULayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9E7482A0EE83600451A65 /* HStackFULayoutExample.swift */; };
+		CFF9E74B2A0F213400451A65 /* VStackFULayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9E74A2A0F213400451A65 /* VStackFULayoutExample.swift */; };
+		CFF9E74D2A0F230700451A65 /* ZStackFULayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9E74C2A0F230700451A65 /* ZStackFULayoutExample.swift */; };
 		CFF9EC3928D1157200F2D18C /* SmartScrollViewSimpleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9EC3828D1157200F2D18C /* SmartScrollViewSimpleExample.swift */; };
 		CFF9EC3D28D2D58700F2D18C /* AnyFULayoutSimpleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9EC3C28D2D58700F2D18C /* AnyFULayoutSimpleExample.swift */; };
 		CFF9EC3F28D2DB2C00F2D18C /* CustomFULayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9EC3E28D2DB2C00F2D18C /* CustomFULayoutExample.swift */; };
@@ -155,6 +157,8 @@
 		CFEB0B122911A556000507B8 /* FULayoutThatFitsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FULayoutThatFitsExample.swift; sourceTree = "<group>"; };
 		CFF9E7442A0E96DF00451A65 /* ExperimentViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentViews.swift; sourceTree = "<group>"; };
 		CFF9E7482A0EE83600451A65 /* HStackFULayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HStackFULayoutExample.swift; sourceTree = "<group>"; };
+		CFF9E74A2A0F213400451A65 /* VStackFULayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStackFULayoutExample.swift; sourceTree = "<group>"; };
+		CFF9E74C2A0F230700451A65 /* ZStackFULayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackFULayoutExample.swift; sourceTree = "<group>"; };
 		CFF9EC3828D1157200F2D18C /* SmartScrollViewSimpleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartScrollViewSimpleExample.swift; sourceTree = "<group>"; };
 		CFF9EC3C28D2D58700F2D18C /* AnyFULayoutSimpleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyFULayoutSimpleExample.swift; sourceTree = "<group>"; };
 		CFF9EC3E28D2DB2C00F2D18C /* CustomFULayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFULayoutExample.swift; sourceTree = "<group>"; };
@@ -211,13 +215,15 @@
 			children = (
 				CF0540892A004747007EE95F /* FULayoutExamples.swift */,
 				CFAC149F2885BC99003D4539 /* HFlowExample.swift */,
+				CF2986B428FEFD1F00CFDAA5 /* HFlowBoxExample.swift */,
 				CF48CCBA26F134CA00406F4E /* VFlowExample.swift */,
 				CFC476502A0C96A5003B51CF /* HMasonryExample.swift */,
-				CFC476522A0C9AAA003B51CF /* VMasonryExample.swift */,
 				CFC476562A0C9FC2003B51CF /* HMasonryAspectRatioExample.swift */,
+				CFC476522A0C9AAA003B51CF /* VMasonryExample.swift */,
 				CFC476542A0C9CC1003B51CF /* VMasonryAspectRatioExample.swift */,
 				CFF9E7482A0EE83600451A65 /* HStackFULayoutExample.swift */,
-				CF2986B428FEFD1F00CFDAA5 /* HFlowBoxExample.swift */,
+				CFF9E74A2A0F213400451A65 /* VStackFULayoutExample.swift */,
+				CFF9E74C2A0F230700451A65 /* ZStackFULayoutExample.swift */,
 				CFF9EC3C28D2D58700F2D18C /* AnyFULayoutSimpleExample.swift */,
 				CF25F6502900DA1A0041FBAF /* AnyFULayoutHorizontalExample.swift */,
 				CFAC14A12885ED2C003D4539 /* AnyFULayoutExample.swift */,
@@ -531,12 +537,14 @@
 				CF086A6826FE8AE8002C715D /* SmartScrollViewExample.swift in Sources */,
 				CF05408A2A004747007EE95F /* FULayoutExamples.swift in Sources */,
 				CF42CE26274C4A540010F12B /* WidgetDemoFrameExample.swift in Sources */,
+				CFF9E74D2A0F230700451A65 /* ZStackFULayoutExample.swift in Sources */,
 				CFF9E7492A0EE83600451A65 /* HStackFULayoutExample.swift in Sources */,
 				CFC476512A0C96A5003B51CF /* HMasonryExample.swift in Sources */,
 				CFC476552A0C9CC1003B51CF /* VMasonryAspectRatioExample.swift in Sources */,
 				CF48CCBB26F134CA00406F4E /* VFlowExample.swift in Sources */,
 				CF9FD88627A83A9D0054B22E /* RelativePaddingExample.swift in Sources */,
 				CF25F6512900DA1A0041FBAF /* AnyFULayoutHorizontalExample.swift in Sources */,
+				CFF9E74B2A0F213400451A65 /* VStackFULayoutExample.swift in Sources */,
 				CFC476482A0C82FA003B51CF /* WidgetRelativeShapeExample.swift in Sources */,
 				CF5C50F927FCF29200769E38 /* AutoRotatingViewExample.swift in Sources */,
 				CF05408C2A004828007EE95F /* WidgetExamples.swift in Sources */,

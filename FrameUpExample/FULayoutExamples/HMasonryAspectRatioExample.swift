@@ -70,6 +70,8 @@ struct HMasonryAspectRatioExample: View {
 
 struct HMasonryAspectRatioExample_Previews: PreviewProvider {
     static var previews: some View {
-        HMasonryAspectRatioExample()
+        NavigationView {
+            HMasonryAspectRatioExample()
+        }
     }
 }
