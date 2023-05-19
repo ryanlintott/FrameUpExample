@@ -10,7 +10,6 @@ import SwiftUI
 struct WidgetExamples: View {
     var body: some View {
         Section {
-            #if os(iOS)
             NavigationLink(destination: WidgetSizeExample()) {
                 Label("WidgetSize", systemImage: "questionmark.app")
             }
@@ -19,11 +18,10 @@ struct WidgetExamples: View {
                 Label("WidgetDemoFrame", systemImage: "app")
             }
             
+            #if os(iOS)
             NavigationLink(destination: WidgetRelativeShapeExample()) {
                 Label("WidgetRelativeShape", systemImage: "app.dashed")
             }
-            #else
-            UnavailableView()
             #endif
         } header: {
             Text("Widget")

@@ -53,15 +53,29 @@ struct ContentView: View {
             .navigationTitle("FrameUp")
             .navigationBarHidden(true)
         }
-        .navigationViewStyle(.stack)
         #else
-        NavigationView {
-            List {
-                logo
-                
-                examples
+        if #available(macOS 13, *) {
+            NavigationSplitView {
+                List {
+                    logo
+
+                    examples
+                }
+                .navigationTitle("FrameUp")
+            } detail: {
+                Text("Select an example.")
             }
-            .navigationTitle("FrameUp")
+        } else {
+            NavigationView {
+                List {
+                    logo
+                    
+                    examples
+                }
+                .navigationTitle("FrameUp")
+                
+                Text("Select an example.")
+            }
         }
         #endif
     }

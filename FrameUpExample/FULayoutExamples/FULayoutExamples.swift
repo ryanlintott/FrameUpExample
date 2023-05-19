@@ -91,10 +91,10 @@ struct FULayoutExamples: View {
         
         Section {
             NavigationLink(destination: CustomFULayoutExample()) {
-                Label("CustomFULayout", systemImage: "rectangle.3.group.bubble.left")
+                Label("Custom FULayout", systemImage: "rectangle.3.group.bubble.left")
             }
         } header: {
-            Text("FULayout Custom")
+            Text("Custom FULayout")
         }
     }
 }

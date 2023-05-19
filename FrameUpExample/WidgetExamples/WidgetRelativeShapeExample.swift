@@ -16,7 +16,7 @@ struct WidgetRelativeShapeExample: View {
                 WidgetRelativeShapeDemo()
             }
             
-            Text("To see this example, add the example FrameUp widget")
+            Text("To see this example, add the example FrameUp widget.")
         }
         .padding()
     }

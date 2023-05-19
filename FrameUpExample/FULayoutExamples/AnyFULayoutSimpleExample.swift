@@ -12,20 +12,12 @@ struct AnyFULayoutSimple: View {
     let isVStack: Bool
     let maxSize: CGSize
     
-    var vStackLayout: AnyFULayout {
-        AnyFULayout(VStackFULayout(alignment: .center, maxWidth: maxSize.width))
-    }
-    
-    var hStackLayout: AnyFULayout {
-        AnyFULayout(HStackFULayout(alignment: .center, maxHeight: maxSize.height))
-    }
-    
-    var layout: AnyFULayout {
-        isVStack ? vStackLayout : hStackLayout
+    var layout: any FULayout {
+        isVStack ? VStackFULayout(maxWidth: maxSize.width) : HStackFULayout(maxHeight: maxSize.height)
     }
     
     var body: some View {
-        layout {
+        AnyFULayout(layout) {
             Text("First")
             Text("Second")
             Text("Third")

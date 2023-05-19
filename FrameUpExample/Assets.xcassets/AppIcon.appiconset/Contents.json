@@ -7,61 +7,61 @@
       "size" : "1024x1024"
     },
     {
-      "filename" : "app-icon-16.png",
+      "filename" : "Icon-MacOS-16x16@1x.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
-      "filename" : "app-icon-32.png",
+      "filename" : "Icon-MacOS-16x16@2x.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
-      "filename" : "app-icon-32 1.png",
+      "filename" : "Icon-MacOS-32x32@1x.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
-      "filename" : "app-icon-64.png",
+      "filename" : "Icon-MacOS-32x32@2x.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
-      "filename" : "app-icon-128.png",
+      "filename" : "Icon-MacOS-128x128@1x.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
-      "filename" : "app-icon-256.png",
+      "filename" : "Icon-MacOS-128x128@2x.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
     },
     {
-      "filename" : "app-icon-256 1.png",
+      "filename" : "Icon-MacOS-256x256@1x.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
     },
     {
-      "filename" : "app-icon-512.png",
+      "filename" : "Icon-MacOS-256x256@2x.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
-      "filename" : "app-icon-512 1.png",
+      "filename" : "Icon-MacOS-512x512@1x.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
     },
     {
-      "filename" : "app-icon-1024@1x~ios-marketing 1.png",
+      "filename" : "Icon-MacOS-512x512@2x.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"

@@ -8,30 +8,62 @@
 import FrameUp
 import SwiftUI
 
-#if os(iOS)
 struct WidgetDemoFrameExample: View {
     @State private var widgetSize: WidgetSize = .small
     
+    #if os(macOS)
+    let iPhoneDemoSize = CGSize(width: 430, height: 932)
+    let iPadDemoSize = CGSize(width: 768, height: 1024)
+    
     var homeScreenSize: CGSize {
-        widgetSize.sizeForCurrentDevice(iPadTarget: .homeScreen)
+        if widgetSize == .extraLarge {
+            return widgetSize.sizeForiPad(screenSize: iPadDemoSize, target: .homeScreen)
+        } else {
+            return widgetSize.sizeForiPhone(screenSize: iPhoneDemoSize)
+        }
     }
     
     var designCanvasSize: CGSize {
-        widgetSize.sizeForCurrentDevice(iPadTarget: .designCanvas)
+        if widgetSize == .extraLarge {
+            return widgetSize.sizeForiPad(screenSize: iPadDemoSize, target: .designCanvas)
+        } else {
+            return widgetSize.sizeForiPhone(screenSize: iPhoneDemoSize)
+        }
     }
+    #endif
     
     func sizeString(_ size: CGSize) -> String {
         String(format: "%.1f", size.width) + " x " + String(format: "%.1f", size.height)
     }
     
+    var sizes: [WidgetSize] {
+        #if os(iOS)
+        WidgetSize.supportedSizesForCurrentDevice
+        #else
+        WidgetSize.allCases
+        #endif
+    }
+    
+    var device: String {
+        #if os(iOS)
+        return "this device"
+        #else
+        if widgetSize == .extraLarge {
+            return "an iPad with screen size \(iPadDemoSize.width)x\(iPadDemoSize.height)"
+        } else {
+            return "an iPhone with screen size \(iPhoneDemoSize.width)x\(iPhoneDemoSize.height)"
+        }
+        #endif
+    }
+    
     var body: some View {
         VStack {
-            Text("Demo frames below are sized for this device. Demo frames for other devices can be created by supplying screen size. iPad demo frames will provide an accurate dimension for the content and scale to the size shown on the home screen. Corner radius used is just an estimate as Apple does not supply these values.")
+            Text("Demo frames below are for \(device). Demo frames for any device can be created by supplying screen size. iPad demo frames will provide an accurate dimension for the content and scale to the size shown on the home screen. Corner radius used is just an estimate as Apple does not supply these values.")
                 .font(.footnote)
                 .padding()
             
             Picker("WidgetSize", selection: $widgetSize) {
-                ForEach(WidgetSize.supportedSizesForCurrentDevice, id: \.self) { widgetSize in
+                ForEach(sizes, id: \.self) { widgetSize in
                     Text(widgetSize.rawValue)
                 }
             }
@@ -40,10 +72,19 @@ struct WidgetDemoFrameExample: View {
             
             Spacer(minLength: 0)
             
+            #if os(iOS)
             WidgetDemoFrame(widgetSize) { size, cornerRadius in
                 Color.blue
             }
-            .foregroundColor(.white)
+            #else
+            WidgetDemoFrame(
+                widgetSize: widgetSize,
+                designCanvasSize: designCanvasSize,
+                homeScreenSize: homeScreenSize
+            ) { size, cornerRadius in
+                Color.blue
+            }
+            #endif
             
             Spacer()
         }
@@ -56,4 +97,3 @@ struct WidgetDemoFrameExample_Previews: PreviewProvider {
         WidgetDemoFrameExample()
     }
 }
-#endif

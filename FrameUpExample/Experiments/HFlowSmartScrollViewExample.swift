@@ -44,6 +44,7 @@ struct HFlowSmartScrollViewExample: View {
                         .animation(.default, value: alignment)
                         .padding()
                 )
+                .padding(.top, 1)
             
             Spacer()
             
@@ -84,7 +85,9 @@ struct HFlowSmartScrollViewExample: View {
 
 struct HFlowSmartScrollViewExample_Previews: PreviewProvider {
     static var previews: some View {
-        HFlowSmartScrollViewExample()
+        NavigationView {
+            HFlowSmartScrollViewExample()
+        }
     }
 }
 #endif

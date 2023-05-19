@@ -61,6 +61,7 @@
 		CFC476532A0C9AAA003B51CF /* VMasonryExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC476522A0C9AAA003B51CF /* VMasonryExample.swift */; };
 		CFC476552A0C9CC1003B51CF /* VMasonryAspectRatioExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC476542A0C9CC1003B51CF /* VMasonryAspectRatioExample.swift */; };
 		CFC476572A0C9FC2003B51CF /* HMasonryAspectRatioExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC476562A0C9FC2003B51CF /* HMasonryAspectRatioExample.swift */; };
+		CFC95D752A15DBEB0098B1E6 /* CustomLayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC95D742A15DBEB0098B1E6 /* CustomLayoutExample.swift */; };
 		CFD6964526F3EED2008D58AD /* TabMenuExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD6964426F3EED2008D58AD /* TabMenuExampleView.swift */; };
 		CFEB0B132911A556000507B8 /* FULayoutThatFitsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEB0B122911A556000507B8 /* FULayoutThatFitsExample.swift */; };
 		CFF9E7452A0E96DF00451A65 /* ExperimentViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9E7442A0E96DF00451A65 /* ExperimentViews.swift */; };
@@ -157,6 +158,7 @@
 		CFC476522A0C9AAA003B51CF /* VMasonryExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMasonryExample.swift; sourceTree = "<group>"; };
 		CFC476542A0C9CC1003B51CF /* VMasonryAspectRatioExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMasonryAspectRatioExample.swift; sourceTree = "<group>"; };
 		CFC476562A0C9FC2003B51CF /* HMasonryAspectRatioExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMasonryAspectRatioExample.swift; sourceTree = "<group>"; };
+		CFC95D742A15DBEB0098B1E6 /* CustomLayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayoutExample.swift; sourceTree = "<group>"; };
 		CFD6964426F3EED2008D58AD /* TabMenuExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuExampleView.swift; sourceTree = "<group>"; };
 		CFEB0B122911A556000507B8 /* FULayoutThatFitsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FULayoutThatFitsExample.swift; sourceTree = "<group>"; };
 		CFF9E7442A0E96DF00451A65 /* ExperimentViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentViews.swift; sourceTree = "<group>"; };
@@ -377,6 +379,7 @@
 				CFF9E7522A0F3ED000451A65 /* VMasonryLayoutExample.swift */,
 				CFF9E7542A0F3ED700451A65 /* HMasonryLayoutExample.swift */,
 				CF9CA721290DC712006E05E4 /* LayoutThatFitsExample.swift */,
+				CFC95D742A15DBEB0098B1E6 /* CustomLayoutExample.swift */,
 			);
 			path = LayoutExamples;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				CFAC14A22885ED2C003D4539 /* AnyFULayoutExample.swift in Sources */,
 				CF086A6826FE8AE8002C715D /* SmartScrollViewExample.swift in Sources */,
 				CF05408A2A004747007EE95F /* FULayoutExamples.swift in Sources */,
+				CFC95D752A15DBEB0098B1E6 /* CustomLayoutExample.swift in Sources */,
 				CF42CE26274C4A540010F12B /* WidgetDemoFrameExample.swift in Sources */,
 				CFF9E7532A0F3ED000451A65 /* VMasonryLayoutExample.swift in Sources */,
 				CFF9E74D2A0F230700451A65 /* ZStackFULayoutExample.swift in Sources */,
@@ -691,6 +695,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FrameUp;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -746,6 +751,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FrameUp;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
