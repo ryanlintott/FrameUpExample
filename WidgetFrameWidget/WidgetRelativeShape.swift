@@ -11,30 +11,13 @@ import WidgetKit
 
 struct WidgetRelativeShapeExample: View {
     var body: some View {
-        VStack {
-            HStack {
-                Image(systemName: "arrow.up.left")
-                Spacer()
-                Image(systemName: "arrow.up.right")
-            }
-            Spacer()
-            Text("Widget Relative Shape (fixes iPad corner issues)")
-            Spacer()
-            HStack {
-                Image(systemName: "arrow.down.left")
-                Spacer()
-                Image(systemName: "arrow.down.right")
-            }
-        }
-        .padding(6)
-        .foregroundColor(.white)
-        .background(.blue)
-        .clipShape(WidgetRelativeShape(.systemSmall))
-        .background(
-            ContainerRelativeShape()
-                .fill(.red)
-        )
-        .padding(1)
+        WidgetRelativeShapeDemo()
+            .clipShape(WidgetRelativeShape(.systemSmall))
+            .background(
+                ContainerRelativeShape()
+                    .fill(.red)
+            )
+            .padding(1)
     }
 }
 
@@ -46,7 +29,7 @@ struct WidgetRelativeShape_Previews: PreviewProvider {
                 .stroke(style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
                 .foregroundColor(.red)
                 .overlay(
-                    Text("Corner radius not correct on iPads")
+                    Text("Corner radius not correct on iPad widgets in iOS 15 and lower")
                 )
                 .padding(1)
             
