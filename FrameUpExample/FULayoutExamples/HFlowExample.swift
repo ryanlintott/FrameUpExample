@@ -13,6 +13,7 @@ struct HFlowExample: View {
     @State private var horizontalAlignment: FUHorizontalAlignment = .leading
     @State private var verticalAlignment: FUVerticalAlignment = .top
     @State private var maxWidth: CGFloat = 300
+    @State private var layoutDirection: LayoutDirection = .leftToRight
     
     var alignment: FUAlignment { .init(horizontal: horizontalAlignment, vertical: verticalAlignment)}
     
@@ -38,7 +39,9 @@ struct HFlowExample: View {
                 .animation(.default, value: maxWidth)
                 .animation(.default, value: horizontalAlignment)
                 .animation(.default, value: verticalAlignment)
+                .animation(.default, value: layoutDirection)
             )
+            .environment(\.layoutDirection, layoutDirection)
             
             VStack {
                 HStack {
@@ -63,6 +66,13 @@ struct HFlowExample: View {
                 .pickerStyle(.segmented)
                 
                 Stepper("Max Width \(maxWidth, specifier: "%.0F")", value: $maxWidth, in: 50...600, step: 50)
+                
+                Picker("Layout Direction", selection: $layoutDirection) {
+                    ForEach(LayoutDirection.allCases, id: \.self) { direction in
+                        Text(direction == .leftToRight ? "Left to Right" : "Right to Left")
+                    }
+                }
+                .pickerStyle(.segmented)
             }
             .padding()
         }

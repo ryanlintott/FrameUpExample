@@ -14,6 +14,7 @@ struct VFlowLayoutExample: View {
     @State private var horizontalAlignment: FUHorizontalAlignment = .leading
     @State private var verticalAlignment: FUVerticalAlignment = .top
     @State private var maxHeight: CGFloat = 300
+    @State private var layoutDirection: LayoutDirection = .leftToRight
     
     var alignment: FUAlignment { .init(horizontal: horizontalAlignment, vertical: verticalAlignment)}
     
@@ -40,7 +41,9 @@ struct VFlowLayoutExample: View {
                 .animation(.default, value: maxHeight)
                 .animation(.default, value: horizontalAlignment)
                 .animation(.default, value: verticalAlignment)
+                .animation(.default, value: layoutDirection)
             )
+            .environment(\.layoutDirection, layoutDirection)
             
             VStack {
                 HStack {
@@ -65,6 +68,13 @@ struct VFlowLayoutExample: View {
                 .pickerStyle(.segmented)
                 
                 Stepper("Max Height \(maxHeight, specifier: "%.0F")", value: $maxHeight, in: 50...600, step: 50)
+                
+                Picker("Layout Direction", selection: $layoutDirection) {
+                    ForEach(LayoutDirection.allCases, id: \.self) { direction in
+                        Text(direction == .leftToRight ? "Left to Right" : "Right to Left")
+                    }
+                }
+                .pickerStyle(.segmented)
             }
             .padding()
         }

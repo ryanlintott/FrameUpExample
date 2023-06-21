@@ -12,6 +12,7 @@ struct ZStackFULayoutExample: View {
     @State private var items: [Item] = .examples
     @State private var horizontalAlignment: FUHorizontalAlignment = .leading
     @State private var verticalAlignment: FUVerticalAlignment = .top
+    @State private var layoutDirection: LayoutDirection = .leftToRight
     
     var alignment: FUAlignment { .init(horizontal: horizontalAlignment, vertical: verticalAlignment)}
     
@@ -35,6 +36,8 @@ struct ZStackFULayoutExample: View {
             .animation(.default, value: items)
             .animation(.default, value: horizontalAlignment)
             .animation(.default, value: verticalAlignment)
+            .animation(.default, value: layoutDirection)
+            .environment(\.layoutDirection, layoutDirection)
             
             VStack {
                 HStack {
@@ -54,6 +57,13 @@ struct ZStackFULayoutExample: View {
                 Picker("Horizontal Alignment", selection: $horizontalAlignment) {
                     ForEach([FUHorizontalAlignment.leading, .center, .trailing]) {
                         Text($0.rawValue)
+                    }
+                }
+                .pickerStyle(.segmented)
+                
+                Picker("Layout Direction", selection: $layoutDirection) {
+                    ForEach(LayoutDirection.allCases, id: \.self) { direction in
+                        Text(direction == .leftToRight ? "Left to Right" : "Right to Left")
                     }
                 }
                 .pickerStyle(.segmented)

@@ -12,6 +12,7 @@ struct VStackFULayoutExample: View {
     @State private var items: [Item] = .examples
     @State private var horizontalAlignment: FUHorizontalAlignment = .center
     @State private var maxWidth: CGFloat = 300
+    @State private var layoutDirection: LayoutDirection = .leftToRight
     
     var body: some View {
         VStack {
@@ -39,7 +40,9 @@ struct VStackFULayoutExample: View {
                 .animation(.default, value: items)
                 .animation(.default, value: maxWidth)
                 .animation(.default, value: horizontalAlignment)
+                .animation(.default, value: layoutDirection)
             )
+            .environment(\.layoutDirection, layoutDirection)
             
             VStack {
                 HStack {
@@ -57,6 +60,13 @@ struct VStackFULayoutExample: View {
                 .pickerStyle(.segmented)
 
                 Stepper("Max Width \(maxWidth, specifier: "%.0F")", value: $maxWidth, in: 50...600, step: 50)
+                
+                Picker("Layout Direction", selection: $layoutDirection) {
+                    ForEach(LayoutDirection.allCases, id: \.self) { direction in
+                        Text(direction == .leftToRight ? "Left to Right" : "Right to Left")
+                    }
+                }
+                .pickerStyle(.segmented)
             }
             .padding()
         }

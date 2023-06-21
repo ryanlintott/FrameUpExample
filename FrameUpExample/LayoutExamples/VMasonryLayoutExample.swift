@@ -15,6 +15,7 @@ struct VMasonryLayoutExample: View {
     @State private var verticalAlignment: FUVerticalAlignment = .top
     @State private var maxWidth: CGFloat = 300
     @State private var columns = 3
+    @State private var layoutDirection: LayoutDirection = .leftToRight
     
     var alignment: FUAlignment { .init(horizontal: horizontalAlignment, vertical: verticalAlignment)}
     
@@ -41,7 +42,9 @@ struct VMasonryLayoutExample: View {
                 .animation(.default, value: maxWidth)
                 .animation(.default, value: horizontalAlignment)
                 .animation(.default, value: verticalAlignment)
+                .animation(.default, value: layoutDirection)
             )
+            .environment(\.layoutDirection, layoutDirection)
             
             VStack {
                 HStack {
@@ -68,6 +71,13 @@ struct VMasonryLayoutExample: View {
                 Stepper("Max Width \(maxWidth, specifier: "%.0F")", value: $maxWidth, in: 50...600, step: 50)
                 
                 Stepper("Columns \(columns)", value: $columns, in: 2...6)
+                
+                Picker("Layout Direction", selection: $layoutDirection) {
+                    ForEach(LayoutDirection.allCases, id: \.self) { direction in
+                        Text(direction == .leftToRight ? "Left to Right" : "Right to Left")
+                    }
+                }
+                .pickerStyle(.segmented)
             }
             .padding()
         }
