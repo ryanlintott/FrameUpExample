@@ -83,6 +83,8 @@ struct VFlowExample: View {
 
 struct VFlowExample_Previews: PreviewProvider {
     static var previews: some View {
-        VFlowExample()
+        NavigationView {
+            VFlowExample()
+        }
     }
 }

@@ -85,6 +85,8 @@ struct VMasonryExample: View {
 
 struct VMasonryExample_Previews: PreviewProvider {
     static var previews: some View {
-        VMasonryExample()
+        NavigationView {
+            VMasonryExample()
+        }
     }
 }

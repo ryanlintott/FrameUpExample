@@ -46,6 +46,8 @@ struct LayoutThatFitsExample: View {
 @available(iOS 16, macOS 13, *)
 struct LayoutThatFitsExample_Previews: PreviewProvider {
     static var previews: some View {
-        LayoutThatFitsExample()
+        NavigationStack {
+            LayoutThatFitsExample()
+        }
     }
 }

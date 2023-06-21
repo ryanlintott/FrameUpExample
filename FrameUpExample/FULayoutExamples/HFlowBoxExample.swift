@@ -55,6 +55,8 @@ struct HFlowBoxExample: View {
 
 struct HFlowBoxExample_Previews: PreviewProvider {
     static var previews: some View {
-        HFlowBoxExample()
+        NavigationView {
+            HFlowBoxExample()
+        }
     }
 }

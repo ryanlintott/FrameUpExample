@@ -85,6 +85,8 @@ struct HFlowLayoutExample: View {
 @available(iOS 16, macOS 13, *)
 struct HFlowLayoutExample_Previews: PreviewProvider {
     static var previews: some View {
-        HFlowLayoutExample()
+        NavigationStack {
+            HFlowLayoutExample()
+        }
     }
 }

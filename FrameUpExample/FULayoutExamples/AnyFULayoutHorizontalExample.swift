@@ -84,6 +84,8 @@ struct AnyFULayoutHorizontalExample: View {
 
 struct AnyFULayoutHorizontalExample_Previews: PreviewProvider {
     static var previews: some View {
-        AnyFULayoutHorizontalExample()
+        NavigationView {
+            AnyFULayoutHorizontalExample()
+        }
     }
 }

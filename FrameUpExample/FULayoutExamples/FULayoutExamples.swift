@@ -101,8 +101,10 @@ struct FULayoutExamples: View {
 
 struct FULayoutExamples_Previews: PreviewProvider {
     static var previews: some View {
-        List {
-            FULayoutExamples()
+        NavigationView {
+            List {
+                FULayoutExamples()
+            }
         }
     }
 }

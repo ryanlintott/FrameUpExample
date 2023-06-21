@@ -87,6 +87,8 @@ struct HMasonryExample: View {
 
 struct HMasonryExample_Previews: PreviewProvider {
     static var previews: some View {
-        HMasonryExample()
+        NavigationView {
+            HMasonryExample()
+        }
     }
 }

@@ -88,6 +88,8 @@ struct VMasonryLayoutExample: View {
 @available(iOS 16, macOS 13, *)
 struct VMasonryLayoutExample_Previews: PreviewProvider {
     static var previews: some View {
-        VMasonryLayoutExample()
+        NavigationStack {
+            VMasonryLayoutExample()
+        }
     }
 }

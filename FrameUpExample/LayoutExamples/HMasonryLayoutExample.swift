@@ -89,6 +89,8 @@ struct HMasonryLayoutExample: View {
 @available(iOS 16, macOS 13, *)
 struct HMasonryLayoutExample_Previews: PreviewProvider {
     static var previews: some View {
-        HMasonryLayoutExample()
+        NavigationStack {
+            HMasonryLayoutExample()
+        }
     }
 }

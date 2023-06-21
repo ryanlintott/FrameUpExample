@@ -85,6 +85,8 @@ struct VFlowLayoutExample: View {
 @available(iOS 16, macOS 13, *)
 struct VFlowLayoutExample_Previews: PreviewProvider {
     static var previews: some View {
-        VFlowLayoutExample()
+        NavigationStack {
+            VFlowLayoutExample()
+        }
     }
 }

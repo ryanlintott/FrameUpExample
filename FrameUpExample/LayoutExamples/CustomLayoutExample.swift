@@ -50,7 +50,7 @@ struct CustomLayoutExample: View {
 @available(iOS 16, macOS 13, *)
 struct CustomLayoutExample_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
+        NavigationStack {
             CustomLayoutExample()
         }
     }

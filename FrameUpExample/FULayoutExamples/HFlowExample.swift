@@ -82,6 +82,8 @@ struct HFlowExample: View {
 
 struct HFlowExample_Previews: PreviewProvider {
     static var previews: some View {
-        HFlowExample()
+        NavigationView {
+            HFlowExample()
+        }
     }
 }

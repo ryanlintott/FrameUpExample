@@ -53,6 +53,8 @@ struct AnyFULayoutSimpleExample: View {
 
 struct AnyFULayoutSimpleExample_Previews: PreviewProvider {
     static var previews: some View {
-        AnyFULayoutSimpleExample()
+        NavigationView {
+            AnyFULayoutSimpleExample()
+        }
     }
 }
