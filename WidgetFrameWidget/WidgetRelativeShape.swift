@@ -5,6 +5,7 @@
 //  Created by Ryan Lintott on 2021-11-24.
 //
 
+#if os(iOS)
 import FrameUp
 import SwiftUI
 import WidgetKit
@@ -39,3 +40,4 @@ struct WidgetRelativeShape_Previews: PreviewProvider {
         .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
+#endif

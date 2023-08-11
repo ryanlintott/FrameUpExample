@@ -11,7 +11,7 @@ import SwiftUI
 struct WidgetDemoFrameExample: View {
     @State private var widgetSize: WidgetSize = .small
     
-    #if os(macOS)
+    #if !os(iOS)
     let iPhoneDemoSize = CGSize(width: 430, height: 932)
     let iPadDemoSize = CGSize(width: 768, height: 1024)
     
