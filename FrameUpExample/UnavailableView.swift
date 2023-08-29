@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct UnavailableView: View {
     let availableInLaterVersion: Bool
     
