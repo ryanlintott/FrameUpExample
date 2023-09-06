@@ -16,7 +16,6 @@ struct InlineImageExample: View {
         Label {
             Text("👈 Any Image")
         } icon: {
-//            AccessoryInlineImage(symbolName: "dragon.profile")
             AccessoryInlineImage("FrameUp-logo-alpha", renderingMode: .alwaysOriginal)
         }
     }
