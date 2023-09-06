@@ -17,17 +17,17 @@ struct WidgetDemoFrameExample: View {
     
     var homeScreenSize: CGSize {
         if widgetSize == .extraLarge {
-            return widgetSize.sizeForiPad(screenSize: iPadDemoSize, target: .homeScreen)
+            return widgetSize.sizeForiPad(screenSize: iPadDemoSize, target: .homeScreen) ?? widgetSize.minimumSize
         } else {
-            return widgetSize.sizeForiPhone(screenSize: iPhoneDemoSize)
+            return widgetSize.sizeForiPhone(screenSize: iPhoneDemoSize) ?? widgetSize.minimumSize
         }
     }
     
     var designCanvasSize: CGSize {
         if widgetSize == .extraLarge {
-            return widgetSize.sizeForiPad(screenSize: iPadDemoSize, target: .designCanvas)
+            return widgetSize.sizeForiPad(screenSize: iPadDemoSize, target: .designCanvas) ?? widgetSize.minimumSize
         } else {
-            return widgetSize.sizeForiPhone(screenSize: iPhoneDemoSize)
+            return widgetSize.sizeForiPhone(screenSize: iPhoneDemoSize) ?? widgetSize.minimumSize
         }
     }
     #endif
