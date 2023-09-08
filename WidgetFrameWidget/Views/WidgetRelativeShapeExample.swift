@@ -10,6 +10,7 @@ import FrameUp
 import SwiftUI
 import WidgetKit
 
+@available(iOS, obsoleted: 16, message: "This modifier is no longer needed")
 struct WidgetRelativeShapeExample: View {
     var demoView: some View {
         WidgetRelativeShapeDemo()
@@ -22,17 +23,11 @@ struct WidgetRelativeShapeExample: View {
     }
     
     var body: some View {
-        if #available(iOS 17, *) {
-            Color.clear
-                .containerBackground(for: .widget) {
-                    demoView
-                }
-        } else {
-            demoView
-        }
+        demoView
     }
 }
 
+@available(iOS, obsoleted: 16, message: "This modifier is no longer needed")
 struct WidgetRelativeShape_Previews: PreviewProvider {
     static var previews: some View {
         Group {
