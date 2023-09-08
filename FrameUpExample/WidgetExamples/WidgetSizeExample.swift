@@ -13,7 +13,7 @@ struct WidgetSizeExample: View {
 
     var size: CGSize {
         #if os(iOS)
-        widgetSize.sizeForCurrentDevice()
+        widgetSize.sizeForCurrentDevice(iPadTarget: .homeScreen) ?? widgetSize.minimumSize
         #else
         widgetSize.minimumSize
         #endif

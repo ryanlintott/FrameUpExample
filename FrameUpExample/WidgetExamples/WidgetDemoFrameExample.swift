@@ -11,23 +11,23 @@ import SwiftUI
 struct WidgetDemoFrameExample: View {
     @State private var widgetSize: WidgetSize = .small
     
-    #if os(macOS)
+    #if !os(iOS)
     let iPhoneDemoSize = CGSize(width: 430, height: 932)
     let iPadDemoSize = CGSize(width: 768, height: 1024)
     
     var homeScreenSize: CGSize {
         if widgetSize == .extraLarge {
-            return widgetSize.sizeForiPad(screenSize: iPadDemoSize, target: .homeScreen)
+            return widgetSize.sizeForiPad(screenSize: iPadDemoSize, target: .homeScreen) ?? widgetSize.minimumSize
         } else {
-            return widgetSize.sizeForiPhone(screenSize: iPhoneDemoSize)
+            return widgetSize.sizeForiPhone(screenSize: iPhoneDemoSize) ?? widgetSize.minimumSize
         }
     }
     
     var designCanvasSize: CGSize {
         if widgetSize == .extraLarge {
-            return widgetSize.sizeForiPad(screenSize: iPadDemoSize, target: .designCanvas)
+            return widgetSize.sizeForiPad(screenSize: iPadDemoSize, target: .designCanvas) ?? widgetSize.minimumSize
         } else {
-            return widgetSize.sizeForiPhone(screenSize: iPhoneDemoSize)
+            return widgetSize.sizeForiPhone(screenSize: iPhoneDemoSize) ?? widgetSize.minimumSize
         }
     }
     #endif

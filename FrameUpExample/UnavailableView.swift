@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct UnavailableView: View {
     let availableInLaterVersion: Bool
     
@@ -19,7 +17,9 @@ struct UnavailableView: View {
     var os: String {
         #if os(iOS)
         "iOS"
-        #else
+        #elseif os(visionOS)
+        "visionOS"
+        #elseif os(macOS)
         "macOS"
         #endif
     }
