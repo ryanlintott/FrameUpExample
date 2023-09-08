@@ -46,32 +46,32 @@ struct TabMenuExampleView: View {
                         Text("DoubleTap")
                     }
                 }
+                    .animation(.default, value: reselect)
+                    .animation(.default, value: doubleTap)
             )
             .foregroundColor(.white)
             
-            TabMenuExample(selection: $selection, onReselect: onReselect, onDoubleTap: onDoubleTap)
+            TabMenuExample(selection: $selection) {
+                reselect = true
+            } onDoubleTap: {
+                doubleTap = true
+            }
+        }
+        .onChange(of: reselect) { _ in
+            if reselect {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    reselect = false
+                }
+            }
+        }
+        .onChange(of: doubleTap) { _ in
+            if doubleTap {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    doubleTap = false
+                }
+            }
         }
         .navigationTitle("TabMenu")
-    }
-    
-    func onReselect() {
-        withAnimation {
-            reselect = true
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            reselect = false
-        }
-    }
-    
-    func onDoubleTap() {
-        withAnimation {
-            doubleTap = true
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            doubleTap = false
-        }
     }
 }
 
