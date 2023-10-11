@@ -1,8 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "FrameUp-icon-visionOS-back.png",
-      "scale" : "2x"
+      "filename" : "FrameUp-icon-tvOS-middle.png",
+      "idiom" : "tv"
     }
   ],
   "info" : {
