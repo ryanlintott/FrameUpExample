@@ -59,14 +59,26 @@ struct ScaledToFrameExample: View {
                 )
             
             HStack {
+                #if os(tvOS)
+                Text("Width \(width)")
+                Button("-") { width = max(10, width - 10) }
+                Button("+") { width = min(500, width + 10) }
+                #else
                 Text("Width")
                 Slider(value: $width, in: 10...500)
+                #endif
             }
             .padding(.horizontal)
             
             HStack {
+                #if os(tvOS)
+                Text("Height \(height)")
+                Button("-") { height = max(10, height - 10) }
+                Button("+") { height = min(100, height + 10) }
+                #else
                 Text("Height")
                 Slider(value: $height, in: 10...100)
+                #endif
             }
             .padding(.horizontal)
             

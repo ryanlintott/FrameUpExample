@@ -45,18 +45,28 @@ struct FUViewThatFitsExample: View {
             VStack {
                 Toggle("Fit Horizontal", isOn: $fitHoriztonal)
                 HStack {
+                    #if os(tvOS)
+                    Text("Max Width \(maxWidth)")
+                    Button("-") { maxWidth = max(50, maxWidth - 50) }
+                    Button("+") { maxWidth = min(350, maxWidth + 50) }
+                    #else
                     Text("Max Width")
-                    Slider(value: $maxWidth, in: 50...350) {
-                        Text("Max Width")
-                    }
+                    Slider(value: $maxWidth, in: 50...350)
+                        .padding()
+                    #endif
                 }
                 
                 Toggle("Fit Vertical", isOn: $fitVertical)
                 HStack {
+                    #if os(tvOS)
+                    Text("Max Height \(maxHeight)")
+                    Button("-") { maxHeight = max(50, maxHeight - 50) }
+                    Button("+") { maxHeight = min(350, maxHeight + 50) }
+                    #else
                     Text("Max Height")
-                    Slider(value: $maxHeight, in: 50...350) {
-                        Text("Max Height")
-                    }
+                    Slider(value: $maxHeight, in: 50...350)
+                        .padding()
+                    #endif
                 }
             }
             .padding()

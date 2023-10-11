@@ -54,9 +54,15 @@ struct FlippingViewExample: View {
                 }
             
                 HStack {
+                    #if os(tvOS)
+                    Text("Perspective \(perspective)")
+                    Button("-") { perspective = max(0, perspective - 0.1) }
+                    Button("+") { perspective = min(1, perspective + 0.1) }
+                    #else
                     Text("Perspective")
                     Slider(value: $perspective, in: 0...1)
                         .padding()
+                    #endif
                 }
                 HStack {
                     Text("Programmatic flip")

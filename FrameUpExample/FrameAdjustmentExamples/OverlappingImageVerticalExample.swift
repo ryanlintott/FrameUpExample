@@ -42,11 +42,24 @@ struct OverlappingImageVerticalExample: View {
             VStack {
                 HStack {
                     Text("Top \(top * 100, specifier: "%.0f")%")
+                    #if os(tvOS)
+                    Button("-") { top = max(0, top - 0.1) }
+                    Button("+") { top = min(1, top + 0.1) }
+                    #else
+                    Text("")
                     Slider(value: $top, in: 0...1)
+                    #endif
                 }
+                
                 HStack {
                     Text("Bottom \(bottom * 100, specifier: "%.0f")%")
+                    #if os(tvOS)
+                    Button("-") { bottom = max(0, bottom - 0.1) }
+                    Button("+") { bottom = min(1, bottom + 0.1) }
+                    #else
+                    Text("")
                     Slider(value: $bottom, in: 0...1)
+                    #endif
                 }
             }
             .padding()

@@ -8,7 +8,7 @@
 import FrameUp
 import SwiftUI
 
-@available(iOS 16, macOS 13, *)
+@available(iOS 16, macOS 13, watchOS 9, tvOS 16, *)
 struct VFlowLayoutExample: View {
     @State private var items: [Item] = .examples
     @State private var horizontalAlignment: FUHorizontalAlignment = .leading
@@ -67,7 +67,15 @@ struct VFlowLayoutExample: View {
                 }
                 .pickerStyle(.segmented)
                 
+                #if os(tvOS)
+                HStack {
+                    Text("Max Height \(maxHeight, specifier: "%.0F")")
+                    Button("-") { maxHeight = max(50, maxHeight - 50) }
+                    Button("+") { maxHeight = min(600, maxHeight + 50) }
+                }
+                #else
                 Stepper("Max Height \(maxHeight, specifier: "%.0F")", value: $maxHeight, in: 50...600, step: 50)
+                #endif
                 
                 Picker("Layout Direction", selection: $layoutDirection) {
                     ForEach(LayoutDirection.allCases, id: \.self) { direction in
@@ -82,7 +90,7 @@ struct VFlowLayoutExample: View {
     }
 }
 
-@available(iOS 16, macOS 13, *)
+@available(iOS 16, macOS 13, watchOS 9, tvOS 16, *)
 struct VFlowLayoutExample_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {

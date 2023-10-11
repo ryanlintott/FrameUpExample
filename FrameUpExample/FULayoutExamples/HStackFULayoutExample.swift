@@ -59,7 +59,15 @@ struct HStackFULayoutExample: View {
                 }
                 .pickerStyle(.segmented)
 
+                #if os(tvOS)
+                HStack {
+                    Text("Max Height \(maxHeight, specifier: "%.0F")")
+                    Button("-") { maxHeight = max(50, maxHeight - 50) }
+                    Button("+") { maxHeight = min(600, maxHeight + 50) }
+                }
+                #else
                 Stepper("Max Height \(maxHeight, specifier: "%.0F")", value: $maxHeight, in: 50...600, step: 50)
+                #endif
                 
                 Picker("Layout Direction", selection: $layoutDirection) {
                     ForEach(LayoutDirection.allCases, id: \.self) { direction in

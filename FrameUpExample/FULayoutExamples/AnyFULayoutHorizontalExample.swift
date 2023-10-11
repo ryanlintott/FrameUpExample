@@ -64,9 +64,6 @@ struct AnyFULayoutHorizontalExample: View {
                         }
                         .background(Color.gray.opacity(0.5))
                         .border(Color.red)
-                        .onTapGesture {
-                            layoutIndex = (layoutIndex + 1) % layouts(maxHeight: 0).count
-                        }
                         
                         Text("After")
                     }
@@ -75,9 +72,12 @@ struct AnyFULayoutHorizontalExample: View {
             }
             .frame(height: 350)
             
+            Spacer()
             
+            Button("Next Layout") {
+                layoutIndex = (layoutIndex + 1) % layouts(maxHeight: 0).count
+            }
         }
-        
         .navigationTitle("AnyFULayout Horizontal")
     }
 }

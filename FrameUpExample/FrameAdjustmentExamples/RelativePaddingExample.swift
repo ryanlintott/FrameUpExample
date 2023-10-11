@@ -39,7 +39,12 @@ struct RelativePaddingExample: View {
                 
                 HStack {
                     Text("Padding \(padding * 100, specifier: "%.0f")%")
+                    #if os(tvOS)
+                    Button("-") { padding = max(-0.5, padding - 0.1) }
+                    Button("+") { padding = min(0.5, padding + 0.1) }
+                    #else
                     Slider(value: $padding, in: -0.5...0.5)
+                    #endif
                 }
             }
             .padding()

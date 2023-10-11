@@ -67,7 +67,7 @@ struct WidgetDemoFrameExample: View {
                     Text(widgetSize.rawValue)
                 }
             }
-            .pickerStyle(.menu)
+            .pickerStyle(pickerStyle)
             .padding()
             
             Spacer(minLength: 0)
@@ -89,6 +89,14 @@ struct WidgetDemoFrameExample: View {
             Spacer()
         }
         .navigationTitle("WidgetDemoFrame")
+    }
+    
+    var pickerStyle: some PickerStyle {
+        #if os(tvOS)
+        .segmented
+        #else
+        .menu
+        #endif
     }
 }
 

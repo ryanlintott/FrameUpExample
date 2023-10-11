@@ -86,10 +86,13 @@ struct AnyFULayout_ViewExample: View {
     }
     
     var body: some View {
-        VStack {
-            GeometryReader { proxy in
-                let layouts = exampleLayouts(size: proxy.size)
-                let layout = layouts[layoutIndex].anyFULayout
+        GeometryReader { proxy in
+            let layouts = exampleLayouts(size: proxy.size)
+            let layout = layouts[layoutIndex].anyFULayout
+            
+            VStack {
+                Text(layout.fuLayoutName)
+                    .font(.subheadline)
                 
                 Color.clear.overlay(
                     ZStack(alignment: .top) {
@@ -111,33 +114,34 @@ struct AnyFULayout_ViewExample: View {
                         .border(Color.red)
                         .animation(.default, value: layoutIndex)
                         .animation(.default, value: items)
-                        .onTapGesture {
-                            layoutIndex = (layoutIndex + 1) % layouts.count
-                        }
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .environment(\.layoutDirection, layoutDirection)
                         
-                        Text(layout.fuLayoutName)
-                            .font(.subheadline)
+                        
                     }
                     , alignment: .top
                 )
-            }
-            .clipped()
-            .frame(maxHeight: 400)
-            
-            Button {
-                layoutDirection = layoutDirection == .leftToRight ? .rightToLeft : .leftToRight
-            } label: {
-                Label("Layout Direction", systemImage: layoutDirectionImageName)
-            }
-            .padding()
-            
-            HStack {
-                Button("Remove Item") { if !items.isEmpty { items.removeLast() } }
-                    .padding()
-                Button("Add Item") { items.append(Item(value: items.randomElement()?.value ?? "New Item")) }
-                    .padding()
+                .clipped()
+                
+                Spacer()
+                
+                Button("Next Layout") {
+                    layoutIndex = (layoutIndex + 1) % layouts.count
+                }
+                
+                Button {
+                    layoutDirection = layoutDirection == .leftToRight ? .rightToLeft : .leftToRight
+                } label: {
+                    Label("Layout Direction", systemImage: layoutDirectionImageName)
+                }
+                .padding()
+                
+                HStack {
+                    Button("Remove Item") { if !items.isEmpty { items.removeLast() } }
+                        .padding()
+                    Button("Add Item") { items.append(Item(value: items.randomElement()?.value ?? "New Item")) }
+                        .padding()
+                }
             }
         }
     }
@@ -157,10 +161,13 @@ struct AnyFULayoutForEachExample: View {
     }
     
     var body: some View {
-        VStack {
-            GeometryReader { proxy in
-                let layouts = exampleLayouts(size: proxy.size)
-                let layout = layouts[layoutIndex].anyFULayout
+        GeometryReader { proxy in
+            let layouts = exampleLayouts(size: proxy.size)
+            let layout = layouts[layoutIndex].anyFULayout
+                
+            VStack {
+                Text(layout.fuLayoutName)
+                    .font(.subheadline)
                 
                 Color.clear.overlay(
                     ZStack(alignment: .top) {
@@ -180,33 +187,34 @@ struct AnyFULayoutForEachExample: View {
                         .border(Color.red)
                         .animation(.spring(), value: layoutIndex)
                         .animation(.spring(), value: items)
-                        .onTapGesture {
-                            layoutIndex = (layoutIndex + 1) % layouts.count
-                        }
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .environment(\.layoutDirection, layoutDirection)
                         
-                        Text(layout.fuLayoutName)
-                            .font(.subheadline)
+                        
                     }
                     , alignment: .top
                 )
-            }
-            .clipped()
-            .frame(maxHeight: 400)
-            
-            Button {
-                layoutDirection = layoutDirection == .leftToRight ? .rightToLeft : .leftToRight
-            } label: {
-                Label("Layout Direction", systemImage: layoutDirectionImageName)
-            }
-            .padding()
-            
-            HStack {
-                Button("Remove Item") { if !items.isEmpty { items.removeLast() } }
-                    .padding()
-                Button("Add Item") { items.append(Item(value: items.randomElement()?.value ?? "New Item")) }
-                    .padding()
+                .clipped()
+                
+                Spacer()
+                
+                Button("Next Layout") {
+                    layoutIndex = (layoutIndex + 1) % layouts.count
+                }
+                
+                Button {
+                    layoutDirection = layoutDirection == .leftToRight ? .rightToLeft : .leftToRight
+                } label: {
+                    Label("Layout Direction", systemImage: layoutDirectionImageName)
+                }
+                .padding()
+                
+                HStack {
+                    Button("Remove Item") { if !items.isEmpty { items.removeLast() } }
+                        .padding()
+                    Button("Add Item") { items.append(Item(value: items.randomElement()?.value ?? "New Item")) }
+                        .padding()
+                }
             }
         }
         .navigationTitle("AnyFULayout")

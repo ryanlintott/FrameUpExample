@@ -50,7 +50,7 @@ struct WidgetSizeExample: View {
                     Text(widgetSize.rawValue)
                 }
             }
-            .pickerStyle(.menu)
+            .pickerStyle(pickerStyle)
             .padding()
             
             Spacer(minLength: 0)
@@ -65,6 +65,14 @@ struct WidgetSizeExample: View {
             Spacer()
         }
         .navigationTitle("WidgetSize")
+    }
+    
+    var pickerStyle: some PickerStyle {
+        #if os(tvOS)
+        .segmented
+        #else
+        .menu
+        #endif
     }
 }
 

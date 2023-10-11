@@ -41,7 +41,7 @@ struct ContentView: View {
     }
     
     var body: some View {
-        #if os(iOS)
+        #if os(iOS) || os(tvOS)
         NavigationView {
             VStack {
                 logo

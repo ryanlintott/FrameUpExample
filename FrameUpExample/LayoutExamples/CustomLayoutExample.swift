@@ -8,14 +8,14 @@
 import FrameUp
 import SwiftUI
 
-@available(iOS 16, macOS 13, *)
+@available(iOS 16, macOS 13, watchOS 9, tvOS 16, *)
 struct PingPongLayout: LayoutFromFULayout {
     func fuLayout(maxSize: CGSize) -> PingPong {
         PingPong(maxWidth: maxSize.width)
     }
 }
 
-@available(iOS 16, macOS 13, *)
+@available(iOS 16, macOS 13, watchOS 9, tvOS 16, *)
 struct CustomLayoutExample: View {
     var body: some View {
         VStack {
@@ -47,7 +47,7 @@ struct CustomLayoutExample: View {
     }
 }
 
-@available(iOS 16, macOS 13, *)
+@available(iOS 16, macOS 13, watchOS 9, tvOS 16, *)
 struct CustomLayoutExample_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {

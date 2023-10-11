@@ -31,10 +31,15 @@ struct FULayoutThatFitsExample: View {
             
             VStack {
                 HStack {
+                    #if os(tvOS)
+                    Text("Max Width \(maxWidth)")
+                    Button("-") { maxWidth = max(50, maxWidth - 50) }
+                    Button("+") { maxWidth = min(350, maxWidth + 50) }
+                    #else
                     Text("Max Width")
-                    Slider(value: $maxWidth, in: 50...350) {
-                        Text("Max Width")
-                    }
+                    Slider(value: $maxWidth, in: 50...350)
+                        .padding()
+                    #endif
                 }
             }
             .padding()

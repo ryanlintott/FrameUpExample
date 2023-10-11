@@ -10,7 +10,7 @@ import SwiftUI
 struct LayoutExamples: View {
     var body: some View {
         Section {
-            if #available(iOS 16, macOS 13, *) {
+            if #available(iOS 16, macOS 13, watchOS 9, tvOS 16, *) {
                 NavigationLink(destination: HFlowLayoutExample()) {
                     Label("HFlowLayout", systemImage: "text.word.spacing")
                 }

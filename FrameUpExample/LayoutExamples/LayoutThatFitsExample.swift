@@ -8,7 +8,7 @@
 import FrameUp
 import SwiftUI
 
-@available(iOS 16, macOS 13, *)
+@available(iOS 16, macOS 13, watchOS 9, tvOS 16, *)
 struct LayoutThatFitsExample: View {
     @State private var maxWidth: CGFloat = 200
     
@@ -32,10 +32,15 @@ struct LayoutThatFitsExample: View {
             Spacer()
             
             HStack {
+                #if os(tvOS)
+                Text("Max Width \(maxWidth)")
+                Button("-") { maxWidth = max(50, maxWidth - 50) }
+                Button("+") { maxWidth = min(350, maxWidth + 50) }
+                #else
                 Text("Max Width")
-                Slider(value: $maxWidth, in: 50...350) {
-                    Text("Max Width")
-                }
+                Slider(value: $maxWidth, in: 50...350)
+                    .padding()
+                #endif
             }
             .padding()
         }
@@ -43,7 +48,7 @@ struct LayoutThatFitsExample: View {
     }
 }
 
-@available(iOS 16, macOS 13, *)
+@available(iOS 16, macOS 13, watchOS 9, tvOS 16, *)
 struct LayoutThatFitsExample_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {

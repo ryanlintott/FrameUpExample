@@ -32,7 +32,12 @@ struct HeightReaderExample: View {
             
             HStack {
                 Text("Percent \(percent * 100, specifier: "%.0f")%")
+                #if os(tvOS)
+                Button("-") { percent = max(0, percent - 0.1) }
+                Button("+") { percent = min(1, percent + 0.1) }
+                #else
                 Slider(value: $percent, in: 0...1)
+                #endif
             }
             .padding()
         }

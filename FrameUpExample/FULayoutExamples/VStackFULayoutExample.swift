@@ -53,13 +53,21 @@ struct VStackFULayoutExample: View {
                 }
 
                 Picker("Horizontal Alignment", selection: $horizontalAlignment) {
-                    ForEach(FUHorizontalAlignment.allCases) {
+                    ForEach([FUHorizontalAlignment.leading, .center, .trailing]) {
                         Text($0.rawValue)
                     }
                 }
                 .pickerStyle(.segmented)
 
+                #if os(tvOS)
+                HStack {
+                    Text("Max Width \(maxWidth, specifier: "%.0F")")
+                    Button("-") { maxWidth = max(50, maxWidth - 50) }
+                    Button("+") { maxWidth = min(600, maxWidth + 50) }
+                }
+                #else
                 Stepper("Max Width \(maxWidth, specifier: "%.0F")", value: $maxWidth, in: 50...600, step: 50)
+                #endif
                 
                 Picker("Layout Direction", selection: $layoutDirection) {
                     ForEach(LayoutDirection.allCases, id: \.self) { direction in

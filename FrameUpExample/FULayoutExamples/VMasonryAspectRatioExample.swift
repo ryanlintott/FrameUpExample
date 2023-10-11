@@ -59,9 +59,25 @@ struct VMasonryAspectRatioExample: View {
                 }
                 .pickerStyle(.segmented)
                 
+                #if os(tvOS)
+                HStack {
+                    Text("Max Width \(maxWidth, specifier: "%.0F")")
+                    Button("-") { maxWidth = max(50, maxWidth - 50) }
+                    Button("+") { maxWidth = min(600, maxWidth + 50) }
+                }
+                #else
                 Stepper("Max Width \(maxWidth, specifier: "%.0F")", value: $maxWidth, in: 50...600, step: 50)
+                #endif
                 
+                #if os(tvOS)
+                HStack {
+                    Text("Columns \(columns)")
+                    Button("-") { columns = max(2, columns - 1) }
+                    Button("+") { columns = min(6, columns + 1) }
+                }
+                #else
                 Stepper("Columns \(columns)", value: $columns, in: 2...6)
+                #endif
                 
                 Picker("Layout Direction", selection: $layoutDirection) {
                     ForEach(LayoutDirection.allCases, id: \.self) { direction in

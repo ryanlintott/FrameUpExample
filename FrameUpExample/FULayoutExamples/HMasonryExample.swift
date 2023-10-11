@@ -68,9 +68,25 @@ struct HMasonryExample: View {
                 }
                 .pickerStyle(.segmented)
                 
+                #if os(tvOS)
+                HStack {
+                    Text("Max Height \(maxHeight, specifier: "%.0F")")
+                    Button("-") { maxHeight = max(50, maxHeight - 50) }
+                    Button("+") { maxHeight = min(600, maxHeight + 50) }
+                }
+                #else
                 Stepper("Max Height \(maxHeight, specifier: "%.0F")", value: $maxHeight, in: 50...600, step: 50)
+                #endif
                 
+                #if os(tvOS)
+                HStack {
+                    Text("Rows \(rows)")
+                    Button("-") { rows = max(2, rows - 1) }
+                    Button("+") { rows = min(6, rows + 1) }
+                }
+                #else
                 Stepper("Rows \(rows)", value: $rows, in: 2...6)
+                #endif
                 
                 Picker("Layout Direction", selection: $layoutDirection) {
                     ForEach(LayoutDirection.allCases, id: \.self) { direction in

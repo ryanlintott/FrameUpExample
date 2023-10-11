@@ -21,6 +21,8 @@ struct UnavailableView: View {
         "visionOS"
         #elseif os(macOS)
         "macOS"
+        #elseif os(tvOS)
+        "tvOS"
         #endif
     }
     
@@ -33,7 +35,7 @@ struct UnavailableView: View {
     }
     
     var body: some View {
-        Label("Unavailable in \(availableInLaterVersion ? osVersion : os)", systemImage: "x.mark.circle")
+        Label("Unavailable in \(availableInLaterVersion ? osVersion : os)", systemImage: "xmark.circle")
     }
 }
 
