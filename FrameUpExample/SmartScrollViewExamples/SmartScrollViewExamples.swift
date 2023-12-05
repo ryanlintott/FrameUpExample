@@ -23,8 +23,6 @@ struct SmartScrollViewExamples: View {
             #endif
         } header: {
             Text("SmartScrollView")
-        } footer: {
-            Text("Complex views like those based on FULayout will not work in SmartScrollView.")
         }
     }
 }

@@ -24,8 +24,8 @@ struct HFlowSmartScrollViewExample: View {
         VStack {
             Color.clear
                 .overlay(
-                    SmartScrollView(.vertical, optionalScrolling: optionalScrolling, shrinkToFit: shrinkToFit) {
-                        WidthReader { width in
+                    WidthReader { width in
+                        SmartScrollView(.vertical, optionalScrolling: optionalScrolling, shrinkToFit: shrinkToFit) {
                             HFlow(alignment: alignment, maxWidth: width) {
                                 ForEach(items) { item in
                                     Text(item.value)
@@ -44,7 +44,6 @@ struct HFlowSmartScrollViewExample: View {
                         .animation(.default, value: alignment)
                         .padding()
                 )
-                .padding(.top, 1)
             
             Spacer()
             
@@ -79,6 +78,7 @@ struct HFlowSmartScrollViewExample: View {
             }
             .padding()
         }
+        .padding(.top, 1)
         .navigationTitle("HFlow")
     }
 }
