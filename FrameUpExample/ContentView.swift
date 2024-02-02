@@ -5,6 +5,7 @@
 //  Created by Ryan Lintott on 2021-09-14.
 //
 
+import FrameUp
 import SwiftUI
 
 struct ContentView: View {
@@ -53,6 +54,7 @@ struct ContentView: View {
             .navigationTitle("FrameUp")
             .navigationBarHidden(true)
         }
+        .keyboardHeightEnvironmentValue()
         #else
         if #available(macOS 13, *) {
             NavigationSplitView {
