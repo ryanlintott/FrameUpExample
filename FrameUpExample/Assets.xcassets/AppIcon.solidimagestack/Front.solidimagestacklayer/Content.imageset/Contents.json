@@ -2,6 +2,7 @@
   "images" : [
     {
       "filename" : "FrameUp-icon-visionOS-front.png",
+      "idiom" : "vision",
       "scale" : "2x"
     }
   ],
