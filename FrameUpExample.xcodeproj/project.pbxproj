@@ -61,6 +61,7 @@
 		CFBC933126F24FF200D5D439 /* TagViewForScrollViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */; };
 		CFBC933526F2AB8000D5D439 /* OverlappingImageHorizontalExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933426F2AB8000D5D439 /* OverlappingImageHorizontalExample.swift */; };
 		CFBC933726F2B29300D5D439 /* TabMenuExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC933626F2B29300D5D439 /* TabMenuExample.swift */; };
+		CFC08F582B6D3D5500753E67 /* KeyboardHeightExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC08F572B6D3D5500753E67 /* KeyboardHeightExample.swift */; };
 		CFC476462A0C7E8E003B51CF /* LayoutExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC476452A0C7E8E003B51CF /* LayoutExamples.swift */; };
 		CFC476482A0C82FA003B51CF /* WidgetRelativeShapeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC476472A0C82FA003B51CF /* WidgetRelativeShapeExample.swift */; };
 		CFC4764A2A0C84F1003B51CF /* WidgetRelativeShapeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC476492A0C84F1003B51CF /* WidgetRelativeShapeDemo.swift */; };
@@ -165,6 +166,7 @@
 		CFBC933026F24FF200D5D439 /* TagViewForScrollViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewForScrollViewExample.swift; sourceTree = "<group>"; };
 		CFBC933426F2AB8000D5D439 /* OverlappingImageHorizontalExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlappingImageHorizontalExample.swift; sourceTree = "<group>"; };
 		CFBC933626F2B29300D5D439 /* TabMenuExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuExample.swift; sourceTree = "<group>"; };
+		CFC08F572B6D3D5500753E67 /* KeyboardHeightExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHeightExample.swift; sourceTree = "<group>"; };
 		CFC476452A0C7E8E003B51CF /* LayoutExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutExamples.swift; sourceTree = "<group>"; };
 		CFC476472A0C82FA003B51CF /* WidgetRelativeShapeExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetRelativeShapeExample.swift; sourceTree = "<group>"; };
 		CFC476492A0C84F1003B51CF /* WidgetRelativeShapeDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetRelativeShapeDemo.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				CF4F7134274C2E3100818896 /* OnSizeChangeExample.swift */,
 				CF9FD88527A83A9D0054B22E /* RelativePaddingExample.swift */,
 				CF4F7132274C2B8400818896 /* ScaledToFrameExample.swift */,
+				CFC08F572B6D3D5500753E67 /* KeyboardHeightExample.swift */,
 				CFBC933426F2AB8000D5D439 /* OverlappingImageHorizontalExample.swift */,
 				CF0540982A005752007EE95F /* OverlappingImageVerticalExample.swift */,
 			);
@@ -582,6 +585,7 @@
 				CFF9EC4128D3C07000F2D18C /* TwoSidedViewExample.swift in Sources */,
 				CFF9EC3F28D2DB2C00F2D18C /* CustomFULayoutExample.swift in Sources */,
 				CF05408F2A004FB8007EE95F /* TagViewExamples.swift in Sources */,
+				CFC08F582B6D3D5500753E67 /* KeyboardHeightExample.swift in Sources */,
 				CF2D066C292201BD007D1142 /* DoubleScrollTabView.swift in Sources */,
 				CFC476572A0C9FC2003B51CF /* HMasonryAspectRatioExample.swift in Sources */,
 				CFAC14A02885BC99003D4539 /* HFlowExample.swift in Sources */,

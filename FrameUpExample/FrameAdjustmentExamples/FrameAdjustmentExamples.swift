@@ -26,6 +26,10 @@ struct FrameAdjustmentExamples: View {
                 Label("RelativePadding", systemImage: "percent")
             }
             
+            NavigationLink(destination: KeyboardHeightExample()) {
+                Label("KeyboardHeight", systemImage: "keyboard")
+            }
+            
             NavigationLink(destination: ScaledToFrameExample()) {
                 Label("ScaledToFrame", systemImage: "rectangle.and.arrow.up.right.and.arrow.down.left")
             }
