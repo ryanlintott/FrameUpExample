@@ -36,6 +36,7 @@ struct WidgetDemoFrameExample: View {
         String(format: "%.1f", size.width) + " x " + String(format: "%.1f", size.height)
     }
     
+    @MainActor
     var sizes: [WidgetSize] {
         #if os(iOS)
         WidgetSize.supportedSizesForCurrentDevice

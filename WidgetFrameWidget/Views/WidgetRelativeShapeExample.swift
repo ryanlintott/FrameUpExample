@@ -12,7 +12,7 @@ import WidgetKit
 
 @available(iOS, obsoleted: 16, message: "This modifier is no longer needed")
 struct WidgetRelativeShapeExample: View {
-    var demoView: some View {
+    var body: some View {
         WidgetRelativeShapeDemo()
             .clipShape(WidgetRelativeShape(.systemSmall))
             .background(
@@ -20,10 +20,6 @@ struct WidgetRelativeShapeExample: View {
                     .fill(.red)
             )
             .padding(1)
-    }
-    
-    var body: some View {
-        demoView
     }
 }
 
