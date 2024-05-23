@@ -38,6 +38,7 @@
 		CF2986B528FEFD1F00CFDAA5 /* HFlowBoxExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2986B428FEFD1F00CFDAA5 /* HFlowBoxExample.swift */; };
 		CF2D066C292201BD007D1142 /* DoubleScrollTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2D066B292201BD007D1142 /* DoubleScrollTabView.swift */; };
 		CF3482C52910C7C600563B01 /* FUViewThatFitsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3482C42910C7C600563B01 /* FUViewThatFitsExample.swift */; };
+		CF3FDA1F2BFFBCF4005D6993 /* HFlowBoxLayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3FDA1E2BFFBCF4005D6993 /* HFlowBoxLayoutExample.swift */; };
 		CF42CE26274C4A540010F12B /* WidgetDemoFrameExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF42CE25274C4A540010F12B /* WidgetDemoFrameExample.swift */; };
 		CF48CC9F26F131C200406F4E /* FrameUpExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CC9E26F131C200406F4E /* FrameUpExampleApp.swift */; };
 		CF48CCA126F131C200406F4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48CCA026F131C200406F4E /* ContentView.swift */; };
@@ -142,6 +143,7 @@
 		CF2986B428FEFD1F00CFDAA5 /* HFlowBoxExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HFlowBoxExample.swift; sourceTree = "<group>"; };
 		CF2D066B292201BD007D1142 /* DoubleScrollTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleScrollTabView.swift; sourceTree = "<group>"; };
 		CF3482C42910C7C600563B01 /* FUViewThatFitsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUViewThatFitsExample.swift; sourceTree = "<group>"; };
+		CF3FDA1E2BFFBCF4005D6993 /* HFlowBoxLayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HFlowBoxLayoutExample.swift; sourceTree = "<group>"; };
 		CF42CE25274C4A540010F12B /* WidgetDemoFrameExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetDemoFrameExample.swift; sourceTree = "<group>"; };
 		CF48CC9B26F131C200406F4E /* FrameUpExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameUpExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF48CC9E26F131C200406F4E /* FrameUpExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameUpExampleApp.swift; sourceTree = "<group>"; };
@@ -422,6 +424,7 @@
 			children = (
 				CFC476452A0C7E8E003B51CF /* LayoutExamples.swift */,
 				CFF9E74E2A0F304900451A65 /* HFlowLayoutExample.swift */,
+				CF3FDA1E2BFFBCF4005D6993 /* HFlowBoxLayoutExample.swift */,
 				CFF9E7502A0F3EC600451A65 /* VFlowLayoutExample.swift */,
 				CFF9E7522A0F3ED000451A65 /* VMasonryLayoutExample.swift */,
 				CFF9E7542A0F3ED700451A65 /* HMasonryLayoutExample.swift */,
@@ -615,6 +618,7 @@
 				CFF9E7532A0F3ED000451A65 /* VMasonryLayoutExample.swift in Sources */,
 				CFF9E74D2A0F230700451A65 /* ZStackFULayoutExample.swift in Sources */,
 				CFF9E7492A0EE83600451A65 /* HStackFULayoutExample.swift in Sources */,
+				CF3FDA1F2BFFBCF4005D6993 /* HFlowBoxLayoutExample.swift in Sources */,
 				CFC476512A0C96A5003B51CF /* HMasonryExample.swift in Sources */,
 				CFC476552A0C9CC1003B51CF /* VMasonryAspectRatioExample.swift in Sources */,
 				CF48CCBB26F134CA00406F4E /* VFlowExample.swift in Sources */,

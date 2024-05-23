@@ -15,6 +15,10 @@ struct LayoutExamples: View {
                     Label("HFlowLayout", systemImage: "text.word.spacing")
                 }
                 
+                NavigationLink(destination: HFlowBoxLayoutExample()) {
+                    Label("HFlowBoxLayout", systemImage: "square.grid.3x3")
+                }
+                
                 NavigationLink(destination: VFlowLayoutExample()) {
                     Label {
                         Text("VFlowLayout")

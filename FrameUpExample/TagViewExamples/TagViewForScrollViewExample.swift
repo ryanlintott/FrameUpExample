@@ -13,23 +13,21 @@ struct TagViewForScrollViewExample: View {
     
     var body: some View {
         ScrollView {
-            VStack {
-                WidthReader { width in
-                    Text("Some text")
-                    
-                    TagViewForScrollView(maxWidth: width, elements: elements) { element in
-                        Text(element)
-                            .foregroundColor(.white)
-                            .padding(10)
-                            .background(Color.blue)
-                            .clipShape(Capsule())
-                            .padding(2)
-                    }
-                    .padding(2)
-                    .background(Color.gray)
-                    
-                    Text("Some more text")
+            WidthReader { width in
+                Text("Some text")
+                
+                TagViewForScrollView(maxWidth: width, elements: elements) { element in
+                    Text(element)
+                        .foregroundColor(.white)
+                        .padding(10)
+                        .background(Color.blue)
+                        .clipShape(Capsule())
+                        .padding(2)
                 }
+                .padding(2)
+                .background(Color.gray)
+                
+                Text("Some more text")
             }
         }
         .navigationTitle("TagViewForScroll")

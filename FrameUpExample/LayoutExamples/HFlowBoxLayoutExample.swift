@@ -1,14 +1,15 @@
 //
-//  HFlowBoxExample.swift
+//  HFlowBoxLayoutExample.swift
 //  FrameUpExample
 //
-//  Created by Ryan Lintott on 2022-10-18.
+//  Created by Ryan Lintott on 2024-05-23.
 //
 
 import FrameUp
 import SwiftUI
 
-struct HFlowBoxExample: View {
+@available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
+struct HFlowBoxLayoutExample: View {
     @State private var boxes = [1,2,3,4,5]
     @State private var horizontalAlignment: FUHorizontalAlignment = .leading
     let verticalAlignment: FUVerticalAlignment = .top
@@ -17,22 +18,18 @@ struct HFlowBoxExample: View {
     
     var body: some View {
         VStack {
-            Color.clear.overlay(
+            Color.blue.overlay(
                 ScrollView {
-                    WidthReader { width in
-                        HFlow(alignment: alignment, maxWidth: width) {
-                            ForEach(boxes, id: \.self) { box in
-                                Color.red
-                                    .frame(width: 80, height: 80)
-                                    .padding()
-                            }
+                    HFlowLayout(alignment: alignment) {
+                        ForEach(boxes, id: \.self) { box in
+                            Color.red
+                                .frame(width: 80, height: 80)
                         }
                     }
                 }
                 .animation(.default, value: boxes)
                 .animation(.default, value: alignment)
             )
-            
             VStack {
                 HStack {
                     Button("Remove Box") { if !boxes.isEmpty { boxes.removeLast() } }
@@ -50,14 +47,14 @@ struct HFlowBoxExample: View {
             }
             .padding()
         }
-        .navigationTitle("HFlow Boxes")
+        .navigationTitle("HFlowLayout Boxes")
     }
 }
 
-struct HFlowBoxExample_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            HFlowBoxExample()
+#Preview {
+    Group {
+        if #available(iOS 16, macOS 13, tvOS 16, watchOS 9, *) {
+            HFlowBoxLayoutExample()
         }
     }
 }

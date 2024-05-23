@@ -39,7 +39,7 @@ struct KeyboardHeightExample: View {
         .ignoresSafeArea(.keyboard)
         /// You may need to add animation if environment variable was added outside a NavigationView
         .animation(.keyboard, value: keyboardHeight)
-        #if !os(macOS)
+        #if !os(macOS) && !os(tvOS)
         .navigationBarTitleDisplayMode(.inline)
         #endif
         .navigationTitle("KeyboardHeight")
