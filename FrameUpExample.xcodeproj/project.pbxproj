@@ -74,6 +74,13 @@
 		CFC95D752A15DBEB0098B1E6 /* CustomLayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC95D742A15DBEB0098B1E6 /* CustomLayoutExample.swift */; };
 		CFD6964526F3EED2008D58AD /* TabMenuExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD6964426F3EED2008D58AD /* TabMenuExampleView.swift */; };
 		CFEB0B132911A556000507B8 /* FULayoutThatFitsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEB0B122911A556000507B8 /* FULayoutThatFitsExample.swift */; };
+		CFF359BF2C090B3F00AFC57E /* FrameUpWatchExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF359BE2C090B3F00AFC57E /* FrameUpWatchExampleApp.swift */; };
+		CFF359C12C090B3F00AFC57E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF359C02C090B3F00AFC57E /* ContentView.swift */; };
+		CFF359C32C090B4100AFC57E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF359C22C090B4100AFC57E /* Assets.xcassets */; };
+		CFF359C62C090B4100AFC57E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF359C52C090B4100AFC57E /* Preview Assets.xcassets */; };
+		CFF359C92C090B4100AFC57E /* FrameUpWatchExample Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CFF359BC2C090B3F00AFC57E /* FrameUpWatchExample Watch App.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CFF359CF2C090BEA00AFC57E /* FrameUp in Frameworks */ = {isa = PBXBuildFile; productRef = CFF359CE2C090BEA00AFC57E /* FrameUp */; };
+		CFF359D02C090CBE00AFC57E /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF19BC082AA67CA70096876A /* SharedAssets.xcassets */; };
 		CFF9E7452A0E96DF00451A65 /* ExperimentViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9E7442A0E96DF00451A65 /* ExperimentViews.swift */; };
 		CFF9E7492A0EE83600451A65 /* HStackFULayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9E7482A0EE83600451A65 /* HStackFULayoutExample.swift */; };
 		CFF9E74B2A0F213400451A65 /* VStackFULayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9E74A2A0F213400451A65 /* VStackFULayoutExample.swift */; };
@@ -97,6 +104,13 @@
 			remoteGlobalIDString = CF1EEF2C274D4C4C00987595;
 			remoteInfo = WidgetFrameWidgetExtension;
 		};
+		CFF359C72C090B4100AFC57E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF48CC9326F131C200406F4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFF359BB2C090B3F00AFC57E;
+			remoteInfo = "FrameUpWatchExample Watch App";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -109,6 +123,17 @@
 				CF1EEF3E274D4C4D00987595 /* WidgetFrameWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFF359CA2C090B4100AFC57E /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				CFF359C92C090B4100AFC57E /* FrameUpWatchExample Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -179,6 +204,11 @@
 		CFC95D742A15DBEB0098B1E6 /* CustomLayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayoutExample.swift; sourceTree = "<group>"; };
 		CFD6964426F3EED2008D58AD /* TabMenuExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuExampleView.swift; sourceTree = "<group>"; };
 		CFEB0B122911A556000507B8 /* FULayoutThatFitsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FULayoutThatFitsExample.swift; sourceTree = "<group>"; };
+		CFF359BC2C090B3F00AFC57E /* FrameUpWatchExample Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FrameUpWatchExample Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFF359BE2C090B3F00AFC57E /* FrameUpWatchExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameUpWatchExampleApp.swift; sourceTree = "<group>"; };
+		CFF359C02C090B3F00AFC57E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CFF359C22C090B4100AFC57E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFF359C52C090B4100AFC57E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CFF9E7442A0E96DF00451A65 /* ExperimentViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentViews.swift; sourceTree = "<group>"; };
 		CFF9E7482A0EE83600451A65 /* HStackFULayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HStackFULayoutExample.swift; sourceTree = "<group>"; };
 		CFF9E74A2A0F213400451A65 /* VStackFULayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStackFULayoutExample.swift; sourceTree = "<group>"; };
@@ -210,6 +240,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF48CCAE26F131EA00406F4E /* FrameUp in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFF359B92C090B3F00AFC57E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFF359CF2C090BEA00AFC57E /* FrameUp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +411,7 @@
 				CF19BC072AA67C8C0096876A /* Shared */,
 				CF48CC9D26F131C200406F4E /* FrameUpExample */,
 				CF1EEF33274D4C4C00987595 /* WidgetFrameWidget */,
+				CFF359BD2C090B3F00AFC57E /* FrameUpWatchExample Watch App */,
 				CF1EEF2E274D4C4C00987595 /* Frameworks */,
 				CF48CC9C26F131C200406F4E /* Products */,
 			);
@@ -383,6 +422,7 @@
 			children = (
 				CF48CC9B26F131C200406F4E /* FrameUpExample.app */,
 				CF1EEF2D274D4C4C00987595 /* WidgetFrameWidgetExtension.appex */,
+				CFF359BC2C090B3F00AFC57E /* FrameUpWatchExample Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -434,6 +474,25 @@
 			path = LayoutExamples;
 			sourceTree = "<group>";
 		};
+		CFF359BD2C090B3F00AFC57E /* FrameUpWatchExample Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				CFF359BE2C090B3F00AFC57E /* FrameUpWatchExampleApp.swift */,
+				CFF359C02C090B3F00AFC57E /* ContentView.swift */,
+				CFF359C22C090B4100AFC57E /* Assets.xcassets */,
+				CFF359C42C090B4100AFC57E /* Preview Content */,
+			);
+			path = "FrameUpWatchExample Watch App";
+			sourceTree = "<group>";
+		};
+		CFF359C42C090B4100AFC57E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CFF359C52C090B4100AFC57E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		CFF9E7432A0E96BD00451A65 /* Experiments */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,11 +534,13 @@
 				CF48CC9826F131C200406F4E /* Frameworks */,
 				CF48CC9926F131C200406F4E /* Resources */,
 				CF1EEF42274D4C4D00987595 /* Embed Foundation Extensions */,
+				CFF359CA2C090B4100AFC57E /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				CF1EEF3D274D4C4D00987595 /* PBXTargetDependency */,
+				CFF359C82C090B4100AFC57E /* PBXTargetDependency */,
 			);
 			name = FrameUpExample;
 			packageProductDependencies = (
@@ -489,6 +550,26 @@
 			productReference = CF48CC9B26F131C200406F4E /* FrameUpExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CFF359BB2C090B3F00AFC57E /* FrameUpWatchExample Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFF359CD2C090B4100AFC57E /* Build configuration list for PBXNativeTarget "FrameUpWatchExample Watch App" */;
+			buildPhases = (
+				CFF359B82C090B3F00AFC57E /* Sources */,
+				CFF359B92C090B3F00AFC57E /* Frameworks */,
+				CFF359BA2C090B3F00AFC57E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FrameUpWatchExample Watch App";
+			packageProductDependencies = (
+				CFF359CE2C090BEA00AFC57E /* FrameUp */,
+			);
+			productName = "FrameUpWatchExample Watch App";
+			productReference = CFF359BC2C090B3F00AFC57E /* FrameUpWatchExample Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -496,7 +577,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1310;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					CF1EEF2C274D4C4C00987595 = {
@@ -504,6 +585,9 @@
 					};
 					CF48CC9A26F131C200406F4E = {
 						CreatedOnToolsVersion = 13.0;
+					};
+					CFF359BB2C090B3F00AFC57E = {
+						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
@@ -525,6 +609,7 @@
 			targets = (
 				CF48CC9A26F131C200406F4E /* FrameUpExample */,
 				CF1EEF2C274D4C4C00987595 /* WidgetFrameWidgetExtension */,
+				CFF359BB2C090B3F00AFC57E /* FrameUpWatchExample Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -546,6 +631,16 @@
 				CF19BC092AA67CA70096876A /* SharedAssets.xcassets in Resources */,
 				CF48CCA626F131C300406F4E /* Preview Assets.xcassets in Resources */,
 				CF48CCA326F131C300406F4E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFF359BA2C090B3F00AFC57E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFF359D02C090CBE00AFC57E /* SharedAssets.xcassets in Resources */,
+				CFF359C62C090B4100AFC57E /* Preview Assets.xcassets in Resources */,
+				CFF359C32C090B4100AFC57E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +731,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CFF359B82C090B3F00AFC57E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFF359C12C090B3F00AFC57E /* ContentView.swift in Sources */,
+				CFF359BF2C090B3F00AFC57E /* FrameUpWatchExampleApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -644,6 +748,12 @@
 			platformFilter = ios;
 			target = CF1EEF2C274D4C4C00987595 /* WidgetFrameWidgetExtension */;
 			targetProxy = CF1EEF3C274D4C4D00987595 /* PBXContainerItemProxy */;
+		};
+		CFF359C82C090B4100AFC57E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = CFF359BB2C090B3F00AFC57E /* FrameUpWatchExample Watch App */;
+			targetProxy = CFF359C72C090B4100AFC57E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -924,6 +1034,73 @@
 			};
 			name = Release;
 		};
+		CFF359CB2C090B4100AFC57E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FrameUpWatchExample Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 97423JQ8B9;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FrameUpWatchExample;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.abetterwaytodo.FrameUpExample;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abetterwaytodo.FrameUpExample.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		CFF359CC2C090B4100AFC57E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FrameUpWatchExample Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 97423JQ8B9;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FrameUpWatchExample;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.abetterwaytodo.FrameUpExample;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abetterwaytodo.FrameUpExample.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -954,6 +1131,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		CFF359CD2C090B4100AFC57E /* Build configuration list for PBXNativeTarget "FrameUpWatchExample Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFF359CB2C090B4100AFC57E /* Debug */,
+				CFF359CC2C090B4100AFC57E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -975,6 +1161,10 @@
 		CF48CCAD26F131EA00406F4E /* FrameUp */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CF48CCAC26F131EA00406F4E /* XCRemoteSwiftPackageReference "FrameUp" */;
+			productName = FrameUp;
+		};
+		CFF359CE2C090BEA00AFC57E /* FrameUp */ = {
+			isa = XCSwiftPackageProductDependency;
 			productName = FrameUp;
 		};
 /* End XCSwiftPackageProductDependency section */
