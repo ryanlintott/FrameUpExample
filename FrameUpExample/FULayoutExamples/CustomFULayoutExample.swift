@@ -11,9 +11,13 @@ import SwiftUI
 struct PingPong: FULayout {
     let maxWidth: CGFloat
     
-    var fixedSize: Axis.Set = .horizontal
+    let fixedSize: Axis.Set = .horizontal
     var maxItemWidth: CGFloat? { maxWidth }
-    var maxItemHeight: CGFloat? = nil
+    let maxItemHeight: CGFloat? = nil
+    
+    init(maxWidth: CGFloat) {
+        self.maxWidth = maxWidth
+    }
     
     func contentOffsets(sizes: [Int : CGSize]) -> [Int : CGPoint] {
         var widthOffset = 0.0

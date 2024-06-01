@@ -28,20 +28,20 @@ struct FULayoutExamples: View {
                 }
             }
             
-            NavigationLink(destination: HMasonryExample()) {
-                Label("HMasonry", systemImage: "align.horizontal.left")
-            }
-            
-            NavigationLink(destination: HMasonryAspectRatioExample()) {
-                Label("HMasonry Aspect Ratio", systemImage: "align.horizontal.left")
-            }
-            
             NavigationLink(destination: VMasonryExample()) {
                 Label("VMasonry", systemImage: "align.vertical.top")
             }
             
             NavigationLink(destination: VMasonryAspectRatioExample()) {
                 Label("VMasonry Aspect Ratio", systemImage: "align.vertical.top")
+            }
+            
+            NavigationLink(destination: HMasonryExample()) {
+                Label("HMasonry", systemImage: "align.horizontal.left")
+            }
+            
+            NavigationLink(destination: HMasonryAspectRatioExample()) {
+                Label("HMasonry Aspect Ratio", systemImage: "align.horizontal.left")
             }
             
             NavigationLink(destination: HStackFULayoutExample()) {

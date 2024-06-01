@@ -19,23 +19,23 @@ struct ContentView: View {
     
     @ViewBuilder
     var examples: some View {
+        LayoutExamples()
+        
         AutoRotatingViewExamples()
         
         FrameAdjustmentExamples()
         
-        FULayoutExamples()
-        
-        LayoutExamples()
-        
         SmartScrollViewExamples()
+        
+        TwoSidedViewExamples()
         
         TabMenuExamples()
         
-        TagViewExamples()
-        
         WidgetExamples()
         
-        TwoSidedViewExamples()
+        FULayoutExamples()
+        
+        TagViewExamples()
         
         /// These likely won't work
         ExperimentViews()

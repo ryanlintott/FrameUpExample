@@ -28,12 +28,12 @@ struct LayoutExamples: View {
                     }
                 }
                 
-                NavigationLink(destination: HMasonryLayoutExample()) {
-                    Label("HMasonryLayout", systemImage: "align.horizontal.left")
-                }
-                
                 NavigationLink(destination: VMasonryLayoutExample()) {
                     Label("VMasonryLayout", systemImage: "align.vertical.top")
+                }
+                
+                NavigationLink(destination: HMasonryLayoutExample()) {
+                    Label("HMasonryLayout", systemImage: "align.horizontal.left")
                 }
             } else {
                 UnavailableView(availableInLaterVersion: true)
