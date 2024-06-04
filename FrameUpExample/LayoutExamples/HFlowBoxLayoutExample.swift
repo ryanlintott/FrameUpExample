@@ -51,10 +51,7 @@ struct HFlowBoxLayoutExample: View {
     }
 }
 
+@available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
 #Preview {
-    Group {
-        if #available(iOS 16, macOS 13, tvOS 16, watchOS 9, *) {
-            HFlowBoxLayoutExample()
-        }
-    }
+    HFlowBoxLayoutExample()
 }
