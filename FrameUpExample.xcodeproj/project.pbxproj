@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF0449632C0EA86900375A10 /* EqualWidthExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0449622C0EA86900375A10 /* EqualWidthExample.swift */; };
+		CF0449652C0EAF7800375A10 /* EqualHeightExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0449642C0EAF7800375A10 /* EqualHeightExample.swift */; };
 		CF05408A2A004747007EE95F /* FULayoutExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0540892A004747007EE95F /* FULayoutExamples.swift */; };
 		CF05408C2A004828007EE95F /* WidgetExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF05408B2A004828007EE95F /* WidgetExamples.swift */; };
 		CF05408F2A004FB8007EE95F /* TagViewExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF05408E2A004FB8007EE95F /* TagViewExamples.swift */; };
@@ -139,6 +141,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CF0449622C0EA86900375A10 /* EqualWidthExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualWidthExample.swift; sourceTree = "<group>"; };
+		CF0449642C0EAF7800375A10 /* EqualHeightExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualHeightExample.swift; sourceTree = "<group>"; };
 		CF0540892A004747007EE95F /* FULayoutExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FULayoutExamples.swift; sourceTree = "<group>"; };
 		CF05408B2A004828007EE95F /* WidgetExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetExamples.swift; sourceTree = "<group>"; };
 		CF05408E2A004FB8007EE95F /* TagViewExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewExamples.swift; sourceTree = "<group>"; };
@@ -309,6 +313,8 @@
 				CF4F7134274C2E3100818896 /* OnSizeChangeExample.swift */,
 				CF9FD88527A83A9D0054B22E /* RelativePaddingExample.swift */,
 				CF4F7132274C2B8400818896 /* ScaledToFrameExample.swift */,
+				CF0449622C0EA86900375A10 /* EqualWidthExample.swift */,
+				CF0449642C0EAF7800375A10 /* EqualHeightExample.swift */,
 				CFC08F572B6D3D5500753E67 /* KeyboardHeightExample.swift */,
 				CFBC933426F2AB8000D5D439 /* OverlappingImageHorizontalExample.swift */,
 				CF0540982A005752007EE95F /* OverlappingImageVerticalExample.swift */,
@@ -669,6 +675,7 @@
 			files = (
 				CF0540992A005752007EE95F /* OverlappingImageVerticalExample.swift in Sources */,
 				CFF9EC3D28D2D58700F2D18C /* AnyFULayoutSimpleExample.swift in Sources */,
+				CF0449652C0EAF7800375A10 /* EqualHeightExample.swift in Sources */,
 				CFF9E7552A0F3ED700451A65 /* HMasonryLayoutExample.swift in Sources */,
 				CF0540A72A00A853007EE95F /* UnavailableView.swift in Sources */,
 				CF48CCA126F131C200406F4E /* ContentView.swift in Sources */,
@@ -712,6 +719,7 @@
 				CF42CE26274C4A540010F12B /* WidgetDemoFrameExample.swift in Sources */,
 				CFF9E7532A0F3ED000451A65 /* VMasonryLayoutExample.swift in Sources */,
 				CFF9E74D2A0F230700451A65 /* ZStackFULayoutExample.swift in Sources */,
+				CF0449632C0EA86900375A10 /* EqualWidthExample.swift in Sources */,
 				CFF9E7492A0EE83600451A65 /* HStackFULayoutExample.swift in Sources */,
 				CF3FDA1F2BFFBCF4005D6993 /* HFlowBoxLayoutExample.swift in Sources */,
 				CFC476512A0C96A5003B51CF /* HMasonryExample.swift in Sources */,

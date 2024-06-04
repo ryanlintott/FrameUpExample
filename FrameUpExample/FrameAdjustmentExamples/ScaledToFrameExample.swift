@@ -15,48 +15,46 @@ struct ScaledToFrameExample: View {
     
     var body: some View {
         VStack {
-            Color.clear
-                .overlay(
-                    VStack {
-                        Spacer()
-                        
-                        Text("Unscaled")
-                            .fixedSize()
-                            .border(.blue)
-                            .frame(width: width, height: height)
-                            .border(.red)
-                        
-                        Spacer()
-                        
-                        Text("ScaledToFit")
-                            .fixedSize()
-                            .border(.blue)
-                            .scaledToFit(width: width, height: height, scaleMode: scaleMode)
-                            .frame(width: width, height: height)
-                            .border(.red)
-                        
-                        Spacer()
-                        
-                        Text("ScaledToFill")
-                            .fixedSize()
-                            .border(.blue)
-                            .scaledToFill(width: width, height: height, scaleMode: scaleMode)
-                            .frame(width: width, height: height)
-                            .border(.red)
-                        
-                        Spacer()
-                        
-                        Text("ScaledToFrame")
-                            .fixedSize()
-                            .border(.blue)
-                            .scaledToFrame(width: width, height: height, contentMode: nil, scaleMode: scaleMode)
-                            .frame(width: width, height: height)
-                            .border(.red)
-                        
-                        Spacer()
-                    }
-                        .font(.system(size: 50))
-                )
+            VStack {
+                Spacer()
+                
+                Text("Unscaled")
+                    .fixedSize()
+                    .border(.blue)
+                    .frame(width: width, height: height)
+                    .border(.red)
+                
+                Spacer()
+                
+                Text("ScaledToFit")
+                    .fixedSize()
+                    .border(.blue)
+                    .scaledToFit(width: width, height: height, scaleMode: scaleMode)
+                    .frame(width: width, height: height)
+                    .border(.red)
+                
+                Spacer()
+                
+                Text("ScaledToFill")
+                    .fixedSize()
+                    .border(.blue)
+                    .scaledToFill(width: width, height: height, scaleMode: scaleMode)
+                    .frame(width: width, height: height)
+                    .border(.red)
+                
+                Spacer()
+                
+                Text("ScaledToFrame")
+                    .fixedSize()
+                    .border(.blue)
+                    .scaledToFrame(width: width, height: height, contentMode: nil, scaleMode: scaleMode)
+                    .frame(width: width, height: height)
+                    .border(.red)
+                
+                Spacer()
+            }
+            .font(.system(size: 50))
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
             
             HStack {
                 #if os(tvOS)

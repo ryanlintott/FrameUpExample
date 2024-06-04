@@ -26,6 +26,14 @@ struct FrameAdjustmentExamples: View {
                 Label("RelativePadding", systemImage: "percent")
             }
             
+            NavigationLink(destination: EqualWidthExample()) {
+                Label("EqualWidth", systemImage: "arrow.left.arrow.right.square")
+            }
+            
+            NavigationLink(destination: EqualHeightExample()) {
+                Label("EqualHeight", systemImage: "arrow.up.arrow.down.square")
+            }
+            
             NavigationLink(destination: KeyboardHeightExample()) {
                 Label("KeyboardHeight", systemImage: "keyboard")
             }
