@@ -8,7 +8,7 @@
 import WidgetKit
 import SwiftUI
 
-@available(iOSApplicationExtension 16.0, *)
+@available(iOS 16.0, *)
 struct InlineImageWidget: Widget {
     let kind: String = "InlineImageWidget"
 
@@ -22,7 +22,7 @@ struct InlineImageWidget: Widget {
     }
 }
 
-@available(iOSApplicationExtension 16.0, *)
+@available(iOS 16.0, *)
 struct InlineImageWidgetEntryView: View {
     var entry: Provider.Entry
     
@@ -31,7 +31,7 @@ struct InlineImageWidgetEntryView: View {
     }
 }
 
-@available(iOSApplicationExtension 16.0, *)
+@available(iOS 16.0, *)
 struct InlineImageWidget_Previews: PreviewProvider {
     static var previews: some View {
         InlineImageWidgetEntryView(entry: SimpleEntry(date: Date()))
