@@ -32,14 +32,6 @@ struct FUViewThatFitsExample: View {
         VStack {
             Spacer()
             
-            WidthReader { width in
-                FUViewThatFits(maxWidth: width) {
-                    Color.green.frame(width: 300, height: 300)
-                    Color.yellow.frame(width: 200, height: 200)
-                    Color.blue.frame(width: 100, height: 100)
-                }
-            }
-            
             fuViewThatFits {
                 Color.green.frame(width: 300, height: 300)
                 Color.yellow.frame(width: 200, height: 200)
