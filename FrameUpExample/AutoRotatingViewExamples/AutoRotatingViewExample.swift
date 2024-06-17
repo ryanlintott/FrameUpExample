@@ -16,7 +16,7 @@ struct AutoRotatingViewExample: View {
     @State private var landscapeRight: Bool = true
     @State private var portraitUpsideDown: Bool = true
     
-    var allowedOrientations: [FrameUp.InterfaceOrientation] {
+    var allowedOrientations: [FUInterfaceOrientation] {
         zip(
             [
                 portrait,
@@ -25,10 +25,10 @@ struct AutoRotatingViewExample: View {
                 portraitUpsideDown
             ],
             [
-                InterfaceOrientation.portrait,
-                InterfaceOrientation.landscapeLeft,
-                InterfaceOrientation.landscapeRight,
-                InterfaceOrientation.portraitUpsideDown
+                .portrait,
+                .landscapeLeft,
+                .landscapeRight,
+                .portraitUpsideDown
             ]
         )
         .compactMap { $0 ? $1 : nil }
