@@ -11,16 +11,29 @@ import SwiftUI
 @main
 struct WidgetLauncher {
     static func main() {
-        if #available(iOS 16, *) {
+        if #available(iOS 18, *) {
             FrameUpWidgetBundle.main()
+        } else if #available(iOS 16, *) {
+            FrameUpWidgetBundleiOS16.main()
         } else {
             FrameUpWidgetBundleiOS14.main()
         }
     }
 }
 
-@available(iOS 16, *)
+@available(iOS 18, *)
 struct FrameUpWidgetBundle: WidgetBundle {
+    var body: some Widget {
+        WidgetFrameWidget()
+        
+        InlineImageWidget()
+        
+        ControlImageWidget()
+    }
+}
+
+@available(iOS 16, *)
+struct FrameUpWidgetBundleiOS16: WidgetBundle {
     var body: some Widget {
         WidgetFrameWidget()
         
