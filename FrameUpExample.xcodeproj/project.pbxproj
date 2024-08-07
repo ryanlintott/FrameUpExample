@@ -55,6 +55,7 @@
 		CF4F7135274C2E3100818896 /* OnSizeChangeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4F7134274C2E3100818896 /* OnSizeChangeExample.swift */; };
 		CF5149A2274E967000F22BF3 /* WidgetRelativeShapeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5149A0274E90F000F22BF3 /* WidgetRelativeShapeExample.swift */; };
 		CF5C50F927FCF29200769E38 /* AutoRotatingViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C50F827FCF29200769E38 /* AutoRotatingViewExample.swift */; };
+		CF6335012C3EFE0300996F80 /* SizeMatchingViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6335002C3EFE0300996F80 /* SizeMatchingViewExample.swift */; };
 		CF6973F92C2378A0000A4E00 /* ControlImageWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6973F82C2378A0000A4E00 /* ControlImageWidget.swift */; };
 		CF6973FB2C247CA9000A4E00 /* OpenAppAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6973FA2C247CA9000A4E00 /* OpenAppAppIntent.swift */; };
 		CF6973FC2C247CA9000A4E00 /* OpenAppAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6973FA2C247CA9000A4E00 /* OpenAppAppIntent.swift */; };
@@ -191,6 +192,7 @@
 		CF4F7134274C2E3100818896 /* OnSizeChangeExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnSizeChangeExample.swift; sourceTree = "<group>"; };
 		CF5149A0274E90F000F22BF3 /* WidgetRelativeShapeExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetRelativeShapeExample.swift; sourceTree = "<group>"; };
 		CF5C50F827FCF29200769E38 /* AutoRotatingViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRotatingViewExample.swift; sourceTree = "<group>"; };
+		CF6335002C3EFE0300996F80 /* SizeMatchingViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeMatchingViewExample.swift; sourceTree = "<group>"; };
 		CF6973F82C2378A0000A4E00 /* ControlImageWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlImageWidget.swift; sourceTree = "<group>"; };
 		CF6973FA2C247CA9000A4E00 /* OpenAppAppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAppAppIntent.swift; sourceTree = "<group>"; };
 		CF7B8B622924383200C4490E /* JustifiedTextExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifiedTextExample.swift; sourceTree = "<group>"; };
@@ -510,6 +512,7 @@
 			isa = PBXGroup;
 			children = (
 				CFF9E7442A0E96DF00451A65 /* ExperimentViews.swift */,
+				CF6335002C3EFE0300996F80 /* SizeMatchingViewExample.swift */,
 				CF25F6522901D91C0041FBAF /* HFlowSmartScrollViewExample.swift */,
 				CF2D066B292201BD007D1142 /* DoubleScrollTabView.swift */,
 			);
@@ -737,6 +740,7 @@
 				CF9FD88627A83A9D0054B22E /* RelativePaddingExample.swift in Sources */,
 				CF25F6512900DA1A0041FBAF /* AnyFULayoutHorizontalExample.swift in Sources */,
 				CFF9E74B2A0F213400451A65 /* VStackFULayoutExample.swift in Sources */,
+				CF6335012C3EFE0300996F80 /* SizeMatchingViewExample.swift in Sources */,
 				CF6973FC2C247CA9000A4E00 /* OpenAppAppIntent.swift in Sources */,
 				CFC476482A0C82FA003B51CF /* WidgetRelativeShapeExample.swift in Sources */,
 				CF5C50F927FCF29200769E38 /* AutoRotatingViewExample.swift in Sources */,
@@ -803,7 +807,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -835,7 +839,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1004,7 +1008,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_STRICT_CONCURRENCY = complete;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,7";
 				TVOS_DEPLOYMENT_TARGET = 14.0;
 			};
@@ -1046,7 +1050,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_STRICT_CONCURRENCY = complete;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,7";
 				TVOS_DEPLOYMENT_TARGET = 14.0;
 			};
