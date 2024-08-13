@@ -56,9 +56,9 @@
 		CF5149A2274E967000F22BF3 /* WidgetRelativeShapeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5149A0274E90F000F22BF3 /* WidgetRelativeShapeExample.swift */; };
 		CF5C50F927FCF29200769E38 /* AutoRotatingViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C50F827FCF29200769E38 /* AutoRotatingViewExample.swift */; };
 		CF6335012C3EFE0300996F80 /* SizeMatchingViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6335002C3EFE0300996F80 /* SizeMatchingViewExample.swift */; };
-		CF6973F92C2378A0000A4E00 /* ControlImageWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6973F82C2378A0000A4E00 /* ControlImageWidget.swift */; };
 		CF6973FB2C247CA9000A4E00 /* OpenAppAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6973FA2C247CA9000A4E00 /* OpenAppAppIntent.swift */; };
 		CF6973FC2C247CA9000A4E00 /* OpenAppAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6973FA2C247CA9000A4E00 /* OpenAppAppIntent.swift */; };
+		CF790D632C6A86680012D4F8 /* LinePlotConcurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF790D622C6A86680012D4F8 /* LinePlotConcurrencyView.swift */; };
 		CF7B8B6829243A6A00C4490E /* JustifiedTextExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7B8B622924383200C4490E /* JustifiedTextExample.swift */; };
 		CF9CA722290DC712006E05E4 /* LayoutThatFitsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9CA721290DC712006E05E4 /* LayoutThatFitsExample.swift */; };
 		CF9FD88627A83A9D0054B22E /* RelativePaddingExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FD88527A83A9D0054B22E /* RelativePaddingExample.swift */; };
@@ -193,8 +193,8 @@
 		CF5149A0274E90F000F22BF3 /* WidgetRelativeShapeExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetRelativeShapeExample.swift; sourceTree = "<group>"; };
 		CF5C50F827FCF29200769E38 /* AutoRotatingViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRotatingViewExample.swift; sourceTree = "<group>"; };
 		CF6335002C3EFE0300996F80 /* SizeMatchingViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeMatchingViewExample.swift; sourceTree = "<group>"; };
-		CF6973F82C2378A0000A4E00 /* ControlImageWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlImageWidget.swift; sourceTree = "<group>"; };
 		CF6973FA2C247CA9000A4E00 /* OpenAppAppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAppAppIntent.swift; sourceTree = "<group>"; };
+		CF790D622C6A86680012D4F8 /* LinePlotConcurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinePlotConcurrencyView.swift; sourceTree = "<group>"; };
 		CF7B8B622924383200C4490E /* JustifiedTextExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifiedTextExample.swift; sourceTree = "<group>"; };
 		CF9CA721290DC712006E05E4 /* LayoutThatFitsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutThatFitsExample.swift; sourceTree = "<group>"; };
 		CF9FD88527A83A9D0054B22E /* RelativePaddingExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativePaddingExample.swift; sourceTree = "<group>"; };
@@ -409,7 +409,6 @@
 				CF19BBFB2AA675740096876A /* FrameUpWidgetBundle.swift */,
 				CF19BBFD2AA676300096876A /* DateTimelineProvider.swift */,
 				CF1EEF34274D4C4C00987595 /* WidgetFrameWidget.swift */,
-				CF6973F82C2378A0000A4E00 /* ControlImageWidget.swift */,
 				CF6973FA2C247CA9000A4E00 /* OpenAppAppIntent.swift */,
 				CF19BC022AA677CA0096876A /* InlineImageWidget.swift */,
 				CF19BC012AA6773C0096876A /* Views */,
@@ -669,7 +668,6 @@
 			files = (
 				CF19BC002AA676520096876A /* FrameUpWidgetBundle.swift in Sources */,
 				CF19BC0D2AA67FF00096876A /* InlineImageExample.swift in Sources */,
-				CF6973F92C2378A0000A4E00 /* ControlImageWidget.swift in Sources */,
 				CF19BBFF2AA6764D0096876A /* DateTimelineProvider.swift in Sources */,
 				CF6973FB2C247CA9000A4E00 /* OpenAppAppIntent.swift in Sources */,
 				CF7B8B6829243A6A00C4490E /* JustifiedTextExample.swift in Sources */,
