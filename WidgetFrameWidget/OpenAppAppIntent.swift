@@ -8,7 +8,7 @@
 import Foundation
 import AppIntents
 
-@available(iOS 16.0, *)
+@available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
 struct OpenApp: AppIntent {
     static let title: LocalizedStringResource = "Open app"
     

@@ -58,7 +58,6 @@
 		CF6335012C3EFE0300996F80 /* SizeMatchingViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6335002C3EFE0300996F80 /* SizeMatchingViewExample.swift */; };
 		CF6973FB2C247CA9000A4E00 /* OpenAppAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6973FA2C247CA9000A4E00 /* OpenAppAppIntent.swift */; };
 		CF6973FC2C247CA9000A4E00 /* OpenAppAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6973FA2C247CA9000A4E00 /* OpenAppAppIntent.swift */; };
-		CF790D632C6A86680012D4F8 /* LinePlotConcurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF790D622C6A86680012D4F8 /* LinePlotConcurrencyView.swift */; };
 		CF7B8B6829243A6A00C4490E /* JustifiedTextExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7B8B622924383200C4490E /* JustifiedTextExample.swift */; };
 		CF9CA722290DC712006E05E4 /* LayoutThatFitsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9CA721290DC712006E05E4 /* LayoutThatFitsExample.swift */; };
 		CF9FD88627A83A9D0054B22E /* RelativePaddingExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FD88527A83A9D0054B22E /* RelativePaddingExample.swift */; };
@@ -80,6 +79,12 @@
 		CFC95D752A15DBEB0098B1E6 /* CustomLayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC95D742A15DBEB0098B1E6 /* CustomLayoutExample.swift */; };
 		CFD6964526F3EED2008D58AD /* TabMenuExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD6964426F3EED2008D58AD /* TabMenuExampleView.swift */; };
 		CFEB0B132911A556000507B8 /* FULayoutThatFitsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEB0B122911A556000507B8 /* FULayoutThatFitsExample.swift */; };
+		CFF017C02C6BA5FC00970A90 /* CrossPlatformSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF017BD2C6BA5FC00970A90 /* CrossPlatformSlider.swift */; };
+		CFF017C12C6BA5FC00970A90 /* CrossPlatformStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF017BE2C6BA5FC00970A90 /* CrossPlatformStepper.swift */; };
+		CFF017C22C6BA5FC00970A90 /* CrossPlatformSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF017BD2C6BA5FC00970A90 /* CrossPlatformSlider.swift */; };
+		CFF017C32C6BA5FC00970A90 /* CrossPlatformStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF017BE2C6BA5FC00970A90 /* CrossPlatformStepper.swift */; };
+		CFF017C42C6BA5FC00970A90 /* CrossPlatformSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF017BD2C6BA5FC00970A90 /* CrossPlatformSlider.swift */; };
+		CFF017C52C6BA5FC00970A90 /* CrossPlatformStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF017BE2C6BA5FC00970A90 /* CrossPlatformStepper.swift */; };
 		CFF359BF2C090B3F00AFC57E /* FrameUpWatchExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF359BE2C090B3F00AFC57E /* FrameUpWatchExampleApp.swift */; };
 		CFF359C12C090B3F00AFC57E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF359C02C090B3F00AFC57E /* ContentView.swift */; };
 		CFF359C32C090B4100AFC57E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF359C22C090B4100AFC57E /* Assets.xcassets */; };
@@ -194,7 +199,6 @@
 		CF5C50F827FCF29200769E38 /* AutoRotatingViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRotatingViewExample.swift; sourceTree = "<group>"; };
 		CF6335002C3EFE0300996F80 /* SizeMatchingViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeMatchingViewExample.swift; sourceTree = "<group>"; };
 		CF6973FA2C247CA9000A4E00 /* OpenAppAppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAppAppIntent.swift; sourceTree = "<group>"; };
-		CF790D622C6A86680012D4F8 /* LinePlotConcurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinePlotConcurrencyView.swift; sourceTree = "<group>"; };
 		CF7B8B622924383200C4490E /* JustifiedTextExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifiedTextExample.swift; sourceTree = "<group>"; };
 		CF9CA721290DC712006E05E4 /* LayoutThatFitsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutThatFitsExample.swift; sourceTree = "<group>"; };
 		CF9FD88527A83A9D0054B22E /* RelativePaddingExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativePaddingExample.swift; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 		CFC95D742A15DBEB0098B1E6 /* CustomLayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayoutExample.swift; sourceTree = "<group>"; };
 		CFD6964426F3EED2008D58AD /* TabMenuExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuExampleView.swift; sourceTree = "<group>"; };
 		CFEB0B122911A556000507B8 /* FULayoutThatFitsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FULayoutThatFitsExample.swift; sourceTree = "<group>"; };
+		CFF017BD2C6BA5FC00970A90 /* CrossPlatformSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossPlatformSlider.swift; sourceTree = "<group>"; };
+		CFF017BE2C6BA5FC00970A90 /* CrossPlatformStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossPlatformStepper.swift; sourceTree = "<group>"; };
 		CFF359BC2C090B3F00AFC57E /* FrameUpWatchExample Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FrameUpWatchExample Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF359BE2C090B3F00AFC57E /* FrameUpWatchExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameUpWatchExampleApp.swift; sourceTree = "<group>"; };
 		CFF359C02C090B3F00AFC57E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -381,6 +387,7 @@
 		CF19BC072AA67C8C0096876A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				CFF017BF2C6BA5FC00970A90 /* CrossPlatform */,
 				CF19BC082AA67CA70096876A /* SharedAssets.xcassets */,
 			);
 			path = Shared;
@@ -486,6 +493,15 @@
 				CFC95D742A15DBEB0098B1E6 /* CustomLayoutExample.swift */,
 			);
 			path = LayoutExamples;
+			sourceTree = "<group>";
+		};
+		CFF017BF2C6BA5FC00970A90 /* CrossPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				CFF017BD2C6BA5FC00970A90 /* CrossPlatformSlider.swift */,
+				CFF017BE2C6BA5FC00970A90 /* CrossPlatformStepper.swift */,
+			);
+			path = CrossPlatform;
 			sourceTree = "<group>";
 		};
 		CFF359BD2C090B3F00AFC57E /* FrameUpWatchExample Watch App */ = {
@@ -668,6 +684,8 @@
 			files = (
 				CF19BC002AA676520096876A /* FrameUpWidgetBundle.swift in Sources */,
 				CF19BC0D2AA67FF00096876A /* InlineImageExample.swift in Sources */,
+				CFF017C42C6BA5FC00970A90 /* CrossPlatformSlider.swift in Sources */,
+				CFF017C52C6BA5FC00970A90 /* CrossPlatformStepper.swift in Sources */,
 				CF19BBFF2AA6764D0096876A /* DateTimelineProvider.swift in Sources */,
 				CF6973FB2C247CA9000A4E00 /* OpenAppAppIntent.swift in Sources */,
 				CF7B8B6829243A6A00C4490E /* JustifiedTextExample.swift in Sources */,
@@ -712,6 +730,8 @@
 				CFF9E7452A0E96DF00451A65 /* ExperimentViews.swift in Sources */,
 				CF19BC182AA7BC730096876A /* View+IfAvailable.swift in Sources */,
 				CF48CCB126F132A400406F4E /* WidthReaderExample.swift in Sources */,
+				CFF017C02C6BA5FC00970A90 /* CrossPlatformSlider.swift in Sources */,
+				CFF017C12C6BA5FC00970A90 /* CrossPlatformStepper.swift in Sources */,
 				CF9CA722290DC712006E05E4 /* LayoutThatFitsExample.swift in Sources */,
 				CFF9E7512A0F3EC600451A65 /* VFlowLayoutExample.swift in Sources */,
 				CF05409F2A00A55B007EE95F /* TwoSidedViewExamples.swift in Sources */,
@@ -756,6 +776,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFF359C12C090B3F00AFC57E /* ContentView.swift in Sources */,
+				CFF017C22C6BA5FC00970A90 /* CrossPlatformSlider.swift in Sources */,
+				CFF017C32C6BA5FC00970A90 /* CrossPlatformStepper.swift in Sources */,
 				CFF359BF2C090B3F00AFC57E /* FrameUpWatchExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1082,7 +1104,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
@@ -1115,7 +1137,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
