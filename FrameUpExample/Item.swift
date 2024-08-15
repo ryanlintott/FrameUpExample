@@ -12,11 +12,15 @@ struct Item<Value>: Identifiable {
     var value: Value
 }
 
+extension Item: Sendable where Value: Sendable { }
 extension Item: Equatable where Value: Equatable { }
+extension Item: Hashable where Value: Hashable { }
+
+extension Item<String> {
+    static let examples = ["Here", "are", "several", "example", "items", "useful for", "creating", "example layouts", "in", "FrameUp"]
+        .map { Item(id: UUID(), value: $0) }
+}
 
 extension Array<Item<String>> {
-    static var examples: Self {
-        ["Here", "are", "several", "example", "items", "useful for", "creating", "example layouts", "in", "FrameUp"]
-            .map { Item(id: UUID(), value: $0) }
-    }
+    static let examples = Element.examples
 }
