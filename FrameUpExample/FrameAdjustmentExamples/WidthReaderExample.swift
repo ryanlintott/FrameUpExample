@@ -30,6 +30,12 @@ struct WidthReaderExample: View {
             Text("The WidthReader above does not have a fixed height and will fit the content.")
                 .padding()
             
+            Button("Animate") {
+                withAnimation {
+                    percent = .random(in: 0...1)
+                }
+            }
+            
             HStack {
                 Text("Percent \(percent * 100, specifier: "%.0f")%")
                 #if os(tvOS)
