@@ -25,6 +25,8 @@ struct ContentView: View {
         
         FrameAdjustmentExamples()
         
+        TextExamples()
+        
         SmartScrollViewExamples()
         
         TwoSidedViewExamples()

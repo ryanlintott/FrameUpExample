@@ -78,6 +78,8 @@
 		CFC476572A0C9FC2003B51CF /* HMasonryAspectRatioExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC476562A0C9FC2003B51CF /* HMasonryAspectRatioExample.swift */; };
 		CFC95D752A15DBEB0098B1E6 /* CustomLayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC95D742A15DBEB0098B1E6 /* CustomLayoutExample.swift */; };
 		CFD6964526F3EED2008D58AD /* TabMenuExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD6964426F3EED2008D58AD /* TabMenuExampleView.swift */; };
+		CFE981F52C9DF06B0094A1A8 /* UnclippedTextExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE981F42C9DF06B0094A1A8 /* UnclippedTextExample.swift */; };
+		CFE981F82C9DF0F90094A1A8 /* TextExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE981F72C9DF0F90094A1A8 /* TextExamples.swift */; };
 		CFEB0B132911A556000507B8 /* FULayoutThatFitsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEB0B122911A556000507B8 /* FULayoutThatFitsExample.swift */; };
 		CFF017C02C6BA5FC00970A90 /* CrossPlatformSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF017BD2C6BA5FC00970A90 /* CrossPlatformSlider.swift */; };
 		CFF017C12C6BA5FC00970A90 /* CrossPlatformStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF017BE2C6BA5FC00970A90 /* CrossPlatformStepper.swift */; };
@@ -218,6 +220,8 @@
 		CFC476562A0C9FC2003B51CF /* HMasonryAspectRatioExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMasonryAspectRatioExample.swift; sourceTree = "<group>"; };
 		CFC95D742A15DBEB0098B1E6 /* CustomLayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayoutExample.swift; sourceTree = "<group>"; };
 		CFD6964426F3EED2008D58AD /* TabMenuExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuExampleView.swift; sourceTree = "<group>"; };
+		CFE981F42C9DF06B0094A1A8 /* UnclippedTextExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnclippedTextExample.swift; sourceTree = "<group>"; };
+		CFE981F72C9DF0F90094A1A8 /* TextExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExamples.swift; sourceTree = "<group>"; };
 		CFEB0B122911A556000507B8 /* FULayoutThatFitsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FULayoutThatFitsExample.swift; sourceTree = "<group>"; };
 		CFF017BD2C6BA5FC00970A90 /* CrossPlatformSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossPlatformSlider.swift; sourceTree = "<group>"; };
 		CFF017BE2C6BA5FC00970A90 /* CrossPlatformStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossPlatformStepper.swift; sourceTree = "<group>"; };
@@ -458,6 +462,7 @@
 				CF19BC162AA7BC600096876A /* _Extensions */,
 				CF0540A02A00A5A3007EE95F /* AutoRotatingViewExamples */,
 				CF0540932A005181007EE95F /* FrameAdjustmentExamples */,
+				CFE981F62C9DF0E00094A1A8 /* TextExamples */,
 				CF0540912A005082007EE95F /* FULayoutExamples */,
 				CFC476442A0C7E79003B51CF /* LayoutExamples */,
 				CF0540A52A00A625007EE95F /* SmartScrollViewExamples */,
@@ -493,6 +498,15 @@
 				CFC95D742A15DBEB0098B1E6 /* CustomLayoutExample.swift */,
 			);
 			path = LayoutExamples;
+			sourceTree = "<group>";
+		};
+		CFE981F62C9DF0E00094A1A8 /* TextExamples */ = {
+			isa = PBXGroup;
+			children = (
+				CFE981F72C9DF0F90094A1A8 /* TextExamples.swift */,
+				CFE981F42C9DF06B0094A1A8 /* UnclippedTextExample.swift */,
+			);
+			path = TextExamples;
 			sourceTree = "<group>";
 		};
 		CFF017BF2C6BA5FC00970A90 /* CrossPlatform */ = {
@@ -703,6 +717,7 @@
 			files = (
 				CF0540992A005752007EE95F /* OverlappingImageVerticalExample.swift in Sources */,
 				CFF9EC3D28D2D58700F2D18C /* AnyFULayoutSimpleExample.swift in Sources */,
+				CFE981F52C9DF06B0094A1A8 /* UnclippedTextExample.swift in Sources */,
 				CF0449652C0EAF7800375A10 /* EqualHeightExample.swift in Sources */,
 				CFF9E7552A0F3ED700451A65 /* HMasonryLayoutExample.swift in Sources */,
 				CF0540A72A00A853007EE95F /* UnavailableView.swift in Sources */,
@@ -737,6 +752,7 @@
 				CF05409F2A00A55B007EE95F /* TwoSidedViewExamples.swift in Sources */,
 				CF2986B528FEFD1F00CFDAA5 /* HFlowBoxExample.swift in Sources */,
 				CFBC933126F24FF200D5D439 /* TagViewForScrollViewExample.swift in Sources */,
+				CFE981F82C9DF0F90094A1A8 /* TextExamples.swift in Sources */,
 				CFBC932F26F24DC600D5D439 /* TagViewExample.swift in Sources */,
 				CF1EEF4B274D5FD600987595 /* WidgetSizeExample.swift in Sources */,
 				CFD6964526F3EED2008D58AD /* TabMenuExampleView.swift in Sources */,

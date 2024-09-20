@@ -16,18 +16,20 @@ struct LayoutThatFitsExample: View {
         VStack {
             Spacer()
             
-            Text("Above")
-            
-            LayoutThatFits(in: .horizontal, [HStackLayout(), VStackLayout()]) {
-                Color.green.frame(width: 50, height: 50)
-                Color.yellow.frame(width: 50, height: 200)
-                Color.blue.frame(width: 50, height: 100)
+            VStack {
+                Text("Above")
+                
+                LayoutThatFits(in: .horizontal, [HStackLayout(), VStackLayout()]) {
+                    Color.green.frame(width: 50, height: 50)
+                    Color.yellow.frame(width: 50, height: 200)
+                    Color.blue.frame(width: 50, height: 100)
+                }
+                .frame(width: maxWidth)
+                .border(Color.red)
+                
+                Text("Below")
             }
             .animation(.default, value: maxWidth)
-            .frame(width: maxWidth)
-            .border(Color.red)
-            
-            Text("Below")
             
             Spacer()
             
@@ -44,7 +46,7 @@ struct LayoutThatFitsExample: View {
             }
             .padding()
         }
-        .navigationTitle("FULayoutThatFits")
+        .navigationTitle("LayoutThatFits")
     }
 }
 
