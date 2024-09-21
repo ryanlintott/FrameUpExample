@@ -5,6 +5,7 @@
 //  Created by Ryan Lintott on 2022-07-18.
 //
 
+#if !os(visionOS)
 import FrameUp
 import SwiftUI
 
@@ -95,3 +96,4 @@ struct HFlowExample_Previews: PreviewProvider {
         }
     }
 }
+#endif

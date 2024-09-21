@@ -5,6 +5,7 @@
 //  Created by Ryan Lintott on 2021-09-14.
 //
 
+#if !os(visionOS)
 import FrameUp
 import SwiftUI
 
@@ -96,3 +97,4 @@ struct VFlowExample_Previews: PreviewProvider {
         }
     }
 }
+#endif

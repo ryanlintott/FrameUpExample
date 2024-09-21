@@ -11,6 +11,7 @@ struct FULayoutExamples: View {
     @ViewBuilder
     var body: some View {
         Section {
+            #if !os(visionOS)
             NavigationLink(destination: HFlowExample()) {
                 Label("HFlow", systemImage: "text.word.spacing")
             }
@@ -79,6 +80,9 @@ struct FULayoutExamples: View {
             NavigationLink(destination: CustomFULayoutExample()) {
                 Label("Custom FULayout", systemImage: "rectangle.3.group.bubble.left")
             }
+            #else
+            UnavailableView()
+            #endif
         } header: {
             Text("FULayout")
         }

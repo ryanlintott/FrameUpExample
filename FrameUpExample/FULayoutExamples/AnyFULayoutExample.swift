@@ -5,6 +5,7 @@
 //  Created by Ryan Lintott on 2022-07-18.
 //
 
+#if !os(visionOS)
 import FrameUp
 import SwiftUI
 
@@ -221,8 +222,6 @@ struct AnyFULayoutForEachExample: View {
     }
 }
 
-
-
 struct AnyFULayoutExample_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
@@ -230,3 +229,4 @@ struct AnyFULayoutExample_Previews: PreviewProvider {
         }
     }
 }
+#endif
