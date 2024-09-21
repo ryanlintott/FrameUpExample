@@ -80,6 +80,7 @@
 		CFD6964526F3EED2008D58AD /* TabMenuExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD6964426F3EED2008D58AD /* TabMenuExampleView.swift */; };
 		CFE981F52C9DF06B0094A1A8 /* UnclippedTextExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE981F42C9DF06B0094A1A8 /* UnclippedTextExample.swift */; };
 		CFE981F82C9DF0F90094A1A8 /* TextExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE981F72C9DF0F90094A1A8 /* TextExamples.swift */; };
+		CFE981FA2C9E74FF0094A1A8 /* TwoSidedVisionOSViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE981F92C9E74FF0094A1A8 /* TwoSidedVisionOSViewExample.swift */; };
 		CFEB0B132911A556000507B8 /* FULayoutThatFitsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEB0B122911A556000507B8 /* FULayoutThatFitsExample.swift */; };
 		CFF017C02C6BA5FC00970A90 /* CrossPlatformSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF017BD2C6BA5FC00970A90 /* CrossPlatformSlider.swift */; };
 		CFF017C12C6BA5FC00970A90 /* CrossPlatformStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF017BE2C6BA5FC00970A90 /* CrossPlatformStepper.swift */; };
@@ -222,6 +223,7 @@
 		CFD6964426F3EED2008D58AD /* TabMenuExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuExampleView.swift; sourceTree = "<group>"; };
 		CFE981F42C9DF06B0094A1A8 /* UnclippedTextExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnclippedTextExample.swift; sourceTree = "<group>"; };
 		CFE981F72C9DF0F90094A1A8 /* TextExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExamples.swift; sourceTree = "<group>"; };
+		CFE981F92C9E74FF0094A1A8 /* TwoSidedVisionOSViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSidedVisionOSViewExample.swift; sourceTree = "<group>"; };
 		CFEB0B122911A556000507B8 /* FULayoutThatFitsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FULayoutThatFitsExample.swift; sourceTree = "<group>"; };
 		CFF017BD2C6BA5FC00970A90 /* CrossPlatformSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossPlatformSlider.swift; sourceTree = "<group>"; };
 		CFF017BE2C6BA5FC00970A90 /* CrossPlatformStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossPlatformStepper.swift; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 			children = (
 				CF05409E2A00A55B007EE95F /* TwoSidedViewExamples.swift */,
 				CFF9EC4028D3C07000F2D18C /* TwoSidedViewExample.swift */,
+				CFE981F92C9E74FF0094A1A8 /* TwoSidedVisionOSViewExample.swift */,
 				CFF9EC4228D3C0AA00F2D18C /* FlippingViewExample.swift */,
 			);
 			path = TwoSidedViewExamples;
@@ -761,6 +764,7 @@
 				CFAC14A22885ED2C003D4539 /* AnyFULayoutExample.swift in Sources */,
 				CF086A6826FE8AE8002C715D /* SmartScrollViewExample.swift in Sources */,
 				CF05408A2A004747007EE95F /* FULayoutExamples.swift in Sources */,
+				CFE981FA2C9E74FF0094A1A8 /* TwoSidedVisionOSViewExample.swift in Sources */,
 				CFC95D752A15DBEB0098B1E6 /* CustomLayoutExample.swift in Sources */,
 				CF42CE26274C4A540010F12B /* WidgetDemoFrameExample.swift in Sources */,
 				CFF9E7532A0F3ED000451A65 /* VMasonryLayoutExample.swift in Sources */,

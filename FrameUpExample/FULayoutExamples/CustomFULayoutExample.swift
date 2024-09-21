@@ -5,7 +5,6 @@
 //  Created by Ryan Lintott on 2022-09-15.
 //
 
-#if !os(visionOS)
 import FrameUp
 import SwiftUI
 
@@ -54,6 +53,7 @@ struct PingPong: FULayout {
     }
 }
 
+#if !os(visionOS)
 struct CustomFULayoutExample: View {
     var body: some View {
         VStack {
