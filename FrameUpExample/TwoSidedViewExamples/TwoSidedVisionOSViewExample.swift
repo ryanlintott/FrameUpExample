@@ -1,14 +1,14 @@
 //
-//  TwoSidedViewExample.swift
+//  TwoSidedVisionOSViewExample.swift
 //  FrameUpExample
 //
-//  Created by Ryan Lintott on 2022-09-15.
+//  Created by Ryan Lintott on 2024-09-20.
 //
 
-import FrameUp
+#if os(visionOS)
 import SwiftUI
 
-struct TwoSidedViewExample: View {
+struct TwoSidedVisionOSViewExample: View {
     enum ExampleAxis: Hashable, Identifiable {
         case horizontal
         case vertical
@@ -39,18 +39,13 @@ struct TwoSidedViewExample: View {
             RoundedRectangle(cornerRadius: 20)
                 .fill(.blue)
                 .overlay(Text("Up"))
+                .aspectRatio(0.7, contentMode: .fit)
+                .frame(maxWidth: 100)
                 /// This modifier creates the two-sided view by supplying a rotation and a back side.
-                #if os(visionOS)
-                .perspectiveRotationEffect(angle, axis: exampleAxis.axis, backsideFlip: .automatic) {
+                .rotation3DEffect(angle, axis: exampleAxis.axis, backsideFlip: .automatic) {
                     backView
                 }
-                #else
-                .rotation3DEffect(angle, axis: exampleAxis.axis, perspective: 0.5, backsideFlip: .automatic) {
-                    backView
-                }
-                #endif
                 .padding()
-            
             
             Picker("Axis", selection: $exampleAxis) {
                 ForEach([ExampleAxis.horizontal, .vertical, .custom(1.0, 1.0, 0.0), .custom(0.7, 0.3, 0)]) { exampleAxis in
@@ -75,8 +70,7 @@ struct TwoSidedViewExample: View {
     }
 }
 
-struct TwoSidedViewExample_Previews: PreviewProvider {
-    static var previews: some View {
-        TwoSidedViewExample()
-    }
+#Preview {
+    TwoSidedVisionOSViewExample()
 }
+#endif

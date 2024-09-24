@@ -13,10 +13,15 @@ struct TwoSidedViewExamples: View {
             NavigationLink(destination: TwoSidedViewExample()) {
                 Label("TwoSidedView", systemImage: "arrow.uturn.right.square")
             }
-            
+            #if os(visionOS)
+            NavigationLink(destination: TwoSidedVisionOSViewExample()) {
+                Label("TwoSidedVisionOSView", systemImage: "arrow.uturn.right.square")
+            }
+            #else
             NavigationLink(destination: FlippingViewExample()) {
                 Label("FlippingView", systemImage: "arrow.uturn.right.square")
             }
+            #endif
         } header: {
             Text("TwoSidedView")
         }
