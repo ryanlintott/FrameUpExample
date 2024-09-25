@@ -77,10 +77,11 @@
 		CFC476552A0C9CC1003B51CF /* VMasonryAspectRatioExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC476542A0C9CC1003B51CF /* VMasonryAspectRatioExample.swift */; };
 		CFC476572A0C9FC2003B51CF /* HMasonryAspectRatioExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC476562A0C9FC2003B51CF /* HMasonryAspectRatioExample.swift */; };
 		CFC95D752A15DBEB0098B1E6 /* CustomLayoutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC95D742A15DBEB0098B1E6 /* CustomLayoutExample.swift */; };
+		CFD564E22CA48F3E00D2BB4E /* PerspectiveFlippingViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD564E12CA48F3E00D2BB4E /* PerspectiveFlippingViewExample.swift */; };
 		CFD6964526F3EED2008D58AD /* TabMenuExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD6964426F3EED2008D58AD /* TabMenuExampleView.swift */; };
 		CFE981F52C9DF06B0094A1A8 /* UnclippedTextExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE981F42C9DF06B0094A1A8 /* UnclippedTextExample.swift */; };
 		CFE981F82C9DF0F90094A1A8 /* TextExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE981F72C9DF0F90094A1A8 /* TextExamples.swift */; };
-		CFE981FA2C9E74FF0094A1A8 /* TwoSidedVisionOSViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE981F92C9E74FF0094A1A8 /* TwoSidedVisionOSViewExample.swift */; };
+		CFE981FA2C9E74FF0094A1A8 /* TwoSided3DViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE981F92C9E74FF0094A1A8 /* TwoSided3DViewExample.swift */; };
 		CFEB0B132911A556000507B8 /* FULayoutThatFitsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEB0B122911A556000507B8 /* FULayoutThatFitsExample.swift */; };
 		CFF017C02C6BA5FC00970A90 /* CrossPlatformSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF017BD2C6BA5FC00970A90 /* CrossPlatformSlider.swift */; };
 		CFF017C12C6BA5FC00970A90 /* CrossPlatformStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF017BE2C6BA5FC00970A90 /* CrossPlatformStepper.swift */; };
@@ -220,10 +221,11 @@
 		CFC476542A0C9CC1003B51CF /* VMasonryAspectRatioExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMasonryAspectRatioExample.swift; sourceTree = "<group>"; };
 		CFC476562A0C9FC2003B51CF /* HMasonryAspectRatioExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMasonryAspectRatioExample.swift; sourceTree = "<group>"; };
 		CFC95D742A15DBEB0098B1E6 /* CustomLayoutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayoutExample.swift; sourceTree = "<group>"; };
+		CFD564E12CA48F3E00D2BB4E /* PerspectiveFlippingViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveFlippingViewExample.swift; sourceTree = "<group>"; };
 		CFD6964426F3EED2008D58AD /* TabMenuExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuExampleView.swift; sourceTree = "<group>"; };
 		CFE981F42C9DF06B0094A1A8 /* UnclippedTextExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnclippedTextExample.swift; sourceTree = "<group>"; };
 		CFE981F72C9DF0F90094A1A8 /* TextExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExamples.swift; sourceTree = "<group>"; };
-		CFE981F92C9E74FF0094A1A8 /* TwoSidedVisionOSViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSidedVisionOSViewExample.swift; sourceTree = "<group>"; };
+		CFE981F92C9E74FF0094A1A8 /* TwoSided3DViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSided3DViewExample.swift; sourceTree = "<group>"; };
 		CFEB0B122911A556000507B8 /* FULayoutThatFitsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FULayoutThatFitsExample.swift; sourceTree = "<group>"; };
 		CFF017BD2C6BA5FC00970A90 /* CrossPlatformSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossPlatformSlider.swift; sourceTree = "<group>"; };
 		CFF017BE2C6BA5FC00970A90 /* CrossPlatformStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossPlatformStepper.swift; sourceTree = "<group>"; };
@@ -356,8 +358,9 @@
 			children = (
 				CF05409E2A00A55B007EE95F /* TwoSidedViewExamples.swift */,
 				CFF9EC4028D3C07000F2D18C /* TwoSidedViewExample.swift */,
-				CFE981F92C9E74FF0094A1A8 /* TwoSidedVisionOSViewExample.swift */,
+				CFE981F92C9E74FF0094A1A8 /* TwoSided3DViewExample.swift */,
 				CFF9EC4228D3C0AA00F2D18C /* FlippingViewExample.swift */,
+				CFD564E12CA48F3E00D2BB4E /* PerspectiveFlippingViewExample.swift */,
 			);
 			path = TwoSidedViewExamples;
 			sourceTree = "<group>";
@@ -764,7 +767,7 @@
 				CFAC14A22885ED2C003D4539 /* AnyFULayoutExample.swift in Sources */,
 				CF086A6826FE8AE8002C715D /* SmartScrollViewExample.swift in Sources */,
 				CF05408A2A004747007EE95F /* FULayoutExamples.swift in Sources */,
-				CFE981FA2C9E74FF0094A1A8 /* TwoSidedVisionOSViewExample.swift in Sources */,
+				CFE981FA2C9E74FF0094A1A8 /* TwoSided3DViewExample.swift in Sources */,
 				CFC95D752A15DBEB0098B1E6 /* CustomLayoutExample.swift in Sources */,
 				CF42CE26274C4A540010F12B /* WidgetDemoFrameExample.swift in Sources */,
 				CFF9E7532A0F3ED000451A65 /* VMasonryLayoutExample.swift in Sources */,
@@ -781,6 +784,7 @@
 				CF6335012C3EFE0300996F80 /* SizeMatchingViewExample.swift in Sources */,
 				CF6973FC2C247CA9000A4E00 /* OpenAppAppIntent.swift in Sources */,
 				CFC476482A0C82FA003B51CF /* WidgetRelativeShapeExample.swift in Sources */,
+				CFD564E22CA48F3E00D2BB4E /* PerspectiveFlippingViewExample.swift in Sources */,
 				CF5C50F927FCF29200769E38 /* AutoRotatingViewExample.swift in Sources */,
 				CF05408C2A004828007EE95F /* WidgetExamples.swift in Sources */,
 				CFF9EC3928D1157200F2D18C /* SmartScrollViewSimpleExample.swift in Sources */,
@@ -1017,8 +1021,6 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=appletvos*]" = "TV App Icon & Top Shelf Image";
-				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=appletvsimulator*]" = "TV App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
@@ -1027,6 +1029,7 @@
 				DEVELOPMENT_TEAM = 97423JQ8B9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1059,8 +1062,6 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=appletvos*]" = "TV App Icon & Top Shelf Image";
-				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=appletvsimulator*]" = "TV App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
@@ -1069,6 +1070,7 @@
 				DEVELOPMENT_TEAM = 97423JQ8B9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -1,21 +1,21 @@
 //
-//  FlippingViewExample.swift
+//  PerspectiveFlippingViewExample.swift
 //  FrameUpExample
 //
-//  Created by Ryan Lintott on 2022-09-15.
+//  Created by Ryan Lintott on 2024-09-25.
 //
-
+#if os(visionOS)
 import FrameUp
 import SwiftUI
 
-struct FlippingViewExample: View {
+struct PerspectiveFlippingViewExample: View {
     @State private var flips: Int = 0
     var isFaceUp: Bool { flips.isMultiple(of: 2) }
     @State private var axis: Axis = .horizontal
     
     var body: some View {
         VStack {
-            FlippingView(
+            PerspectiveFlippingView(
                 axis,
                 flips: $flips
             ) {
@@ -65,3 +65,4 @@ struct FlippingViewExample: View {
 #Preview {
     FlippingViewExample()
 }
+#endif
