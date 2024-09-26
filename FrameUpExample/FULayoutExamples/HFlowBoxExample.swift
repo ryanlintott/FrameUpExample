@@ -5,6 +5,7 @@
 //  Created by Ryan Lintott on 2022-10-18.
 //
 
+#if !os(visionOS)
 import FrameUp
 import SwiftUI
 
@@ -61,3 +62,4 @@ struct HFlowBoxExample_Previews: PreviewProvider {
         }
     }
 }
+#endif

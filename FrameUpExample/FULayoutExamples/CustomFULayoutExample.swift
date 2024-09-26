@@ -53,6 +53,7 @@ struct PingPong: FULayout {
     }
 }
 
+#if !os(visionOS)
 struct CustomFULayoutExample: View {
     var body: some View {
         VStack {
@@ -92,3 +93,4 @@ struct CustomFULayoutExample_Previews: PreviewProvider {
         }
     }
 }
+#endif

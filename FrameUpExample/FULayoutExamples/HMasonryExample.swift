@@ -5,6 +5,7 @@
 //  Created by Ryan Lintott on 2023-05-10.
 //
 
+#if !os(visionOS)
 import FrameUp
 import SwiftUI
 
@@ -108,3 +109,4 @@ struct HMasonryExample_Previews: PreviewProvider {
         }
     }
 }
+#endif

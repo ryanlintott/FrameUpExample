@@ -11,6 +11,7 @@ struct FULayoutExamples: View {
     @ViewBuilder
     var body: some View {
         Section {
+            #if !os(visionOS)
             NavigationLink(destination: HFlowExample()) {
                 Label("HFlow", systemImage: "text.word.spacing")
             }
@@ -55,11 +56,7 @@ struct FULayoutExamples: View {
             NavigationLink(destination: ZStackFULayoutExample()) {
                 Label("ZStackFULayout", systemImage: "square.3.layers.3d")
             }
-        } header: {
-            Text("FULayout")
-        }
             
-        Section {
             NavigationLink(destination: AnyFULayoutSimpleExample()) {
                 Label("AnyFULayout Simple", systemImage: "rectangle.3.group")
             }
@@ -71,30 +68,23 @@ struct FULayoutExamples: View {
             NavigationLink(destination: AnyFULayoutHorizontalExample()) {
                 Label("AnyFULayout Horizontal", systemImage: "rectangle.3.group")
             }
-        } header: {
-            Text("AnyFULayout")
-        }
             
-        Section {
-            Group {
-                NavigationLink(destination: FUViewThatFitsExample()) {
-                    Label("FUViewThatFits", systemImage: "arrow.up.right.and.arrow.down.left.rectangle")
-                }
-                
-                NavigationLink(destination: FULayoutThatFitsExample()) {
-                    Label("FULayoutThatFits", systemImage: "arrow.up.right.and.arrow.down.left.rectangle")
-                }
+            NavigationLink(destination: FUViewThatFitsExample()) {
+                Label("FUViewThatFits", systemImage: "arrow.up.right.and.arrow.down.left.rectangle")
             }
-        } header: {
-            Text("FUViewThatFits")
-        }
-        
-        Section {
+            
+            NavigationLink(destination: FULayoutThatFitsExample()) {
+                Label("FULayoutThatFits", systemImage: "arrow.up.right.and.arrow.down.left.rectangle")
+            }
+            
             NavigationLink(destination: CustomFULayoutExample()) {
                 Label("Custom FULayout", systemImage: "rectangle.3.group.bubble.left")
             }
+            #else
+            UnavailableView()
+            #endif
         } header: {
-            Text("Custom FULayout")
+            Text("FULayout")
         }
     }
 }

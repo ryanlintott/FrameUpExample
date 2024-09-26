@@ -78,35 +78,37 @@ struct EqualWidthExample: View {
                     .frame(width: width)
                     .frame(maxWidth: .infinity)
                     
-                    Text("It even works with custom layouts like HFlow.")
-                    
-                    HFlow(maxWidth: width) {
-                        Button { } label: {
-                            Text("More Information")
-                                .equalWidthPreferred()
-                                .padding(4)
-                                .background(RoundedRectangle(cornerRadius: 4).stroke(Color.red))
-                        }
+                    if #available(iOS 16, macOS 13, tvOS 16, watchOS 9, *) {
+                        Text("It even works with custom layouts like HFlow.")
                         
-                        Button { } label: {
-                            Text("Cancel")
-                                .equalWidthPreferred()
-                                .padding(4)
-                                .background(RoundedRectangle(cornerRadius: 4).stroke(Color.red))
+                        HFlowLayout {
+                            Button { } label: {
+                                Text("More Information")
+                                    .equalWidthPreferred()
+                                    .padding(4)
+                                    .background(RoundedRectangle(cornerRadius: 4).stroke(Color.red))
+                            }
+                            
+                            Button { } label: {
+                                Text("Cancel")
+                                    .equalWidthPreferred()
+                                    .padding(4)
+                                    .background(RoundedRectangle(cornerRadius: 4).stroke(Color.red))
+                            }
+                            
+                            Button { } label: {
+                                Text("OK")
+                                    .equalWidthPreferred()
+                                    .padding(4)
+                                    .background(RoundedRectangle(cornerRadius: 4).stroke(Color.red))
+                            }
                         }
-                        
-                        Button { } label: {
-                            Text("OK")
-                                .equalWidthPreferred()
-                                .padding(4)
-                                .background(RoundedRectangle(cornerRadius: 4).stroke(Color.red))
-                        }
+                        .equalWidthContainer()
+                        .padding(4)
+                        .background(RoundedRectangle(cornerRadius: 8).stroke(Color.green))
+                        .frame(width: width)
+                        .frame(maxWidth: .infinity)
                     }
-                    .equalWidthContainer()
-                    .padding(4)
-                    .frame(maxWidth: .infinity)
-                    .background(RoundedRectangle(cornerRadius: 8).stroke(Color.green))
-                    .frame(width: width)
                 }
             }
             .frame(maxHeight: .infinity)

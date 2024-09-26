@@ -80,36 +80,38 @@ struct EqualHeightExample: View {
                     .frame(height: height)
                     .frame(maxWidth: .infinity)
                     
-                    Text("It even works with custom layouts like VFlow.")
-                    
-                    VFlow(maxHeight: height) {
-                        Button { } label: {
-                            Label("Info", systemImage: "info.circle")
-                                .font(.title)
-                                .equalHeightPreferred()
-                                .padding(4)
-                                .background(RoundedRectangle(cornerRadius: 4).stroke(Color.red))
-                        }
+                    if #available(iOS 16, macOS 13, tvOS 16, watchOS 9, *) {
+                        Text("It even works with custom layouts like VFlowLayout.")
                         
-                        Button { } label: {
-                            Text("Cancel")
-                                .equalHeightPreferred()
-                                .padding(4)
-                                .background(RoundedRectangle(cornerRadius: 4).stroke(Color.red))
+                        VFlowLayout {
+                            Button { } label: {
+                                Label("Info", systemImage: "info.circle")
+                                    .font(.title)
+                                    .equalHeightPreferred()
+                                    .padding(4)
+                                    .background(RoundedRectangle(cornerRadius: 4).stroke(Color.red))
+                            }
+                            
+                            Button { } label: {
+                                Text("Cancel")
+                                    .equalHeightPreferred()
+                                    .padding(4)
+                                    .background(RoundedRectangle(cornerRadius: 4).stroke(Color.red))
+                            }
+                            
+                            Button { } label: {
+                                Text("OK")
+                                    .equalHeightPreferred()
+                                    .padding(4)
+                                    .background(RoundedRectangle(cornerRadius: 4).stroke(Color.red))
+                            }
                         }
-                        
-                        Button { } label: {
-                            Text("OK")
-                                .equalHeightPreferred()
-                                .padding(4)
-                                .background(RoundedRectangle(cornerRadius: 4).stroke(Color.red))
-                        }
+                        .equalHeightContainer()
+                        .padding(4)
+                        .background(RoundedRectangle(cornerRadius: 8).stroke(Color.green))
+                        .frame(height: height)
+                        .frame(maxHeight: .infinity)
                     }
-                    .equalHeightContainer()
-                    .padding(4)
-                    .frame(maxHeight: .infinity)
-                    .background(RoundedRectangle(cornerRadius: 8).stroke(Color.green))
-                    .frame(height: height)
                 }
             }
             .frame(maxHeight: .infinity)

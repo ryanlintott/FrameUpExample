@@ -10,7 +10,7 @@ import SwiftUI
 import WidgetKit
 
 
-@available(iOSApplicationExtension 16.0, *)
+@available(iOS 16.0, *)
 struct InlineImageExample: View {
     var body: some View {
         Label {
@@ -21,7 +21,7 @@ struct InlineImageExample: View {
     }
 }
 
-@available(iOSApplicationExtension 16.0, *)
+@available(iOS 16.0, *)
 struct InlineImageExample_Previews: PreviewProvider {
     static var previews: some View {
         InlineImageExample()

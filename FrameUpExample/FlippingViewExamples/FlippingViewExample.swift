@@ -12,14 +12,12 @@ struct FlippingViewExample: View {
     @State private var flips: Int = 0
     var isFaceUp: Bool { flips.isMultiple(of: 2) }
     @State private var axis: Axis = .horizontal
-    @State private var perspective: CGFloat = 1
     
     var body: some View {
         VStack {
             FlippingView(
                 axis,
-                flips: $flips,
-                perspective: perspective
+                flips: $flips
             ) {
                 ZStack {
                     Color.blue
@@ -52,18 +50,7 @@ struct FlippingViewExample: View {
                     }
                     .pickerStyle(.segmented)
                 }
-            
-                HStack {
-                    #if os(tvOS)
-                    Text("Perspective \(perspective)")
-                    Button("-") { perspective = max(0, perspective - 0.1) }
-                    Button("+") { perspective = min(1, perspective + 0.1) }
-                    #else
-                    Text("Perspective")
-                    Slider(value: $perspective, in: 0...1)
-                        .padding()
-                    #endif
-                }
+                
                 HStack {
                     Text("Programmatic flip")
                     Button("-1") { flips -= 1 }
@@ -75,8 +62,6 @@ struct FlippingViewExample: View {
     }
 }
 
-struct FlippingViewExample_Previews: PreviewProvider {
-    static var previews: some View {
-        FlippingViewExample()
-    }
+#Preview {
+    FlippingViewExample()
 }

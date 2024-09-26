@@ -35,11 +35,15 @@ struct LayoutExamples: View {
                 NavigationLink(destination: HMasonryLayoutExample()) {
                     Label("HMasonryLayout", systemImage: "align.horizontal.left")
                 }
+                
+                NavigationLink(destination: LayoutThatFitsExample()) {
+                    Label("LayoutThatFits", systemImage: "arrow.up.right.and.arrow.down.left.rectangle")
+                }
             } else {
                 UnavailableView(availableInLaterVersion: true)
             }
         } header: {
-            Text("SwiftUI Layout")
+            Text("Layout")
         }
     }
 }

@@ -9,12 +9,24 @@ import FrameUp
 import SwiftUI
 
 struct TwoSidedViewExample: View {
-    @State private var angle: Angle = .zero
-    @State private var axis: Axis = .horizontal
-    
-    var rotationAxis: (x: CGFloat, y: CGFloat, z: CGFloat) {
-        axis == .horizontal ? (0,1,0) : (1,0,0)
+    enum ExampleAxis: Hashable, Identifiable {
+        case horizontal
+        case vertical
+        case custom(_ x: CGFloat, _ y: CGFloat, _ z: CGFloat)
+        
+        var id: Self { self }
+        
+        var axis: (x: CGFloat, y: CGFloat, z: CGFloat) {
+            switch self {
+            case .horizontal: (0, 1, 0)
+            case .vertical: (1, 0, 0)
+            case let .custom(x, y, z): (x, y, z)
+            }
+        }
     }
+    
+    @State private var angle: Angle = .degrees(0)
+    @State private var exampleAxis: ExampleAxis = .custom(0.2, 0.8, 0)
     
     var backView: some View {
         RoundedRectangle(cornerRadius: 20)
@@ -27,23 +39,22 @@ struct TwoSidedViewExample: View {
             RoundedRectangle(cornerRadius: 20)
                 .fill(.blue)
                 .overlay(Text("Up"))
+                /// This modifier creates the two-sided view by supplying a rotation and a back side.
                 #if os(visionOS)
-                .rotation3DEffect(angle, axis: axis == .horizontal ? .y : .x) {
+                .perspectiveRotationEffect(angle, axis: exampleAxis.axis, backsideFlip: .automatic) {
                     backView
                 }
-                .offset(z: 100)
-                .frame(width: 200, height: 200)
                 #else
-                /// This modifier creates the two-sided view by supplying a rotation and a back side.
-                .rotation3DEffect(angle, axis: axis == .horizontal ? (0,1,0) : (1,0,0), perspective: 0.5) {
+                .rotation3DEffect(angle, axis: exampleAxis.axis, perspective: 0.5, backsideFlip: .automatic) {
                     backView
                 }
                 #endif
                 .padding()
             
-            Picker("Axis", selection: $axis) {
-                ForEach(Axis.allCases, id: \.self) { axis in
-                    Text("\(axis.description)")
+            
+            Picker("Axis", selection: $exampleAxis) {
+                ForEach([ExampleAxis.horizontal, .vertical, .custom(1.0, 1.0, 0.0), .custom(0.7, 0.3, 0)]) { exampleAxis in
+                    Text("\(String(describing: exampleAxis))")
                 }
             }
             .pickerStyle(.segmented)

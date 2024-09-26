@@ -5,6 +5,7 @@
 //  Created by Ryan Lintott on 2022-10-31.
 //
 
+#if !os(visionOS)
 import FrameUp
 import SwiftUI
 
@@ -31,14 +32,6 @@ struct FUViewThatFitsExample: View {
     var body: some View {
         VStack {
             Spacer()
-            
-            WidthReader { width in
-                FUViewThatFits(maxWidth: width) {
-                    Color.green.frame(width: 300, height: 300)
-                    Color.yellow.frame(width: 200, height: 200)
-                    Color.blue.frame(width: 100, height: 100)
-                }
-            }
             
             fuViewThatFits {
                 Color.green.frame(width: 300, height: 300)
@@ -90,3 +83,4 @@ struct FUViewThatFitsExample_Previews: PreviewProvider {
         }
     }
 }
+#endif

@@ -11,7 +11,6 @@ import SwiftUI
 struct WidgetSizeExample: View {
     @State private var widgetSize: WidgetSize = .small
 
-    @MainActor
     var size: CGSize {
         #if os(iOS)
         widgetSize.sizeForCurrentDevice(iPadTarget: .homeScreen) ?? widgetSize.minimumSize
@@ -20,12 +19,10 @@ struct WidgetSizeExample: View {
         #endif
     }
     
-    @MainActor
     var sizeString: String {
         String(format: "%.1f", size.width) + " x " + String(format: "%.1f", size.height)
     }
     
-    @MainActor
     var sizes: [WidgetSize] {
         #if os(iOS)
         WidgetSize.supportedSizesForCurrentDevice

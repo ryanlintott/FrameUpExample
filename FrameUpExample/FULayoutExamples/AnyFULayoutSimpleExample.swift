@@ -5,6 +5,7 @@
 //  Created by Ryan Lintott on 2022-09-14.
 //
 
+#if !os(visionOS)
 import FrameUp
 import SwiftUI
 
@@ -58,3 +59,4 @@ struct AnyFULayoutSimpleExample_Previews: PreviewProvider {
         }
     }
 }
+#endif
