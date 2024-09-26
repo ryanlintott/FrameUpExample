@@ -29,7 +29,7 @@ struct ContentView: View {
         
         SmartScrollViewExamples()
         
-        TwoSidedViewExamples()
+        FlippingViewExamples()
         
         TabMenuExamples()
         

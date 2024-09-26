@@ -1,5 +1,5 @@
 //
-//  TwoSidedViewExamples.swift
+//  FlippingViewExamples.swift
 //  FrameUpExample
 //
 //  Created by Ryan Lintott on 2023-05-01.
@@ -7,16 +7,20 @@
 
 import SwiftUI
 
-struct TwoSidedViewExamples: View {
+struct FlippingViewExamples: View {
     var body: some View {
         Section {
-            NavigationLink(destination: TwoSidedViewExample()) {
-                Label("TwoSidedView", systemImage: "arrow.uturn.right.square")
-            }
-            
             #if os(visionOS)
             NavigationLink(destination: TwoSided3DViewExample()) {
-                Label("TwoSidedVisionOSView", systemImage: "arrow.uturn.right.square")
+                Label("rotation3DEffect(back:)", systemImage: "arrow.uturn.right.square")
+            }
+            
+            NavigationLink(destination: TwoSidedViewExample()) {
+                Label("perspectiveRotationEffect(back:)", systemImage: "arrow.uturn.right.square")
+            }
+            #else
+            NavigationLink(destination: TwoSidedViewExample()) {
+                Label("rotation3DEffect(back:)", systemImage: "arrow.uturn.right.square")
             }
             #endif
             
@@ -30,15 +34,13 @@ struct TwoSidedViewExamples: View {
             }
             #endif
         } header: {
-            Text("TwoSidedView")
+            Text("FlippingView")
         }
     }
 }
 
-struct TwoSidedViewExamples_Previews: PreviewProvider {
-    static var previews: some View {
-        List {
-            TwoSidedViewExamples()
-        }
+#Preview {
+    List {
+        FlippingViewExamples()
     }
 }
