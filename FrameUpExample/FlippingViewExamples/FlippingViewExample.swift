@@ -31,6 +31,10 @@ struct FlippingViewExample: View {
                 }
                 .cornerRadius(20)
             }
+            #if os(visionOS)
+            .frame(maxWidth: 200, maxHeight: 200)
+            .frame(maxDepth: 200, alignment: .center)
+            #endif
             .font(.largeTitle)
             .padding(40)
             

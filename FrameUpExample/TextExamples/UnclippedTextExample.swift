@@ -13,21 +13,21 @@ struct UnclippedTextExample: View {
     var body: some View {
         ScrollView {
             Grid {
+                
+                Text("Zapfino")
+                    .font(.custom("zapfino", size: 18))
+                    .unclippedTextRenderer()
+                    .fixedSize()
+                    .padding()
+                
                 GridRow {
-                    Text("")
-                    
                     Text("SwiftUI\nText")
                     
-                    Text(".unclipped()")
+                    Text(".unclippedTextRenderer()")
                 }
                 .font(.caption)
                 
                 GridRow {
-                    Text("Zapfino")
-                        .font(.custom("zapfino", size: 18))
-                        .unclippedTextRenderer()
-                        .fixedSize()
-                    
                     Text("f")
                         .font(.custom("zapfino", size: 30))
                         .border(Color.red)
@@ -38,13 +38,20 @@ struct UnclippedTextExample: View {
                         .unclippedTextRenderer()
                         .border(Color.red)
                         .frame(maxWidth: .infinity)
-                    
                 }
                 
+                Text("System serif black italic")
+                    .font(.system(size: 20, weight: .black, design: .serif))
+                    .padding()
+                
                 GridRow {
-                    Text("System serif black italic")
-                        .font(.system(size: 20, weight: .black, design: .serif))
+                    Text("SwiftUI\nText")
                     
+                    Text(".unclippedTextRenderer()")
+                }
+                .font(.caption)
+                
+                GridRow {
                     Text("f")
                         .font(.system(size: 70, weight: .black, design: .serif))
                         .italic()
@@ -55,7 +62,6 @@ struct UnclippedTextExample: View {
                         .italic()
                         .unclippedTextRenderer()
                         .border(Color.red)
-                    
                 }
             }
             .multilineTextAlignment(.center)

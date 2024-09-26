@@ -43,6 +43,10 @@ struct TwoSided3DViewExample: View {
                 .rotation3DEffect(angle, axis: exampleAxis.axis, backsideFlip: .automatic) {
                     backView
                 }
+                #if os(visionOS)
+                .frame(maxWidth: 200, maxHeight: 200)
+                .frame(maxDepth: 200, alignment: .center)
+                #endif
                 .padding()
             
             Picker("Axis", selection: $exampleAxis) {
